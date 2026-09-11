@@ -5,15 +5,26 @@ title: "Does Online Gravity Estimation Matter? Revisiting a Silent Design Split 
 authors:
   - family-names: Xu
     given-names: Jie
+    affiliation: Anyverse Dynamics
   - family-names: Jin
     given-names: Ziyi
+    affiliation: Anyverse Dynamics
   - family-names: Yu
     given-names: Kangjin
+    affiliation: Anyverse Dynamics
   - family-names: Huang
     given-names: Hongjun
+    affiliation: Anyverse Dynamics
+  - family-names: Jin
+    given-names: Tongxing
+    affiliation: Anyverse Dynamics
+  - family-names: Luo
+    given-names: Hongkun
+    affiliation: Anyverse Dynamics
   - family-names: Xia
     given-names: Zhongpu
+    affiliation: Anyverse Dynamics
 repository-code: "https://github.com/jiejie567/lio-gravity-ablation"
 url: "https://github.com/jiejie567/lio-gravity-ablation"
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-09-11

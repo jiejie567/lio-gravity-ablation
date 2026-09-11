@@ -2,9 +2,14 @@
 
 **Revisiting a Silent Design Split in LiDAR-Inertial Odometry**
 
-Xu Jie · Jin Ziyi · Yu Kangjin · Huang Hongjun · Xia Zhongpu
+Xu Jie · Jin Ziyi · Yu Kangjin · Huang Hongjun · Jin Tongxing · Luo Hongkun · Xia Zhongpu
+
+Anyverse Dynamics
 
 [Paper (preprint PDF)](paper/preprint.pdf) · [Video](media/demo.mp4) · [Reproduction archive](https://github.com/jiejie567/lio-gravity-ablation/releases/tag/v1.0.0)
+
+The updated seven-author preprint and its source are in
+[v1.0.1](https://github.com/jiejie567/lio-gravity-ablation/releases/tag/v1.0.1).
 
 We test gravity and accelerometer-bias state choices within FAST-LIO2 and
 LIO-SAM, keeping the rest of each estimator fixed. We separately test a
