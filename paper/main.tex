@@ -52,6 +52,17 @@ Revisiting a Silent Design Split in LiDAR-Inertial Odometry}
 Tongxing Jin \quad Hongkun Luo \quad Zhongpu Xia}\\[2pt]
 {\small Anyverse Dynamics}}
 
+% First-page contact information in the existing footer area.
+\makeatletter
+\def\ps@firstcontact{%
+  \let\@oddhead\@empty\let\@evenhead\@empty
+  \def\@oddfoot{\parbox[b]{\textwidth}{\footnotesize\raggedright
+    Corresponding author: Zhongpu Xia.\quad
+    Contact (Jie Xu): \texttt{jeff\_xu\_0503@foxmail.com}.\par
+    \vspace{4pt}\centering\normalsize\thepage}}%
+  \let\@evenfoot\@oddfoot}
+\makeatother
+
 \hypersetup{
   pdftitle={Does Online Gravity Estimation Matter? Revisiting a Silent Design Split in LiDAR-Inertial Odometry},
   pdfauthor={Jie Xu; Ziyi Jin; Kangjin Yu; Hongjun Huang; Tongxing Jin; Hongkun Luo; Zhongpu Xia}
@@ -59,7 +70,7 @@ Tongxing Jin \quad Hongkun Luo \quad Zhongpu Xia}\\[2pt]
 
 \begin{document}
 \maketitle
-\thispagestyle{plain}
+\thispagestyle{firstcontact}
 \pagestyle{plain}
 
 \begin{abstract}

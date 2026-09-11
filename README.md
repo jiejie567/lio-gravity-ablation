@@ -9,8 +9,11 @@ Anyverse Dynamics
 [Paper (preprint PDF)](paper/preprint.pdf) · [Video](media/demo.mp4) · [Reproduction archive](https://github.com/jiejie567/lio-gravity-ablation/releases/tag/v1.0.0)
 
 The updated seven-author preprint and its source are in
-[v1.0.2](https://github.com/jiejie567/lio-gravity-ablation/releases/tag/v1.0.2),
+[v1.0.3](https://github.com/jiejie567/lio-gravity-ablation/releases/tag/v1.0.3),
 using given-name-first author display.
+
+Corresponding author: Zhongpu Xia. Contact: Jie Xu
+([jeff_xu_0503@foxmail.com](mailto:jeff_xu_0503@foxmail.com)).
 
 We test gravity and accelerometer-bias state choices within FAST-LIO2 and
 LIO-SAM, keeping the rest of each estimator fixed. We separately test a
