@@ -1,0 +1,93 @@
+{
+  "schema_version": 5,
+  "role": "qualitative intervention visualization; not a performance result",
+  "source": {
+    "dataset": "MCD",
+    "sequence": "ntu_day_10_os1",
+    "bag": "data/mcd/ntu_day_10/os1.bag",
+    "topic": "/os_cloud_node/points",
+    "fastlio_run": "results/ntu_day_10_os1/A",
+    "map_pcd": "results/ntu_day_10_os1/A/map.pcd",
+    "state_log": "results/ntu_day_10_os1/A/state_log.csv",
+    "pointcloud_stage": "FAST-LIO post-preprocessing, deskewed dense scan (feats_undistort)",
+    "fastlio_commit": "2f726e05f6f06ead1ff0546af4e00fddc4e5de58",
+    "relative_time_s": 24.00029468536377,
+    "message_type": "sensor_msgs/msg/PointCloud2",
+    "fastlio_state_row_zero_based": 240,
+    "raw_scan_index_zero_based": 244,
+    "first_fastlio_raw_scan_index_zero_based": 4,
+    "state_to_raw_end_time_error_s": 0.010991573333740234,
+    "point_filter_num": 3,
+    "blind_m": 0.5,
+    "max_relative_time_ms": 100.0,
+    "pcd_point_offset": [
+      9223027,
+      9255606
+    ],
+    "intensity_multiset_matches_retained_raw": true
+  },
+  "interventions": {
+    "range_limit_m": 20.0,
+    "fov_half_angle_deg": 60.0,
+    "dropout_gap_s": [
+      1,
+      2,
+      3,
+      5
+    ]
+  },
+  "counts": {
+    "finite_points": 32579,
+    "range_retained": 24840,
+    "fov_retained": 10476
+  },
+  "visualization": {
+    "common_xy_limit_m": 45.0,
+    "z_limits_m": [
+      -3.0,
+      8.0
+    ],
+    "max_display_points": 24000,
+    "random_seed": 2027,
+    "intensity_field": "intensity",
+    "intensity_bounds": {
+      "nominal": [
+        3.0,
+        5435.0
+      ],
+      "range": [
+        3.0,
+        5435.0
+      ],
+      "fov": [
+        3.0,
+        2237.0
+      ]
+    },
+    "renderer": {
+      "implementation": "ROS1 RViz IntensityPCTransformer",
+      "rviz_config": "catkin_ws/src/FAST_LIO/rviz_cfg/loam_livox.rviz",
+      "display_name": "surround",
+      "topic": "/cloud_registered",
+      "fixed_frame": "camera_init",
+      "color_transformer": "Intensity",
+      "channel_name": "intensity",
+      "autocompute_intensity_bounds": true,
+      "use_rainbow": true,
+      "invert_rainbow": false,
+      "alpha": 1.0,
+      "style": "Points",
+      "size_pixels": 3,
+      "background_rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    "note": "A common deterministic display subset is used. Each admitted cloud is colored with the bundled FAST-LIO ROS1 RViz display's linear automatic intensity bounds and native rainbow transfer."
+  },
+  "artifact": {
+    "path": "report/design_pointcloud.npz",
+    "sha256": "4e55608415dfd0457c2054e97befee5f482b6452fcab0c6a922c51e2e5b31554"
+  }
+}

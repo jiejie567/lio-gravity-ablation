@@ -1,0 +1,36 @@
+# TIERS multi_modal_lidar_dataset: Livox Mid-360 + 内置 IMU (200Hz)
+# 点云为 livox_ros_driver2 的 PointCloud2(每点绝对 ns 时间戳,header=扫描起始,实测验证)
+# 外参 = Mid-360 出厂内参(同 FAST-LIO 自带 mid360.yaml)
+common:
+    lid_topic:  "/mid360/livox/lidar"
+    imu_topic:  "/mid360/livox/imu"
+    time_sync_en: false
+    time_offset_lidar_to_imu: 0.02
+
+preprocess:
+    lidar_type: 5                # LIVOX_PC2 (本实验新增)
+    scan_line: 4
+    blind: 0.5
+
+mapping:
+    acc_cov: 0.1
+    gyr_cov: 0.1
+    b_acc_cov: 0.0001
+    b_gyr_cov: 0.0001
+    fov_degree:    360
+    det_range:     60.0
+    extrinsic_est_en:  false
+    extrinsic_T: [ -0.011, -0.02329, 0.04412 ]
+    extrinsic_R: [ 1, 0, 0,
+                   0, 1, 0,
+                   0, 0, 1 ]
+
+publish:
+    path_en:  false
+    scan_publish_en:  true
+    dense_publish_en: true
+    scan_bodyframe_pub_en: true
+
+pcd_save:
+    pcd_save_en: false
+    interval: -1

@@ -1,0 +1,340 @@
+{
+  "status": "two_full_sequences_valid_descriptive_only",
+  "inference": "Cross-sequence descriptive evidence only; n=2 is insufficient for a paired significance or equivalence claim.",
+  "baseline": "FG-BA (stock LIO-SAM structure)",
+  "sequences": [
+    {
+      "status": "full_sequence_valid",
+      "sequence": "m2dgr-hall05",
+      "playback_rate": 0.5,
+      "alignment": "rigid SE(3), first 10 s",
+      "runs": {
+        "FG-BA": {
+          "frames": 1995,
+          "duration_s": 399.58401703834534,
+          "gt_arc_length_m": 285.28000263801914,
+          "rmse_z_m": 0.33859391074515416,
+          "ate_rmse_m": 2.1020999364601574,
+          "final_position_error_m": 1.034078027799201,
+          "delta_rmse_z_pct_vs_fg_ba": 0.0,
+          "delta_ate_pct_vs_fg_ba": 0.0
+        },
+        "FG-B0": {
+          "frames": 1995,
+          "duration_s": 399.58401703834534,
+          "gt_arc_length_m": 285.28000263801914,
+          "rmse_z_m": 0.34115260127912334,
+          "ate_rmse_m": 2.1026247603952064,
+          "final_position_error_m": 1.0294293932001415,
+          "delta_rmse_z_pct_vs_fg_ba": 0.7556812018084447,
+          "delta_ate_pct_vs_fg_ba": 0.024966650060065376
+        },
+        "GE-BA": {
+          "frames": 1995,
+          "duration_s": 399.58401703834534,
+          "gt_arc_length_m": 285.28000263801914,
+          "rmse_z_m": 0.3374655420672483,
+          "ate_rmse_m": 2.1005699360970542,
+          "final_position_error_m": 1.0297693734681481,
+          "delta_rmse_z_pct_vs_fg_ba": -0.3332513202681686,
+          "delta_ate_pct_vs_fg_ba": -0.07278437797203496
+        },
+        "GE-B0": {
+          "frames": 1995,
+          "duration_s": 399.58401703834534,
+          "gt_arc_length_m": 285.28000263801914,
+          "rmse_z_m": 0.34290126597807696,
+          "ate_rmse_m": 2.1023945984114145,
+          "final_position_error_m": 1.027262424705296,
+          "delta_rmse_z_pct_vs_fg_ba": 1.2721301524423412,
+          "delta_ate_pct_vs_fg_ba": 0.014017504408148085
+        }
+      }
+    },
+    {
+      "status": "full_sequence_valid_single_sequence_not_cross_sequence_claim",
+      "sequence": "mcd_tuhh_day_04",
+      "playback_rate": 0.25,
+      "alignment": "rigid SE(3), first 10 s, evaluated in VectorNav/body frame",
+      "runs": {
+        "FG-BA": {
+          "frames": 929,
+          "duration_s": 185.5891888141632,
+          "gt_arc_length_m": 295.62320234627254,
+          "rmse_z_m": 4.4119401003204,
+          "ate_rmse_m": 11.478633715327971,
+          "final_position_error_m": 0.8293487681550323,
+          "delta_rmse_z_pct_vs_fg_ba": 0.0,
+          "delta_ate_pct_vs_fg_ba": 0.0
+        },
+        "FG-B0": {
+          "frames": 929,
+          "duration_s": 185.5891888141632,
+          "gt_arc_length_m": 295.62320234627254,
+          "rmse_z_m": 4.270792005885959,
+          "ate_rmse_m": 11.353327686191998,
+          "final_position_error_m": 0.8222002058478308,
+          "delta_rmse_z_pct_vs_fg_ba": -3.1992296183756097,
+          "delta_ate_pct_vs_fg_ba": -1.0916458547557517
+        },
+        "GE-BA": {
+          "frames": 929,
+          "duration_s": 185.5891888141632,
+          "gt_arc_length_m": 295.62320234627254,
+          "rmse_z_m": 4.432277864581362,
+          "ate_rmse_m": 11.485298098742053,
+          "final_position_error_m": 0.8276385305758618,
+          "delta_rmse_z_pct_vs_fg_ba": 0.46097099685202814,
+          "delta_ate_pct_vs_fg_ba": 0.05805903018911707
+        },
+        "GE-B0": {
+          "frames": 929,
+          "duration_s": 185.5891888141632,
+          "gt_arc_length_m": 295.62320234627254,
+          "rmse_z_m": 4.4529265012424295,
+          "ate_rmse_m": 11.497192462021973,
+          "final_position_error_m": 0.8286157138670667,
+          "delta_rmse_z_pct_vs_fg_ba": 0.9289881546454604,
+          "delta_ate_pct_vs_fg_ba": 0.16168079890221954
+        }
+      }
+    }
+  ],
+  "effects": {
+    "estimate_g_given_ba": {
+      "contrast": "GE-BA minus FG-BA",
+      "rmse_z_m": {
+        "per_sequence": [
+          {
+            "sequence": "m2dgr-hall05",
+            "absolute_difference_m": -0.0011283686779058333,
+            "percent_difference": -0.3332513202681686
+          },
+          {
+            "sequence": "mcd_tuhh_day_04",
+            "absolute_difference_m": 0.020337764260961677,
+            "percent_difference": 0.46097099685202814
+          }
+        ],
+        "percent_range": [
+          -0.3332513202681686,
+          0.46097099685202814
+        ],
+        "absolute_range_m": [
+          -0.0011283686779058333,
+          0.020337764260961677
+        ]
+      },
+      "ate_rmse_m": {
+        "per_sequence": [
+          {
+            "sequence": "m2dgr-hall05",
+            "absolute_difference_m": -0.0015300003631031345,
+            "percent_difference": -0.07278437797203496
+          },
+          {
+            "sequence": "mcd_tuhh_day_04",
+            "absolute_difference_m": 0.006664383414081598,
+            "percent_difference": 0.05805903018911707
+          }
+        ],
+        "percent_range": [
+          -0.07278437797203496,
+          0.05805903018911707
+        ],
+        "absolute_range_m": [
+          -0.0015300003631031345,
+          0.006664383414081598
+        ]
+      }
+    },
+    "estimate_g_given_b0": {
+      "contrast": "GE-B0 minus FG-B0",
+      "rmse_z_m": {
+        "per_sequence": [
+          {
+            "sequence": "m2dgr-hall05",
+            "absolute_difference_m": 0.001748664698953628,
+            "percent_difference": 0.5125755138308152
+          },
+          {
+            "sequence": "mcd_tuhh_day_04",
+            "absolute_difference_m": 0.18213449535647008,
+            "percent_difference": 4.264653841850752
+          }
+        ],
+        "percent_range": [
+          0.5125755138308152,
+          4.264653841850752
+        ],
+        "absolute_range_m": [
+          0.001748664698953628,
+          0.18213449535647008
+        ]
+      },
+      "ate_rmse_m": {
+        "per_sequence": [
+          {
+            "sequence": "m2dgr-hall05",
+            "absolute_difference_m": -0.0002301619837918878,
+            "percent_difference": -0.010946412699364139
+          },
+          {
+            "sequence": "mcd_tuhh_day_04",
+            "absolute_difference_m": 0.14386477582997514,
+            "percent_difference": 1.2671595483405573
+          }
+        ],
+        "percent_range": [
+          -0.010946412699364139,
+          1.2671595483405573
+        ],
+        "absolute_range_m": [
+          -0.0002301619837918878,
+          0.14386477582997514
+        ]
+      }
+    },
+    "fix_ba_given_fg": {
+      "contrast": "FG-B0 minus FG-BA",
+      "rmse_z_m": {
+        "per_sequence": [
+          {
+            "sequence": "m2dgr-hall05",
+            "absolute_difference_m": 0.002558690533969177,
+            "percent_difference": 0.7556812018084447
+          },
+          {
+            "sequence": "mcd_tuhh_day_04",
+            "absolute_difference_m": -0.14114809443444098,
+            "percent_difference": -3.1992296183756097
+          }
+        ],
+        "percent_range": [
+          -3.1992296183756097,
+          0.7556812018084447
+        ],
+        "absolute_range_m": [
+          -0.14114809443444098,
+          0.002558690533969177
+        ]
+      },
+      "ate_rmse_m": {
+        "per_sequence": [
+          {
+            "sequence": "m2dgr-hall05",
+            "absolute_difference_m": 0.0005248239350490458,
+            "percent_difference": 0.024966650060065376
+          },
+          {
+            "sequence": "mcd_tuhh_day_04",
+            "absolute_difference_m": -0.12530602913597377,
+            "percent_difference": -1.0916458547557517
+          }
+        ],
+        "percent_range": [
+          -1.0916458547557517,
+          0.024966650060065376
+        ],
+        "absolute_range_m": [
+          -0.12530602913597377,
+          0.0005248239350490458
+        ]
+      }
+    },
+    "fix_ba_given_ge": {
+      "contrast": "GE-B0 minus GE-BA",
+      "rmse_z_m": {
+        "per_sequence": [
+          {
+            "sequence": "m2dgr-hall05",
+            "absolute_difference_m": 0.005435723910828638,
+            "percent_difference": 1.610749316072524
+          },
+          {
+            "sequence": "mcd_tuhh_day_04",
+            "absolute_difference_m": 0.02064863666106742,
+            "percent_difference": 0.4658696338980084
+          }
+        ],
+        "percent_range": [
+          0.4658696338980084,
+          1.610749316072524
+        ],
+        "absolute_range_m": [
+          0.005435723910828638,
+          0.02064863666106742
+        ]
+      },
+      "ate_rmse_m": {
+        "per_sequence": [
+          {
+            "sequence": "m2dgr-hall05",
+            "absolute_difference_m": 0.0018246623143602925,
+            "percent_difference": 0.08686510660771418
+          },
+          {
+            "sequence": "mcd_tuhh_day_04",
+            "absolute_difference_m": 0.011894363279919773,
+            "percent_difference": 0.10356164182818706
+          }
+        ],
+        "percent_range": [
+          0.08686510660771418,
+          0.10356164182818706
+        ],
+        "absolute_range_m": [
+          0.0018246623143602925,
+          0.011894363279919773
+        ]
+      }
+    },
+    "fix_both_vs_stock": {
+      "contrast": "FG-B0 minus FG-BA",
+      "rmse_z_m": {
+        "per_sequence": [
+          {
+            "sequence": "m2dgr-hall05",
+            "absolute_difference_m": 0.002558690533969177,
+            "percent_difference": 0.7556812018084447
+          },
+          {
+            "sequence": "mcd_tuhh_day_04",
+            "absolute_difference_m": -0.14114809443444098,
+            "percent_difference": -3.1992296183756097
+          }
+        ],
+        "percent_range": [
+          -3.1992296183756097,
+          0.7556812018084447
+        ],
+        "absolute_range_m": [
+          -0.14114809443444098,
+          0.002558690533969177
+        ]
+      },
+      "ate_rmse_m": {
+        "per_sequence": [
+          {
+            "sequence": "m2dgr-hall05",
+            "absolute_difference_m": 0.0005248239350490458,
+            "percent_difference": 0.024966650060065376
+          },
+          {
+            "sequence": "mcd_tuhh_day_04",
+            "absolute_difference_m": -0.12530602913597377,
+            "percent_difference": -1.0916458547557517
+          }
+        ],
+        "percent_range": [
+          -1.0916458547557517,
+          0.024966650060065376
+        ],
+        "absolute_range_m": [
+          -0.12530602913597377,
+          0.0005248239350490458
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+ "schema": 1,
+ "status": "selection_locked_before_slam_outcomes",
+ "selection_rule": {
+  "purpose": "stress the shared acceleration-mean initializer with stronger natural motion",
+  "outcome_blind": true,
+  "requirements": [
+   "apparent-gravity mismatch exceeds the prior dynamic sweep on the same trajectory",
+   "mean gyro exceeds both 0.08 rad/s and the prior dynamic maximum",
+   "mean gyro remains below 0.40 rad/s to avoid an extreme-turn-only test",
+   "two starts per trajectory are separated by at least 30 s",
+   "at least 60 s of LiDAR data remains after the selected scan"
+  ]
+ },
+ "records": [
+  {
+   "platform": "vehicle",
+   "start_sec": 130.072,
+   "sequence": "ntu_day_10_fastinit_s130p072",
+   "duration_sec": 60.0,
+   "selection_window": {
+    "definition": "IMU samples from 20 ms before to 130 ms after the first selected LiDAR timestamp",
+    "is_exact_estimator_buffer": false,
+    "first_selected_lidar_time": 1645008890.2574077,
+    "imu_samples": 15,
+    "mean_acceleration_norm_mps2": 8.99924644481886,
+    "acceleration_std_norm_mps2": 4.932889549164221,
+    "mean_gyro_norm_radps": 0.1929431629733657,
+    "apparent_gravity_angle_deg": 34.29581885027384
+   },
+   "previous_dynamic_max": {
+    "apparent_gravity_angle_deg": 29.689073376530587,
+    "mean_gyro_norm_radps": 0.04728414495454781
+   },
+   "remaining_lidar_duration_sec": 194.58993482589722
+  },
+  {
+   "platform": "vehicle",
+   "start_sec": 189.471,
+   "sequence": "ntu_day_10_fastinit_s189p471",
+   "duration_sec": 60.0,
+   "selection_window": {
+    "definition": "IMU samples from 20 ms before to 130 ms after the first selected LiDAR timestamp",
+    "is_exact_estimator_buffer": false,
+    "first_selected_lidar_time": 1645008949.6557107,
+    "imu_samples": 15,
+    "mean_acceleration_norm_mps2": 8.961597371718256,
+    "acceleration_std_norm_mps2": 3.980592015983824,
+    "mean_gyro_norm_radps": 0.30477049849020765,
+    "apparent_gravity_angle_deg": 39.376516182714006
+   },
+   "previous_dynamic_max": {
+    "apparent_gravity_angle_deg": 29.689073376530587,
+    "mean_gyro_norm_radps": 0.04728414495454781
+   },
+   "remaining_lidar_duration_sec": 135.19163179397583
+  },
+  {
+   "platform": "handheld",
+   "start_sec": 70.572,
+   "sequence": "tuhh_day_04_fastinit_s70p572",
+   "duration_sec": 60.0,
+   "selection_window": {
+    "definition": "IMU samples from 20 ms before to 130 ms after the first selected LiDAR timestamp",
+    "is_exact_estimator_buffer": false,
+    "first_selected_lidar_time": 1666259455.3332546,
+    "imu_samples": 15,
+    "mean_acceleration_norm_mps2": 5.4454203137226065,
+    "acceleration_std_norm_mps2": 1.0328949655129422,
+    "mean_gyro_norm_radps": 0.3070877783199269,
+    "apparent_gravity_angle_deg": 15.720814499059069
+   },
+   "previous_dynamic_max": {
+    "apparent_gravity_angle_deg": 5.227681521668154,
+    "mean_gyro_norm_radps": 0.04672859482272318
+   },
+   "remaining_lidar_duration_sec": 117.1964123249054
+  },
+  {
+   "platform": "handheld",
+   "start_sec": 114.279,
+   "sequence": "tuhh_day_04_fastinit_s114p279",
+   "duration_sec": 60.0,
+   "selection_window": {
+    "definition": "IMU samples from 20 ms before to 130 ms after the first selected LiDAR timestamp",
+    "is_exact_estimator_buffer": false,
+    "first_selected_lidar_time": 1666259499.0396464,
+    "imu_samples": 15,
+    "mean_acceleration_norm_mps2": 5.658124488689619,
+    "acceleration_std_norm_mps2": 1.4822259592552651,
+    "mean_gyro_norm_radps": 0.35787474754540827,
+    "apparent_gravity_angle_deg": 18.826587358442563
+   },
+   "previous_dynamic_max": {
+    "apparent_gravity_angle_deg": 5.227681521668154,
+    "mean_gyro_norm_radps": 0.04672859482272318
+   },
+   "remaining_lidar_duration_sec": 73.49002051353455
+  }
+ ]
+}

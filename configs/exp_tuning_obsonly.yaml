@@ -1,0 +1,14 @@
+# 方法O(observation-only): 同一FAST-LIO内核,IMU保留去畸变+迭代初值,
+# 但统计权重归零(过程噪声×1e4)且全部IMU状态冻结(grav+ba+bg)。
+# 用法: 以方法C运行 + 本overlay + -g(冻结bg):
+#   ./scripts/run_experiment.sh C <bag> -x configs/exp_tuning_obsonly.yaml -g -n O
+# 注意: 冻结 bg 必须用 -g 走 experiment: 块,不能在本文件里写 experiment/freeze_bg
+point_filter_num: 3
+max_iteration: 4
+filter_size_surf: 0.4
+filter_size_map: 0.4
+mapping:
+  acc_cov: 1000.0
+  gyr_cov: 100.0
+  b_acc_cov: 1.0
+  b_gyr_cov: 1.0

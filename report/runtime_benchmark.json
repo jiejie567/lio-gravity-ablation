@@ -1,0 +1,625 @@
+{
+  "schema_version": 2,
+  "generated_at": "2026-08-28T09:07:34+08:00",
+  "benchmark": {
+    "sequence": "MCD ntu_day_10, Ouster OS1-128 vehicle",
+    "bag": "data/mcd/ntu_day_10/os1.bag",
+    "timed_input_span_s": 324.28759241104126,
+    "replay_rate": 1.0,
+    "pair_order": [
+      [
+        "A",
+        "RED21"
+      ],
+      [
+        "RED21",
+        "A"
+      ],
+      [
+        "A",
+        "RED21"
+      ]
+    ],
+    "host": {
+      "platform": "macOS-26.5.2-arm64-arm-64bit-Mach-O",
+      "machine": "arm64"
+    },
+    "timing_definition": {
+      "core": "FAST-LIO t0--t5: IMU propagation, scan downsampling, iterated update, and incremental map maintenance",
+      "component_sum": "mean core time plus mean point-cloud callback preprocessing time",
+      "filter_algebra": "final cumulative update time minus Jacobian construction; covers the state-dimension-sensitive iterated-filter algebra"
+    },
+    "gates": {
+      "serial_lock": true,
+      "exact_runtime_timestamp_match": true,
+      "exact_input_point_count_match": true,
+      "exact_frame_count_match": true,
+      "sleep_events_in_runs": 0,
+      "stable_binary_fingerprint_per_method": true
+    }
+  },
+  "runs": [
+    {
+      "method": "A",
+      "dimension": 23,
+      "repeat": 1,
+      "order_start": "2026-08-27T23:40:58",
+      "frames": 3244,
+      "warmup_scans_excluded": 100,
+      "timed_frames": 3144,
+      "binary_sha1": "655a13b3c4ca",
+      "runtime_log_sha256": "12dabd450faffd74790b17ae8514f6431827f6abf37e049949e4145bc8c6ba48",
+      "sleep_events": [],
+      "structure": {
+        "gravity_max_component_span": 0.391356389,
+        "accelerometer_bias_max_component_span": 0.426225479,
+        "gravity_norm_max_abs_error": 5.141878034464753e-10,
+        "estimated_path_length_m": 1784.9706366154958,
+        "gt_path_length_m": 1783.6092291909413
+      },
+      "core_ms": {
+        "mean": 132.50935606552164,
+        "median": 121.40637000000001,
+        "p90": 211.56707800000007
+      },
+      "preprocess_ms": {
+        "mean": 2.5589391571246822
+      },
+      "component_sum_ms": {
+        "mean": 135.06829522264633
+      },
+      "cumulative_components_ms": {
+        "matching": 113.105,
+        "measurement_solve_including_jacobian": 3.02,
+        "jacobian_construction": 0.6859999999999999,
+        "state_dimension_sensitive_filter_algebra": 2.334,
+        "reported_core_mean": 130.242
+      },
+      "map_workload": {
+        "mean_tree_size_at_scan_start": 2259636.171755725,
+        "mean_incremental_map_ms": 8.263350674300254
+      }
+    },
+    {
+      "method": "RED21",
+      "dimension": 21,
+      "repeat": 1,
+      "order_start": "2026-08-27T23:50:15",
+      "frames": 3244,
+      "warmup_scans_excluded": 100,
+      "timed_frames": 3144,
+      "binary_sha1": "ac7f79d89953",
+      "runtime_log_sha256": "d958218ff30adf861e83079b0d2e8eb31a27711790e28a38489f36cba26c6b94",
+      "sleep_events": [],
+      "structure": {
+        "gravity_max_component_span": 0.0,
+        "accelerometer_bias_max_component_span": 0.652147674,
+        "gravity_norm_max_abs_error": 4.2107650699563237e-10,
+        "estimated_path_length_m": 1785.0271136129245,
+        "gt_path_length_m": 1783.6092291909413
+      },
+      "core_ms": {
+        "mean": 146.55770138676846,
+        "median": 125.20639500000001,
+        "p90": 280.53722700000003
+      },
+      "preprocess_ms": {
+        "mean": 2.235827573155216
+      },
+      "component_sum_ms": {
+        "mean": 148.79352895992366
+      },
+      "cumulative_components_ms": {
+        "matching": 128.372,
+        "measurement_solve_including_jacobian": 1.656,
+        "jacobian_construction": 0.6489999999999999,
+        "state_dimension_sensitive_filter_algebra": 1.0070000000000001,
+        "reported_core_mean": 143.951
+      },
+      "map_workload": {
+        "mean_tree_size_at_scan_start": 2519515.967557252,
+        "mean_incremental_map_ms": 8.120317045165397
+      }
+    },
+    {
+      "method": "A",
+      "dimension": 23,
+      "repeat": 2,
+      "order_start": "2026-08-28T00:09:08",
+      "frames": 3244,
+      "warmup_scans_excluded": 100,
+      "timed_frames": 3144,
+      "binary_sha1": "655a13b3c4ca",
+      "runtime_log_sha256": "e31b27f3b8773fff982894fb8ff0d091e91446fdab484283d427e90798b2df93",
+      "sleep_events": [],
+      "structure": {
+        "gravity_max_component_span": 0.391356389,
+        "accelerometer_bias_max_component_span": 0.426225479,
+        "gravity_norm_max_abs_error": 5.141878034464753e-10,
+        "estimated_path_length_m": 1784.9706366154958,
+        "gt_path_length_m": 1783.6092291909413
+      },
+      "core_ms": {
+        "mean": 134.70933224236643,
+        "median": 112.086785,
+        "p90": 252.47541000000007
+      },
+      "preprocess_ms": {
+        "mean": 2.0186303212468193
+      },
+      "component_sum_ms": {
+        "mean": 136.72796256361326
+      },
+      "cumulative_components_ms": {
+        "matching": 117.589,
+        "measurement_solve_including_jacobian": 1.649,
+        "jacobian_construction": 0.62,
+        "state_dimension_sensitive_filter_algebra": 1.029,
+        "reported_core_mean": 132.20000000000002
+      },
+      "map_workload": {
+        "mean_tree_size_at_scan_start": 2519441.8298346056,
+        "mean_incremental_map_ms": 7.735520181297711
+      }
+    },
+    {
+      "method": "RED21",
+      "dimension": 21,
+      "repeat": 2,
+      "order_start": "2026-08-28T00:01:09",
+      "frames": 3244,
+      "warmup_scans_excluded": 100,
+      "timed_frames": 3144,
+      "binary_sha1": "ac7f79d89953",
+      "runtime_log_sha256": "207728c249b261630438831b9660c4b6a9389c3a2043ae5bf94c5b481a3ea3f1",
+      "sleep_events": [],
+      "structure": {
+        "gravity_max_component_span": 0.0,
+        "accelerometer_bias_max_component_span": 0.6529323349999999,
+        "gravity_norm_max_abs_error": 4.2107650699563237e-10,
+        "estimated_path_length_m": 1785.0130407213169,
+        "gt_path_length_m": 1783.6092291909413
+      },
+      "core_ms": {
+        "mean": 109.2820575413486,
+        "median": 99.82934,
+        "p90": 164.076758
+      },
+      "preprocess_ms": {
+        "mean": 2.030223463740458
+      },
+      "component_sum_ms": {
+        "mean": 111.31228100508906
+      },
+      "cumulative_components_ms": {
+        "matching": 94.033,
+        "measurement_solve_including_jacobian": 1.572,
+        "jacobian_construction": 0.62,
+        "state_dimension_sensitive_filter_algebra": 0.9520000000000001,
+        "reported_core_mean": 107.49000000000001
+      },
+      "map_workload": {
+        "mean_tree_size_at_scan_start": 2262216.956424936,
+        "mean_incremental_map_ms": 6.375334980916031
+      }
+    },
+    {
+      "method": "A",
+      "dimension": 23,
+      "repeat": 3,
+      "order_start": "2026-08-28T00:18:29",
+      "frames": 3244,
+      "warmup_scans_excluded": 100,
+      "timed_frames": 3144,
+      "binary_sha1": "655a13b3c4ca",
+      "runtime_log_sha256": "bef53a06507af3f77e937d302ae4fae2c461aae603dc92c1f880300522e92cf6",
+      "sleep_events": [],
+      "structure": {
+        "gravity_max_component_span": 0.391356389,
+        "accelerometer_bias_max_component_span": 0.426225479,
+        "gravity_norm_max_abs_error": 5.141878034464753e-10,
+        "estimated_path_length_m": 1784.9706366154958,
+        "gt_path_length_m": 1783.6092291909413
+      },
+      "core_ms": {
+        "mean": 134.6102706520356,
+        "median": 112.33556,
+        "p90": 251.01490700000014
+      },
+      "preprocess_ms": {
+        "mean": 2.0768192589058527
+      },
+      "component_sum_ms": {
+        "mean": 136.68708991094147
+      },
+      "cumulative_components_ms": {
+        "matching": 117.48899999999999,
+        "measurement_solve_including_jacobian": 1.633,
+        "jacobian_construction": 0.622,
+        "state_dimension_sensitive_filter_algebra": 1.0110000000000001,
+        "reported_core_mean": 132.10399999999998
+      },
+      "map_workload": {
+        "mean_tree_size_at_scan_start": 2519441.8298346056,
+        "mean_incremental_map_ms": 7.742450031806616
+      }
+    },
+    {
+      "method": "RED21",
+      "dimension": 21,
+      "repeat": 3,
+      "order_start": "2026-08-28T00:27:49",
+      "frames": 3244,
+      "warmup_scans_excluded": 100,
+      "timed_frames": 3144,
+      "binary_sha1": "ac7f79d89953",
+      "runtime_log_sha256": "56c710514c9c60c752e654b06ba518fa208d86b1e9560fe26684c978eaad81ae",
+      "sleep_events": [],
+      "structure": {
+        "gravity_max_component_span": 0.0,
+        "accelerometer_bias_max_component_span": 0.6529323349999999,
+        "gravity_norm_max_abs_error": 4.2107650699563237e-10,
+        "estimated_path_length_m": 1785.0130407213169,
+        "gt_path_length_m": 1783.6092291909413
+      },
+      "core_ms": {
+        "mean": 108.77115054071248,
+        "median": 99.27714499999999,
+        "p90": 162.42952100000002
+      },
+      "preprocess_ms": {
+        "mean": 2.200158187022901
+      },
+      "component_sum_ms": {
+        "mean": 110.97130872773539
+      },
+      "cumulative_components_ms": {
+        "matching": 93.447,
+        "measurement_solve_including_jacobian": 1.571,
+        "jacobian_construction": 0.625,
+        "state_dimension_sensitive_filter_algebra": 0.946,
+        "reported_core_mean": 106.97800000000001
+      },
+      "map_workload": {
+        "mean_tree_size_at_scan_start": 2262216.956424936,
+        "mean_incremental_map_ms": 6.439675798346055
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "repeat": 1,
+      "effects": {
+        "core_mean_pct": 10.601776160092701,
+        "core_median_pct": 3.1300046282579874,
+        "core_p90_pct": 32.59966042542779,
+        "component_sum_mean_pct": 10.161699097965716,
+        "filter_algebra_pct": -56.85518423307626,
+        "filter_algebra_saving_as_online_core_pct": 1.018872560310806,
+        "measurement_solve_pct": -45.16556291390729
+      }
+    },
+    {
+      "repeat": 2,
+      "effects": {
+        "core_mean_pct": -18.875659375454077,
+        "core_median_pct": -10.935673638957532,
+        "core_p90_pct": -35.01277688785615,
+        "component_sum_mean_pct": -18.588503099137053,
+        "filter_algebra_pct": -7.482993197278898,
+        "filter_algebra_saving_as_online_core_pct": 0.05824508320726161,
+        "measurement_solve_pct": -4.669496664645234
+      }
+    },
+    {
+      "repeat": 3,
+      "effects": {
+        "core_mean_pct": -19.195504166332633,
+        "core_median_pct": -11.624471360627043,
+        "core_p90_pct": -35.29088652890246,
+        "component_sum_mean_pct": -18.813613780175732,
+        "filter_algebra_pct": -6.429277942631073,
+        "filter_algebra_saving_as_online_core_pct": 0.04920365772421742,
+        "measurement_solve_pct": -3.7966932026944344
+      }
+    }
+  ],
+  "summary": {
+    "n_pairs": 3,
+    "per_method": {
+      "A": {
+        "n_runs": 3,
+        "core_mean_ms": {
+          "median": 134.6102706520356,
+          "range": [
+            132.50935606552164,
+            134.70933224236643
+          ],
+          "values": [
+            132.50935606552164,
+            134.70933224236643,
+            134.6102706520356
+          ]
+        },
+        "core_median_ms": {
+          "median": 112.33556,
+          "range": [
+            112.086785,
+            121.40637000000001
+          ],
+          "values": [
+            121.40637000000001,
+            112.086785,
+            112.33556
+          ]
+        },
+        "core_p90_ms": {
+          "median": 251.01490700000014,
+          "range": [
+            211.56707800000007,
+            252.47541000000007
+          ],
+          "values": [
+            211.56707800000007,
+            252.47541000000007,
+            251.01490700000014
+          ]
+        },
+        "component_sum_mean_ms": {
+          "median": 136.68708991094147,
+          "range": [
+            135.06829522264633,
+            136.72796256361326
+          ],
+          "values": [
+            135.06829522264633,
+            136.72796256361326,
+            136.68708991094147
+          ]
+        },
+        "filter_algebra_ms": {
+          "median": 1.029,
+          "range": [
+            1.0110000000000001,
+            2.334
+          ],
+          "values": [
+            2.334,
+            1.029,
+            1.0110000000000001
+          ]
+        },
+        "measurement_solve_ms": {
+          "median": 1.649,
+          "range": [
+            1.633,
+            3.02
+          ],
+          "values": [
+            3.02,
+            1.649,
+            1.633
+          ]
+        },
+        "mean_tree_size": {
+          "median": 2519441.8298346056,
+          "range": [
+            2259636.171755725,
+            2519441.8298346056
+          ],
+          "values": [
+            2259636.171755725,
+            2519441.8298346056,
+            2519441.8298346056
+          ]
+        }
+      },
+      "RED21": {
+        "n_runs": 3,
+        "core_mean_ms": {
+          "median": 109.2820575413486,
+          "range": [
+            108.77115054071248,
+            146.55770138676846
+          ],
+          "values": [
+            146.55770138676846,
+            109.2820575413486,
+            108.77115054071248
+          ]
+        },
+        "core_median_ms": {
+          "median": 99.82934,
+          "range": [
+            99.27714499999999,
+            125.20639500000001
+          ],
+          "values": [
+            125.20639500000001,
+            99.82934,
+            99.27714499999999
+          ]
+        },
+        "core_p90_ms": {
+          "median": 164.076758,
+          "range": [
+            162.42952100000002,
+            280.53722700000003
+          ],
+          "values": [
+            280.53722700000003,
+            164.076758,
+            162.42952100000002
+          ]
+        },
+        "component_sum_mean_ms": {
+          "median": 111.31228100508906,
+          "range": [
+            110.97130872773539,
+            148.79352895992366
+          ],
+          "values": [
+            148.79352895992366,
+            111.31228100508906,
+            110.97130872773539
+          ]
+        },
+        "filter_algebra_ms": {
+          "median": 0.9520000000000001,
+          "range": [
+            0.946,
+            1.0070000000000001
+          ],
+          "values": [
+            1.0070000000000001,
+            0.9520000000000001,
+            0.946
+          ]
+        },
+        "measurement_solve_ms": {
+          "median": 1.572,
+          "range": [
+            1.571,
+            1.656
+          ],
+          "values": [
+            1.656,
+            1.572,
+            1.571
+          ]
+        },
+        "mean_tree_size": {
+          "median": 2262216.956424936,
+          "range": [
+            2262216.956424936,
+            2519515.967557252
+          ],
+          "values": [
+            2519515.967557252,
+            2262216.956424936,
+            2262216.956424936
+          ]
+        }
+      }
+    },
+    "paired_effects_pct": {
+      "core_mean_pct": {
+        "median": -18.875659375454077,
+        "range": [
+          -19.195504166332633,
+          10.601776160092701
+        ],
+        "values": [
+          10.601776160092701,
+          -18.875659375454077,
+          -19.195504166332633
+        ]
+      },
+      "core_median_pct": {
+        "median": -10.935673638957532,
+        "range": [
+          -11.624471360627043,
+          3.1300046282579874
+        ],
+        "values": [
+          3.1300046282579874,
+          -10.935673638957532,
+          -11.624471360627043
+        ]
+      },
+      "core_p90_pct": {
+        "median": -35.01277688785615,
+        "range": [
+          -35.29088652890246,
+          32.59966042542779
+        ],
+        "values": [
+          32.59966042542779,
+          -35.01277688785615,
+          -35.29088652890246
+        ]
+      },
+      "component_sum_mean_pct": {
+        "median": -18.588503099137053,
+        "range": [
+          -18.813613780175732,
+          10.161699097965716
+        ],
+        "values": [
+          10.161699097965716,
+          -18.588503099137053,
+          -18.813613780175732
+        ]
+      },
+      "filter_algebra_pct": {
+        "median": -7.482993197278898,
+        "range": [
+          -56.85518423307626,
+          -6.429277942631073
+        ],
+        "values": [
+          -56.85518423307626,
+          -7.482993197278898,
+          -6.429277942631073
+        ]
+      },
+      "filter_algebra_saving_as_online_core_pct": {
+        "median": 0.05824508320726161,
+        "range": [
+          0.04920365772421742,
+          1.018872560310806
+        ],
+        "values": [
+          1.018872560310806,
+          0.05824508320726161,
+          0.04920365772421742
+        ]
+      },
+      "measurement_solve_pct": {
+        "median": -4.669496664645234,
+        "range": [
+          -45.16556291390729,
+          -3.7966932026944344
+        ],
+        "values": [
+          -45.16556291390729,
+          -4.669496664645234,
+          -3.7966932026944344
+        ]
+      }
+    },
+    "workload_shares_pct": {
+      "filter_algebra_of_reported_core_pct": {
+        "median": 0.831330039467727,
+        "range": [
+          0.6995435946954174,
+          1.7920486479015987
+        ],
+        "values": [
+          1.7920486479015987,
+          0.6995435946954174,
+          0.7783661119515883,
+          0.8856637826774583,
+          0.7653061224489798,
+          0.8842939669838658
+        ]
+      },
+      "matching_of_reported_core_pct": {
+        "median": 88.20872134211677,
+        "range": [
+          86.84218608436603,
+          89.17756736667339
+        ],
+        "values": [
+          86.84218608436603,
+          89.17756736667339,
+          88.94780635400906,
+          87.48069587868638,
+          88.93674680554716,
+          87.3516050028978
+        ]
+      }
+    }
+  },
+  "scope": "single-sequence descriptive engineering benchmark; filter-algebra timing isolates the dimension-sensitive component, while end-to-end timing is confounded by two observed incremental-map workload branches and is not a cross-platform real-time claim"
+}

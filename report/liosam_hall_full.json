@@ -1,0 +1,48 @@
+{
+  "status": "full_sequence_valid",
+  "sequence": "m2dgr-hall05",
+  "playback_rate": 0.5,
+  "alignment": "rigid SE(3), first 10 s",
+  "runs": {
+    "FG-BA": {
+      "frames": 1995,
+      "duration_s": 399.58401703834534,
+      "gt_arc_length_m": 285.28000263801914,
+      "rmse_z_m": 0.33859391074515416,
+      "ate_rmse_m": 2.1020999364601574,
+      "final_position_error_m": 1.034078027799201,
+      "delta_rmse_z_pct_vs_fg_ba": 0.0,
+      "delta_ate_pct_vs_fg_ba": 0.0
+    },
+    "FG-B0": {
+      "frames": 1995,
+      "duration_s": 399.58401703834534,
+      "gt_arc_length_m": 285.28000263801914,
+      "rmse_z_m": 0.34115260127912334,
+      "ate_rmse_m": 2.1026247603952064,
+      "final_position_error_m": 1.0294293932001415,
+      "delta_rmse_z_pct_vs_fg_ba": 0.7556812018084447,
+      "delta_ate_pct_vs_fg_ba": 0.024966650060065376
+    },
+    "GE-BA": {
+      "frames": 1995,
+      "duration_s": 399.58401703834534,
+      "gt_arc_length_m": 285.28000263801914,
+      "rmse_z_m": 0.3374655420672483,
+      "ate_rmse_m": 2.1005699360970542,
+      "final_position_error_m": 1.0297693734681481,
+      "delta_rmse_z_pct_vs_fg_ba": -0.3332513202681686,
+      "delta_ate_pct_vs_fg_ba": -0.07278437797203496
+    },
+    "GE-B0": {
+      "frames": 1995,
+      "duration_s": 399.58401703834534,
+      "gt_arc_length_m": 285.28000263801914,
+      "rmse_z_m": 0.34290126597807696,
+      "ate_rmse_m": 2.1023945984114145,
+      "final_position_error_m": 1.027262424705296,
+      "delta_rmse_z_pct_vs_fg_ba": 1.2721301524423412,
+      "delta_ate_pct_vs_fg_ba": 0.014017504408148085
+    }
+  }
+}

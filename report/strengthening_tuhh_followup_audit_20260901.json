@@ -1,0 +1,2972 @@
+{
+  "audited_at": "2026-09-01T09:42:41.224521+08:00",
+  "rounds": {
+    "1": {
+      "audited_at": "2026-09-01T09:41:57.232150+08:00",
+      "structural_validation_stdout": "LIO-SAM gravity-direction sweep structural validation: PASS\ndataset: mcd\nstate/odometry rows per run: 709/710\ngravity norm: 9.805000305176 (max error 3.55e-15)\nFG-BA_s0p5: factors=709, median=2.3323->1.7842 deg, max_age=0.003105 s\nFG-BA_s2: factors=709, median=3.6732->3.6315 deg, max_age=0.003105 s\nFG-BA_s5: factors=709, median=4.2131->4.1903 deg, max_age=0.003105 s\nGE-BA_s0p5: factors=709, median=2.3054->1.7591 deg, max_age=0.003105 s\nGE-BA_s2: factors=709, median=3.6912->3.6507 deg, max_age=0.003105 s\nGE-BA_s5: factors=709, median=4.2315->4.2337 deg, max_age=0.003105 s\n",
+      "cells": {
+        "FG-BA_off": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r1/FG-BA_off",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-08-31T16:42:24.254719+08:00",
+            "events": 0,
+            "history_start": "2026-08-24T16:47:40+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 304.48003907415057,
+            "estimate_to_gt_arc_ratio": 1.0347095073045989,
+            "gap_transition_arc_m": 77.96414240566973,
+            "nongap_arc_m": 226.51589666848082,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 9.623601996694354,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 10.894381879198233,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 9.449065040761003,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 11.466487591431095,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 4.157539818020714,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 3.909059174862994,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 14.12190426171301,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 9.641540188323251,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 4.700562454665072,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "cc9e2b5332736eccd9d920e8daf857e57747ef75",
+            "launch.log": "eba121bbb3d81eab90f53a6fcbc1457a1a01c5ff",
+            "odometry.csv": "64f28993620e7c0f418e80208c399e65342bac1d",
+            "roscore.log": "87155684eac818534420ef520375cf2027cd8d1f",
+            "run_meta.txt": "5eebde5eb97edf630502ebab28ff25b9309b8b00",
+            "state_log.csv": "f7fea0b51d1b7ab2febeacf23bb6c1a3509a6b9a",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.0347095073045989,
+            "rmse_z_m": 17.26318921503964,
+            "ate_rmse_m": 26.879152845064198,
+            "rmse_z_mm_per_100m": 5866.521188553077,
+            "ate_mm_per_100m": 9134.29828820675,
+            "final_position_error_m": 26.93645964959043
+          }
+        },
+        "FG-BA_s0p5": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r1/FG-BA_s0p5",
+          "status": "observed_arc_gate_accuracy_outcome",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:41:47.851315+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 482.8490538710546,
+            "estimate_to_gt_arc_ratio": 1.640857995659085,
+            "gap_transition_arc_m": 110.49691194238412,
+            "nongap_arc_m": 372.35214192867045,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 7.89255452626149,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 7.535917295609536,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 14.109378182824296,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 14.376695645090246,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 3.803386074729637,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 19.619449722207225,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 11.628823542291693,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 16.596267145146935,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 14.934439808223063,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "ff3cd3600e72bc53bc31e2f0537dafeb61194698",
+            "campaign_sleep.json": "20bf1d13cd8b1fce76fea6236a5a1106987dc4be",
+            "launch.log": "94def7f1935e28204880e20ec06a466409ae09cc",
+            "campaign_completion.json": "9f3aea21b31cf98f753f705955b023e14a2336fd",
+            "odometry.csv": "cfd9d64f7f4d399fbbc32d4411dd37f2e5fd88b1",
+            "gravity_direction.csv": "420602c04c80794f70fa3c9d5d5f6fa72b488987",
+            "roscore.log": "e0857a18d31c5b8401b87a0df8174f3fccdc0a27",
+            "run_meta.txt": "a2f882d20586a7021284551a4f1ea3fc251dd79b",
+            "state_log.csv": "de464388b1569049d4d0907c72793677182820bd",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "original_gate_warning": "./results/strengthening_20260831/liosam_weights/tuhh_day04/r1/FG-BA_s0p5: arc-length gate failed (1.641)",
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.640857995659086,
+            "rmse_z_m": 4.340566062918922,
+            "ate_rmse_m": 39.744218311435645,
+            "rmse_z_mm_per_100m": 1475.047423812286,
+            "ate_mm_per_100m": 13506.212319296586,
+            "final_position_error_m": 70.61406882515887,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 2.3322553615581976,
+              "median_post_residual_deg": 1.784246285048034,
+              "p95_post_residual_deg": 5.813721496987806,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        },
+        "FG-BA_s2": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r1/FG-BA_s2",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-08-31T16:42:25.735686+08:00",
+            "events": 0,
+            "history_start": "2026-08-24T16:47:40+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 289.53713362195504,
+            "estimate_to_gt_arc_ratio": 0.9839292775556954,
+            "gap_transition_arc_m": 54.88871368502882,
+            "nongap_arc_m": 234.64841993692622,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 8.175060477832453,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 7.668170865363397,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 6.98124474231502,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 9.084450143269208,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 4.223025733212655,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 3.2913157655704834,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 4.724589811296339,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 6.976101042114427,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 3.7647551040548386,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "06fd00ab794bfa0af1373b86ad7d2a684210e447",
+            "launch.log": "87a2f6b88925ae57c62943bcfc733cbc12468c82",
+            "odometry.csv": "c8319c16ad64f0e7c6d1519abb7ed3e145eb1737",
+            "gravity_direction.csv": "967fefe819b415647ee1eb3f83e5406f59b585cd",
+            "roscore.log": "1a697a15e159fb07acb57fe7f9fd56e053ee42ec",
+            "run_meta.txt": "2dae8b34c0a3e81e5c77d732ae62a8e3de8cf311",
+            "state_log.csv": "4851d761a5f4ab124b9670016a1798c51ddbd9f5",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 0.9839292775556954,
+            "rmse_z_m": 17.769806729737784,
+            "ate_rmse_m": 24.26715318145266,
+            "rmse_z_mm_per_100m": 6038.6841850566125,
+            "ate_mm_per_100m": 8246.666739934028,
+            "final_position_error_m": 41.512319270226854,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 3.67323579942558,
+              "median_post_residual_deg": 3.631491479869121,
+              "p95_post_residual_deg": 10.286627825167924,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        },
+        "FG-BA_s5": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r1/FG-BA_s5",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:41:50.921583+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 314.672411569994,
+            "estimate_to_gt_arc_ratio": 1.0693460790664369,
+            "gap_transition_arc_m": 80.45029676512844,
+            "nongap_arc_m": 234.22211480486556,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 9.19416953287285,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 9.181913173789928,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 9.55512370813669,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 8.49891072095546,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 8.449339926990612,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 7.83069391361644,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 11.386297472130133,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 8.671453129248837,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 7.682395187387491,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "c04e2a93ad4f7c9be7d54bca3aa0adb21aca25d3",
+            "campaign_sleep.json": "4c274c4fa1db4f86869b6dfb92802746fc1f6d22",
+            "launch.log": "182138963efa11d89e1b691a25241116bc2c5f4a",
+            "campaign_completion.json": "963528410d88d58cab9d93c19980a9d7a0dad5fe",
+            "odometry.csv": "67435301a8bfbc0e2a862e9850b8680a21cdf369",
+            "gravity_direction.csv": "e46c15696efdb08f34b6ab4285199c8aae2dbcd6",
+            "roscore.log": "4f6ccacb2cb1ab6ee8ce2c921afc53eeb12f9412",
+            "run_meta.txt": "61065552ef9527602a214c08a99349bd2576a3c6",
+            "state_log.csv": "2eb6699d4bda797ddc70a33a34ac536d40d2fb48",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.069346079066437,
+            "rmse_z_m": 7.871714135653336,
+            "ate_rmse_m": 10.393353903127403,
+            "rmse_z_mm_per_100m": 2675.031663721298,
+            "ate_mm_per_100m": 3531.956357154933,
+            "final_position_error_m": 17.673728041803336,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 4.213067539256495,
+              "median_post_residual_deg": 4.190266678036971,
+              "p95_post_residual_deg": 11.472706122986313,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        },
+        "GE-BA_off": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r1/GE-BA_off",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-08-31T16:42:27.223742+08:00",
+            "events": 0,
+            "history_start": "2026-08-24T16:47:40+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 331.12121020405874,
+            "estimate_to_gt_arc_ratio": 1.1252437608394639,
+            "gap_transition_arc_m": 80.82384285010716,
+            "nongap_arc_m": 250.29736735395159,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 9.918530985290875,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 9.279800529562353,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 9.38379797204966,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 8.007551283511804,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 10.274431505310162,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 10.178360327854902,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 10.351963762288115,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 7.1587330074201185,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 6.270673476819153,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "c07e7fcad50f4f3d0dd80db132352c1005cc639f",
+            "launch.log": "67664e2c110ce722ab8558c189b2474ae5343680",
+            "odometry.csv": "2e2dfc61e6553a0cb333f025ffe8805fe04b28e2",
+            "roscore.log": "b3381d04caad0f160ddcb7443029109991363c11",
+            "run_meta.txt": "2214aae040549bb8a1dcb4bd06351867c8f1ef3c",
+            "state_log.csv": "da4a9b3ff712a19c68827579a3ab9a8bcbaad788",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.1252437608394636,
+            "rmse_z_m": 3.142861536639416,
+            "ate_rmse_m": 11.436829441761528,
+            "rmse_z_mm_per_100m": 1068.0334651792368,
+            "ate_mm_per_100m": 3886.5589326628715,
+            "final_position_error_m": 0.8300757510975004
+          }
+        },
+        "GE-BA_s0p5": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r1/GE-BA_s0p5",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:41:54.005528+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 423.3949647601287,
+            "estimate_to_gt_arc_ratio": 1.4388161428063653,
+            "gap_transition_arc_m": 115.59171529332417,
+            "nongap_arc_m": 307.8032494668045,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 7.440878181346379,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 7.611573409956484,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 13.470230862511366,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 14.834606076312308,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 3.4724862617559342,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 19.67216973064442,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 10.806837221707015,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 16.820745058857675,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 21.462188490232588,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "599bdedd1a49277e6db512109d3658464f9f809b",
+            "campaign_sleep.json": "b4cda3edd9fb81791bd5c1fb417ef070c5ff4831",
+            "launch.log": "477113832c7563a8e0de04808f0e12e903dae23c",
+            "campaign_completion.json": "1d6012d85920cf44f4bc0b426de3ba8c7fb815d6",
+            "odometry.csv": "7274c7cbebd7c96a97b1d2db50f49a1043f9c8d0",
+            "gravity_direction.csv": "0dac2d7f298a303d85a9a939135851c41cab705b",
+            "roscore.log": "e5133b1c9d6c839a7657f1d84cfbcb77bff1c383",
+            "run_meta.txt": "84df0caa9c382bec04c0d86c4d70b8b916db48b4",
+            "state_log.csv": "997a065bcfba72e44344ccda8ca970f9e8950ea7",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.4388161428063648,
+            "rmse_z_m": 4.8006229997378576,
+            "ate_rmse_m": 37.644739657489346,
+            "rmse_z_mm_per_100m": 1631.3878157392776,
+            "ate_mm_per_100m": 12792.749942509301,
+            "final_position_error_m": 37.072331774489044,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 2.305439804289232,
+              "median_post_residual_deg": 1.759138520505097,
+              "p95_post_residual_deg": 5.6651650386174355,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        },
+        "GE-BA_s2": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r1/GE-BA_s2",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-08-31T16:42:28.706034+08:00",
+            "events": 0,
+            "history_start": "2026-08-24T16:47:40+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 280.37928246434353,
+            "estimate_to_gt_arc_ratio": 0.9528083026370295,
+            "gap_transition_arc_m": 52.05183547180987,
+            "nongap_arc_m": 228.32744699253365,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 8.199352278700612,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 8.184371548202254,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 6.32750982901602,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 7.159521878802782,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 6.192729449485601,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 3.490219917486721,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 3.971909877809703,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 5.454040186889784,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 3.072180505416396,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "3726d934a43032722c507034e1d32fd16762e52f",
+            "launch.log": "2ad98740496bfbc3fa17670da597139557bd8b98",
+            "odometry.csv": "4fbe086e5e47da210e646afab6ee7cc19326ceb5",
+            "gravity_direction.csv": "c41adcca4df1848e358d172ca763d31dd2f0a36f",
+            "roscore.log": "6a4ed30b61fe11081f3fb94fb95170097141f925",
+            "run_meta.txt": "7fc3625c6657094ce6af166cd071bf3ed4b06127",
+            "state_log.csv": "e467966c80d0df637aa7e1ff816960b8b988bce7",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 0.9528083026370291,
+            "rmse_z_m": 19.998835877772542,
+            "ate_rmse_m": 24.53555004395025,
+            "rmse_z_mm_per_100m": 6796.171493106043,
+            "ate_mm_per_100m": 8337.875604134597,
+            "final_position_error_m": 39.83477365639809,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 3.691155286304058,
+              "median_post_residual_deg": 3.6506719791096724,
+              "p95_post_residual_deg": 10.130089921172441,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        },
+        "GE-BA_s5": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r1/GE-BA_s5",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:41:57.197188+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 319.7030180603231,
+            "estimate_to_gt_arc_ratio": 1.0864415063360848,
+            "gap_transition_arc_m": 80.45153035842797,
+            "nongap_arc_m": 239.2514877018951,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 9.824641967578255,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 9.24475826495174,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 8.805832117087963,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 7.652162987455648,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 10.205781363972626,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 8.46337315781785,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 10.314426174411969,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 8.6033816109501,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 7.337172714201823,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "0394fb626961a207216024dba0401a2063d28ceb",
+            "campaign_sleep.json": "596896ecf36a744c1d0685807ee1355a239b7c6f",
+            "launch.log": "382499d64e91439a3099b96f1af252181127e6cb",
+            "campaign_completion.json": "81779b0f805fdad50614d2abc175951fd578ec3b",
+            "odometry.csv": "856a47e3dbc83e081aca104cf130badc9a549de9",
+            "gravity_direction.csv": "af278836cb0e3af167a3e5e022b077384f67a4eb",
+            "roscore.log": "e5a52c0e80527139090b5692e94fab80ca9082a9",
+            "run_meta.txt": "8a54d90373862e6ef664e70c141991c99cbd994b",
+            "state_log.csv": "c98329067de6815eb198ce7addd12f54ee09ac03",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.0864415063360848,
+            "rmse_z_m": 9.173835684640917,
+            "ate_rmse_m": 13.837776019949608,
+            "rmse_z_mm_per_100m": 3117.5294873883286,
+            "ate_mm_per_100m": 4702.468658152839,
+            "final_position_error_m": 25.06187325441052,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 4.231497714064268,
+              "median_post_residual_deg": 4.233702700086532,
+              "p95_post_residual_deg": 11.4159886482852,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        }
+      },
+      "interpretation": "With usable shared GT and complete finite outputs, excess estimated travel is retained as a flagged accuracy outcome. It is not proof of factor causality; low-level IMU receipt timing was not recorded."
+    },
+    "2": {
+      "audited_at": "2026-09-01T09:42:15.961388+08:00",
+      "structural_validation_stdout": "LIO-SAM gravity-direction sweep structural validation: PASS\ndataset: mcd\nstate/odometry rows per run: 709/710\ngravity norm: 9.805000305176 (max error 3.55e-15)\nFG-BA_s0p5: factors=709, median=2.3313->1.7810 deg, max_age=0.003105 s\nFG-BA_s2: factors=709, median=3.6346->3.5686 deg, max_age=0.003105 s\nFG-BA_s5: factors=709, median=4.1831->4.2489 deg, max_age=0.003105 s\nGE-BA_s0p5: factors=709, median=2.3299->1.7642 deg, max_age=0.003105 s\nGE-BA_s2: factors=709, median=3.7572->3.7115 deg, max_age=0.003105 s\nGE-BA_s5: factors=709, median=4.1357->4.1356 deg, max_age=0.003105 s\n",
+      "cells": {
+        "FG-BA_off": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r2/FG-BA_off",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:42:00.973078+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 309.14777961047355,
+            "estimate_to_gt_arc_ratio": 1.0505718131728277,
+            "gap_transition_arc_m": 80.21218358179405,
+            "nongap_arc_m": 228.9355960286795,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 9.664024397755226,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 10.451610182932363,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 8.289124611485777,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 9.626154081737827,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 6.7789578868862606,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 6.760478329696425,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 12.295771582091897,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 8.917521515827787,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 7.428540993380494,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "2350bd7f1f8845fa536663e311b223a65604b1e5",
+            "campaign_sleep.json": "8f567752ab6db6893675a4843afa281f06509cab",
+            "launch.log": "6144838799f1c7612731d4d6c315684a6ecf5da5",
+            "campaign_completion.json": "b925045895393929dfabd575c6b328f1d5c4ed21",
+            "odometry.csv": "8497f9091aec1c956ec9e9d3816013670a8ed214",
+            "roscore.log": "dc7f2fb5a909c323b3cd1ceb320d5cb32027c3ae",
+            "run_meta.txt": "f8d42ede34c28cc683fe541bc2482e92d0252f75",
+            "state_log.csv": "cc79c8ed02eb6f71c61dc2248d27dc19366ce05f",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.050571813172828,
+            "rmse_z_m": 11.998418989923115,
+            "ate_rmse_m": 19.562522441332373,
+            "rmse_z_mm_per_100m": 4077.402984855132,
+            "ate_mm_per_100m": 6647.899815848592,
+            "final_position_error_m": 22.333234247554323
+          }
+        },
+        "FG-BA_s0p5": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r2/FG-BA_s0p5",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:42:03.934043+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 412.066029479615,
+            "estimate_to_gt_arc_ratio": 1.4003172084327682,
+            "gap_transition_arc_m": 112.18375900487825,
+            "nongap_arc_m": 299.88227047473674,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 7.836298803676216,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 7.794657694227591,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 14.09348037773749,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 14.715015429499854,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 4.291911782283001,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 19.453873412743075,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 11.512130676162823,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 13.946675118312337,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 18.539715710235875,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "ce5b43e2ca362c5932160e269a3151e820b87797",
+            "campaign_sleep.json": "ebe8449203007bd97da3204d39512b488bbefb0c",
+            "launch.log": "c562354fecb4a1070f03f8fa9e6d993c18a9de64",
+            "campaign_completion.json": "e0e5d163ce61bde8a883479c01f384b8a0762d45",
+            "odometry.csv": "f37254d82f548059f9746f8177b060e5fe64f037",
+            "gravity_direction.csv": "840fb65b58b56b207d105d76715fa22d4c7c82f1",
+            "roscore.log": "8aae9c7afc269bf869bb0dafa81a056dd3396966",
+            "run_meta.txt": "400ecd52b6bcc7764ee282cf044873873fad034f",
+            "state_log.csv": "bf06a36526317229328016d38d3217fcb0a51a8f",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.4003172084327675,
+            "rmse_z_m": 4.374406272951174,
+            "ate_rmse_m": 38.65376457275556,
+            "rmse_z_mm_per_100m": 1486.5472867116823,
+            "ate_mm_per_100m": 13135.645219358275,
+            "final_position_error_m": 38.3091440084335,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 2.3313240843573784,
+              "median_post_residual_deg": 1.7810013976668824,
+              "p95_post_residual_deg": 5.710443950300227,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        },
+        "FG-BA_s2": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r2/FG-BA_s2",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:42:06.932456+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 282.3857319771214,
+            "estimate_to_gt_arc_ratio": 0.9596267870050388,
+            "gap_transition_arc_m": 55.894979628209946,
+            "nongap_arc_m": 226.49075234891146,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 8.175060477832453,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 7.668170865363397,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 6.962076932529724,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 8.700610769154348,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 5.560048970485999,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 3.216383081525377,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 5.171941299439225,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 6.483757667007948,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 3.9569295648714733,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "b18d9c5f9cf093e159a36e2b8477eb868ea3ac77",
+            "campaign_sleep.json": "a4b0305fa29869a19917aff165f21adae0ce1e28",
+            "launch.log": "03280275b0aedcecc307fd22d1d95c29a8615bc0",
+            "campaign_completion.json": "728af32877d6d7833d4f2e6997b8d7eb46cfeac2",
+            "odometry.csv": "2e7539ead6d0eb97748e2e4251bd074b5056393a",
+            "gravity_direction.csv": "1b77df41155560eac96ce91a8ccd267f22b7dc5f",
+            "roscore.log": "76fbdae3b7dfe76c16394e07997c06506ceeb082",
+            "run_meta.txt": "365864abe61827941b76757e49ada41ebd0041e5",
+            "state_log.csv": "d610044a53adec9a75d0c33c31abe240ec13bd46",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 0.9596267870050388,
+            "rmse_z_m": 19.052101061453893,
+            "ate_rmse_m": 25.12037830549411,
+            "rmse_z_mm_per_100m": 6474.444158099161,
+            "ate_mm_per_100m": 8536.616830061885,
+            "final_position_error_m": 46.13447953737945,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 3.6346466728933997,
+              "median_post_residual_deg": 3.5686109534638617,
+              "p95_post_residual_deg": 10.275114002770977,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        },
+        "FG-BA_s5": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r2/FG-BA_s5",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:42:09.888863+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 325.94793081828317,
+            "estimate_to_gt_arc_ratio": 1.1076634906165568,
+            "gap_transition_arc_m": 79.92867890489639,
+            "nongap_arc_m": 246.01925191338677,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 9.19416953287285,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 9.181913173789928,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 9.55512370813669,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 8.49891072095546,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 8.437439040952222,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 7.905083475476013,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 11.727513854632162,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 8.988369483647597,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 6.440155914433457,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "80a99d7e57e80da748eb138480dce8ffd340d92a",
+            "campaign_sleep.json": "69d5c63289c218c94c9f248e8e613a51ed82b734",
+            "launch.log": "f06c49d3da6a55072dadb92769900b2855b6fd2a",
+            "campaign_completion.json": "19b46d56d1944eed5005149e8ed275bd5469dc14",
+            "odometry.csv": "407e9e28c531b86e4f3f649cd04a04f6190fb451",
+            "gravity_direction.csv": "8b9637717b12b0d07e970086ad229c8865eb3363",
+            "roscore.log": "13ec1cf155ac2720a4dcdc181f107258a8719b87",
+            "run_meta.txt": "8d505cec93001daabec4e4c5160eb23529487380",
+            "state_log.csv": "438e16e80209ab2c3a5e673d551da9d3b77549b0",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.107663490616557,
+            "rmse_z_m": 7.401302712114451,
+            "ate_rmse_m": 10.143928395298998,
+            "rmse_z_mm_per_100m": 2515.1725236080647,
+            "ate_mm_per_100m": 3447.1944971988264,
+            "final_position_error_m": 12.205225840414345,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 4.183146821585103,
+              "median_post_residual_deg": 4.2489203250744305,
+              "p95_post_residual_deg": 11.41303277386651,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        },
+        "GE-BA_off": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r2/GE-BA_off",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-08-31T16:42:30.227711+08:00",
+            "events": 0,
+            "history_start": "2026-08-24T16:47:40+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 331.19627517306975,
+            "estimate_to_gt_arc_ratio": 1.1254988528886418,
+            "gap_transition_arc_m": 85.17541321617193,
+            "nongap_arc_m": 246.02086195689782,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 9.918530985290875,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 9.279800529562353,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 9.38379797204966,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 8.007551283511804,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 10.255702797240577,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 10.299601321210972,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 11.594078552297841,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 8.903617816931138,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 7.532731958076708,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "64bd0002df4897a2b22edf9b2b706f57d8311808",
+            "launch.log": "815a2ba48f0bfa30848b65854d11dc6459273b56",
+            "odometry.csv": "7ee6c1c7da922b9134e4671e95a22dc59465f677",
+            "roscore.log": "3a9bff5f737eeaacf14daac7a56de3969b7ad502",
+            "run_meta.txt": "be53760dfa788cb7703bb85cdc1a0869b8bd03f6",
+            "state_log.csv": "788d0b2cd044e8aa7614a27b9af6ace5af237a20",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.1254988528886416,
+            "rmse_z_m": 3.5129863051422543,
+            "ate_rmse_m": 11.554223468587546,
+            "rmse_z_mm_per_100m": 1193.8123563089555,
+            "ate_mm_per_100m": 3926.452751655738,
+            "final_position_error_m": 4.183384294837513
+          }
+        },
+        "GE-BA_s0p5": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r2/GE-BA_s0p5",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:42:12.894057+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 466.13167345769966,
+            "estimate_to_gt_arc_ratio": 1.5840475968443584,
+            "gap_transition_arc_m": 100.66546633392139,
+            "nongap_arc_m": 365.4662071237783,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 7.440878181346379,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 7.611573409956484,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 13.393184487456518,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 15.234537663666922,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 4.560320712508608,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 19.826237830926438,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 11.547674891328528,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 5.604808676136247,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 15.446250480595271,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "9a7200e764fb315fc281f3a7db313454f5c7a34a",
+            "campaign_sleep.json": "d1ffb3ac15882a1819e294be477f71c71b7b65e9",
+            "launch.log": "b2d934d385f50c580767fb7d23cff3457cf275fd",
+            "campaign_completion.json": "fd404a9428b22df2203095a94b68ed93fe5358d2",
+            "odometry.csv": "0979b0ebcf51126f3b5f348dccff1df2ab694a34",
+            "gravity_direction.csv": "911882102513ba48456aebfe80c389d62f2a03fc",
+            "roscore.log": "e9a9f93ca5d2f1fcfb247d45a0a3ff76798c25a5",
+            "run_meta.txt": "88b4e32344c9e65191a4d12c453dfe27408d5604",
+            "state_log.csv": "e08338073af8cb73f50a60dfb8c46d9d014006c6",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.5840475968443584,
+            "rmse_z_m": 4.279370976962163,
+            "ate_rmse_m": 38.87565062999828,
+            "rmse_z_mm_per_100m": 1454.2515984332829,
+            "ate_mm_per_100m": 13211.04839313134,
+            "final_position_error_m": 16.65744571818219,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 2.329943730720955,
+              "median_post_residual_deg": 1.7641946862665179,
+              "p95_post_residual_deg": 5.841520721080381,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        },
+        "GE-BA_s2": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r2/GE-BA_s2",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-08-31T16:42:31.729015+08:00",
+            "events": 0,
+            "history_start": "2026-08-24T16:47:40+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 282.5908702506217,
+            "estimate_to_gt_arc_ratio": 0.9603239050248218,
+            "gap_transition_arc_m": 52.08438689962206,
+            "nongap_arc_m": 230.50648335099964,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 8.199352278700612,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 8.184371548202254,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 6.32750982901602,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 7.159521878802782,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 6.045908152126563,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 3.413906927067878,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 4.336474525734606,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 5.411681257838422,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 3.0056605021329292,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "6c8b72637a70163cb7e66064c75172ef95721d18",
+            "launch.log": "bc60baeea72f57d27d3e0524383691d07c71d415",
+            "odometry.csv": "f2a0d3133031b3502e79509c73425731a9738584",
+            "gravity_direction.csv": "20905993d8ba791e6af3e3c9d41979e97594f5fc",
+            "roscore.log": "875c7751fb8a7bf94e386a55d45ad9bb0909d037",
+            "run_meta.txt": "7e750359c079815ce4b20571c6792ef13b134ec7",
+            "state_log.csv": "5192691b060919fa97bef7437087b3143ef160ba",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 0.9603239050248212,
+            "rmse_z_m": 19.320912566973096,
+            "ate_rmse_m": 24.079739448471308,
+            "rmse_z_mm_per_100m": 6565.793929755569,
+            "ate_mm_per_100m": 8182.978239398852,
+            "final_position_error_m": 38.42267728707324,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 3.7571616953102587,
+              "median_post_residual_deg": 3.711457982553909,
+              "p95_post_residual_deg": 10.154878439373174,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        },
+        "GE-BA_s5": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r2/GE-BA_s5",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:42:15.927913+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 315.6073343663427,
+            "estimate_to_gt_arc_ratio": 1.07252321182338,
+            "gap_transition_arc_m": 76.43314161355579,
+            "nongap_arc_m": 239.1741927527869,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 9.837662504148808,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 9.267344147112974,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 8.77926480281731,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 7.52984691148053,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 9.992377115554262,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 8.188765078250464,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 9.255123274598613,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 7.454409819894468,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 6.1283479596983605,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "ffb603292f1020953739a454af08d65460bf9e97",
+            "campaign_sleep.json": "a19889359fd74a0a620a9d559a8bd54f4774be28",
+            "launch.log": "777bd8a33a02bb7b6a11ddff4264a22ee3898df4",
+            "campaign_completion.json": "56cb00a0ac8ac6ed36ca3e6bf306fbea8dd2714e",
+            "odometry.csv": "8a0ff9a6acabd4f29dc48c6777f7be09bc566ac4",
+            "gravity_direction.csv": "79f89815fb34c611436c3d31d14de4baf129cd6b",
+            "roscore.log": "3200cda46beba1be05fd502627ebeeec107228d3",
+            "run_meta.txt": "faa0cdbe308858993bc1240d864310b0b2e443de",
+            "state_log.csv": "063e4e66d8009243ff046de6c2d62991b6818635",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.0725232118233796,
+            "rmse_z_m": 5.748053655123928,
+            "ate_rmse_m": 11.964097961450607,
+            "rmse_z_mm_per_100m": 1953.3516165916074,
+            "ate_mm_per_100m": 4065.739726216254,
+            "final_position_error_m": 16.506485064945835,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 4.135744269112469,
+              "median_post_residual_deg": 4.135582634340151,
+              "p95_post_residual_deg": 11.223202078655333,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        }
+      },
+      "interpretation": "With usable shared GT and complete finite outputs, excess estimated travel is retained as a flagged accuracy outcome. It is not proof of factor causality; low-level IMU receipt timing was not recorded."
+    },
+    "3": {
+      "audited_at": "2026-09-01T09:42:41.070775+08:00",
+      "structural_validation_stdout": "LIO-SAM gravity-direction sweep structural validation: PASS\ndataset: mcd\nstate/odometry rows per run: 709/710\ngravity norm: 9.805000305176 (max error 1.78e-15)\nFG-BA_s0p5: factors=709, median=2.3323->1.7624 deg, max_age=0.003105 s\nFG-BA_s2: factors=709, median=3.7138->3.6081 deg, max_age=0.003105 s\nFG-BA_s5: factors=709, median=4.1971->4.2363 deg, max_age=0.003105 s\nGE-BA_s0p5: factors=709, median=2.3182->1.8234 deg, max_age=0.003105 s\nGE-BA_s2: factors=709, median=3.7874->3.7325 deg, max_age=0.003105 s\nGE-BA_s5: factors=709, median=4.2223->4.2272 deg, max_age=0.003105 s\n",
+      "cells": {
+        "FG-BA_off": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r3/FG-BA_off",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:42:19.686720+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 312.2124903432727,
+            "estimate_to_gt_arc_ratio": 1.0609865692337117,
+            "gap_transition_arc_m": 81.94911581112441,
+            "nongap_arc_m": 230.26337453214828,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 9.664024397755226,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 10.451610182932363,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 8.289124611485777,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 9.626154081737827,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 6.797877779566815,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 6.703598993043245,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 12.452174973593197,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 9.437641657819574,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 8.526909133190381,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "0fe57fbd2f444ab3a8d048339984cf862c45eaf3",
+            "campaign_sleep.json": "6d508223c1278096a24efc1c071233dfea87feb8",
+            "launch.log": "425fcc0e1e88ecd5d5e6dab95b9182574d59a995",
+            "campaign_completion.json": "160f65cd3e22eac5d6cf16cc48dd043f4cd6bf42",
+            "odometry.csv": "974f3947c0939702233ceb8358f97106602cb34c",
+            "roscore.log": "0a36eb648287fa1a3e6620c01ef145af13c3097f",
+            "run_meta.txt": "33dcd09e34c2282dd490ce298f7afffa3dde7911",
+            "state_log.csv": "1ca0e151fb1fa560455bf035c8587acae9b33d73",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.0609865692337117,
+            "rmse_z_m": 12.332893910898111,
+            "ate_rmse_m": 19.80505655255439,
+            "rmse_z_mm_per_100m": 4191.067046952648,
+            "ate_mm_per_100m": 6730.319783834073,
+            "final_position_error_m": 23.85798901584738
+          }
+        },
+        "FG-BA_s0p5": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r3/FG-BA_s0p5",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:42:22.736982+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 458.91982169035384,
+            "estimate_to_gt_arc_ratio": 1.5595396796369287,
+            "gap_transition_arc_m": 116.05414243856494,
+            "nongap_arc_m": 342.8656792517889,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 7.89255452626149,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 7.535917295609536,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 14.035109140285106,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 14.628242295955976,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 4.510539734544622,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 19.433132798023557,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 11.573303497171576,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 14.512890795097775,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 21.932452355615293,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "67b085ba40f6a420dd8128da0a9a2cadd3c235d7",
+            "campaign_sleep.json": "a433156817a879dc1ad30e6eef7edbd72e55fb18",
+            "launch.log": "61d742082fb0613962df8f749a206933c975e1af",
+            "campaign_completion.json": "7ef4391e81f9bf59fe0f86a6371de9ec4e91c4fd",
+            "odometry.csv": "c1d47adec11cb62940714211c26514327a2fbacc",
+            "gravity_direction.csv": "64c77fc02af11fa9fb72d66c5021db807f5702b1",
+            "roscore.log": "7e99dfb8213feebe8ae0568688162cf7ca13d28b",
+            "run_meta.txt": "eac26056de1eede6aec4fdc5c5c2467e6283d8cf",
+            "state_log.csv": "1e29011e849f1b93924993535ae0bd03cda16189",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.5595396796369292,
+            "rmse_z_m": 4.371512314823229,
+            "ate_rmse_m": 40.48243382633089,
+            "rmse_z_mm_per_100m": 1485.5638376823695,
+            "ate_mm_per_100m": 13757.078883168728,
+            "final_position_error_m": 32.20431782343883,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 2.3322553615581976,
+              "median_post_residual_deg": 1.7624468661286796,
+              "p95_post_residual_deg": 5.890181473928532,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        },
+        "FG-BA_s2": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r3/FG-BA_s2",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:42:25.747126+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 284.26326917789106,
+            "estimate_to_gt_arc_ratio": 0.9660071907840901,
+            "gap_transition_arc_m": 52.66653157202795,
+            "nongap_arc_m": 231.5967376058631,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 8.175060477832453,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 7.668170865363397,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 6.962076932529724,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 8.700610769154348,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 5.583787406349709,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 3.2429222106408497,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 3.7628461114777014,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 5.170252504262907,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 3.4008042944168544,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "a341d224024114973b5316525fd3c1c69db9781e",
+            "campaign_sleep.json": "0479429f2715b936e48cfdd54e09a5ca30efcf71",
+            "launch.log": "f6a7f5e4956b2dd1dea53f99c7fcbc51e451a7de",
+            "campaign_completion.json": "939590aafd95762bf94312e80a7cc3a429d02ba2",
+            "odometry.csv": "c4bb453223fd19ad537b41092d1ddc59da5f0eb7",
+            "gravity_direction.csv": "7297635101410e55f63a7e826abe01b8c5b2f39f",
+            "roscore.log": "5bd3132c2f9958ec484dbd752b4f1433194a494e",
+            "run_meta.txt": "a217266ede755c2518fed12133f84d5bb48c67b6",
+            "state_log.csv": "381d635f76c9c8f3958300a476ef5e164df4a2f8",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 0.9660071907840901,
+            "rmse_z_m": 19.266028553989262,
+            "ate_rmse_m": 24.75468071420173,
+            "rmse_z_mm_per_100m": 6547.142785921614,
+            "ate_mm_per_100m": 8412.34241927975,
+            "final_position_error_m": 42.51150498928048,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 3.7138169857005647,
+              "median_post_residual_deg": 3.608057067003984,
+              "p95_post_residual_deg": 10.365635344315315,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        },
+        "FG-BA_s5": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r3/FG-BA_s5",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:42:28.764072+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 314.3364375668725,
+            "estimate_to_gt_arc_ratio": 1.0682043441392672,
+            "gap_transition_arc_m": 77.1583982176682,
+            "nongap_arc_m": 237.1780393492043,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 9.178595411719527,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 9.207339408282282,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 9.46366455796958,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 8.826940563295157,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 8.18585885607156,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 8.00996231122221,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 10.049579903633337,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 7.592402705968669,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 6.644054499505885,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "4b54cd06b01da6b79b6d2d1a17657e0711c94e88",
+            "campaign_sleep.json": "c11afb2d248706932b336ac986f90717a1801cda",
+            "launch.log": "a79d7a7717a93fcb5bf2524ff4bcefa21b8d2fbf",
+            "campaign_completion.json": "e0d4f6d9da3bb3a482004dcf971252d06a2f95e0",
+            "odometry.csv": "32db4d2e1f89c82a429c40f7a76d8a9f3d33dbec",
+            "gravity_direction.csv": "64795b8e69dd3462b21eace0cd96144408e12b91",
+            "roscore.log": "6f290c0e094ad4a8a351c619a7016a3ccf5ce91f",
+            "run_meta.txt": "85a7f4f83e7d3bbf19f53fa48a3d573ae42e9933",
+            "state_log.csv": "c52c936c87f2e87fb220c099bc611682daa6331d",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.0682043441392672,
+            "rmse_z_m": 7.919326362401819,
+            "ate_rmse_m": 10.579846161324692,
+            "rmse_z_mm_per_100m": 2691.2116484028556,
+            "ate_mm_per_100m": 3595.331714430306,
+            "final_position_error_m": 18.1996179434754,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 4.197068965682814,
+              "median_post_residual_deg": 4.236290655844566,
+              "p95_post_residual_deg": 11.357425330632864,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        },
+        "GE-BA_off": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r3/GE-BA_off",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:42:31.803624+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 324.8426077058429,
+            "estimate_to_gt_arc_ratio": 1.1039072892689639,
+            "gap_transition_arc_m": 83.6222000316372,
+            "nongap_arc_m": 241.22040767420572,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 9.918530985290875,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 9.279800529562353,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 9.38379797204966,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 8.007551283511804,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 10.271298897866014,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 10.166237698898481,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 10.819639203267862,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 8.658053100851177,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 7.1172903603389654,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "31efdb8d3dcb48c259c349b0be2642f3727b1697",
+            "campaign_sleep.json": "aa4c9209ad7803d0bb0006715791ea9545fb9142",
+            "launch.log": "791e143c7ce52e6b118bac289b2d1959ad55f003",
+            "campaign_completion.json": "5660e92652fa2fc101d4bb9d235dbdc326a8ae54",
+            "odometry.csv": "ca40c7e558a55aa7dc56d348445af76fe5bb06ec",
+            "roscore.log": "547b0439cf1a399226636980ad3b3cd517d17ea0",
+            "run_meta.txt": "500344616e625a1a977c68bb606a2ec103af34a4",
+            "state_log.csv": "19c4362c675dfd1571afd82c81de33a906afb0b1",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.1039072892689639,
+            "rmse_z_m": 5.312833251450113,
+            "ate_rmse_m": 12.197951667899043,
+            "rmse_z_mm_per_100m": 1805.4513828608262,
+            "ate_mm_per_100m": 4145.20984652903,
+            "final_position_error_m": 14.441104004044185
+          }
+        },
+        "GE-BA_s0p5": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r3/GE-BA_s0p5",
+          "status": "observed_arc_gate_accuracy_outcome",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:42:34.900535+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 486.5817771598545,
+            "estimate_to_gt_arc_ratio": 1.6535428477984988,
+            "gap_transition_arc_m": 119.26964568087168,
+            "nongap_arc_m": 367.3121314789828,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 7.440878181346379,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 7.611573409956484,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 13.470230862511366,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 15.082412489711439,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 4.048479279077008,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 19.77447847991587,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 9.46891275699758,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 16.47637473950092,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 25.89630548185463,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "eb0580bc31416cae1ecf7e95c4b5ba29b05bc353",
+            "campaign_sleep.json": "7e2d346c0ddfd83d7186b415e89c251bd6d32d29",
+            "launch.log": "cf17f0ef48fa018d88642c0557bba107abb579fe",
+            "campaign_completion.json": "aa85dd56c8c85406d2cf21bedfc75b6fc839489d",
+            "odometry.csv": "b53c915db6f3232a8273fa061a978ae360dbb91d",
+            "gravity_direction.csv": "41a2b7c2d5acbfa947210a43fe6aed09a687a83d",
+            "roscore.log": "9ca4c89b74a17e66fe554a551c1f2d5429ac934c",
+            "run_meta.txt": "2565af4f37132d1ed704ecedba985e12ef2408a2",
+            "state_log.csv": "e44148ad006519e315147bf3d5bae5c41025adea",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "original_gate_warning": "./results/strengthening_20260831/liosam_weights/tuhh_day04/r3/GE-BA_s0p5: arc-length gate failed (1.654)",
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.653542847798498,
+            "rmse_z_m": 4.843631477152903,
+            "ate_rmse_m": 40.35792687743958,
+            "rmse_z_mm_per_100m": 1646.0033158592066,
+            "ate_mm_per_100m": 13714.767891573001,
+            "final_position_error_m": 81.47615825878553,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 2.3181861811791546,
+              "median_post_residual_deg": 1.823433024478689,
+              "p95_post_residual_deg": 5.712290387750168,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        },
+        "GE-BA_s2": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r3/GE-BA_s2",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:42:38.042473+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 281.9021077416634,
+            "estimate_to_gt_arc_ratio": 0.9579832947225464,
+            "gap_transition_arc_m": 51.33293671123878,
+            "nongap_arc_m": 230.5691710304246,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 8.199352278700612,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 8.184371548202254,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 6.32750982901602,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 7.159521878802782,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 6.045908152126563,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 3.4066553041438685,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 4.23408266219305,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 4.80443989522927,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 2.9710951628243616,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "a3fafa84f6b1184a9ae2dae21f994b4f2131c299",
+            "campaign_sleep.json": "d35a7c652032565f2bed8a66a9fda5571e237895",
+            "launch.log": "37a08e6533bf5c4a51b9a84865dda739e95dc848",
+            "campaign_completion.json": "29db231e567be3fb8037674118da0a282636ef33",
+            "odometry.csv": "94fcc3bbe93701a1a2fcb475fd1a1ad468239b9d",
+            "gravity_direction.csv": "87ff59c7d1af04fd79e12984cefd5a1524e9ae5f",
+            "roscore.log": "4c18aefb87c6e272541e8fd3838a22eead1b2960",
+            "run_meta.txt": "14b65c6b813d956dfc9bb650dc57d3b53c062442",
+            "state_log.csv": "075140518b3591e53b701a3117038cf3d7489212",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 0.9579832947225461,
+            "rmse_z_m": 19.577101892225034,
+            "ate_rmse_m": 23.738445034662373,
+            "rmse_z_mm_per_100m": 6652.854326658492,
+            "ate_mm_per_100m": 8066.9967202714,
+            "final_position_error_m": 36.113585792338846,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 3.787449378570991,
+              "median_post_residual_deg": 3.732511175408866,
+              "p95_post_residual_deg": 10.192772651450598,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        },
+        "GE-BA_s5": {
+          "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r3/GE-BA_s5",
+          "status": "admitted_accuracy",
+          "state_rows": 709,
+          "odometry_rows": 710,
+          "sleep": {
+            "checked_at": "2026-09-01T09:42:41.035259+08:00",
+            "events": 0,
+            "history_start": "2026-08-25T09:46:25+08:00"
+          },
+          "diagnostics": {
+            "gt_overlap_rows": 705,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimated_arc_length_m": 320.08392112830063,
+            "estimate_to_gt_arc_ratio": 1.0877359229651562,
+            "gap_transition_arc_m": 80.07952620180755,
+            "nongap_arc_m": 240.0043949264931,
+            "gap_transitions": [
+              {
+                "end_s_from_first_matched_pose": 18.9999783039093,
+                "duration_s": 5.206595182418823,
+                "estimate_step_m": 9.837662504148808,
+                "gt_step_m": 8.893099361366573
+              },
+              {
+                "end_s_from_first_matched_pose": 39.09098839759827,
+                "duration_s": 5.10196590423584,
+                "estimate_step_m": 9.267344147112974,
+                "gt_step_m": 8.826521049850722
+              },
+              {
+                "end_s_from_first_matched_pose": 59.091503381729126,
+                "duration_s": 5.197057008743286,
+                "estimate_step_m": 8.77926480281731,
+                "gt_step_m": 9.205427373940001
+              },
+              {
+                "end_s_from_first_matched_pose": 79.092116355896,
+                "duration_s": 5.199793815612793,
+                "estimate_step_m": 7.52984691148053,
+                "gt_step_m": 9.218230873189725
+              },
+              {
+                "end_s_from_first_matched_pose": 99.0911340713501,
+                "duration_s": 5.195026397705078,
+                "estimate_step_m": 9.982769782972424,
+                "gt_step_m": 9.315475275114284
+              },
+              {
+                "end_s_from_first_matched_pose": 119.0970675945282,
+                "duration_s": 5.200582027435303,
+                "estimate_step_m": 8.47738708262661,
+                "gt_step_m": 9.401939244680607
+              },
+              {
+                "end_s_from_first_matched_pose": 139.09086322784424,
+                "duration_s": 5.193096160888672,
+                "estimate_step_m": 10.195735504733317,
+                "gt_step_m": 9.283478488231669
+              },
+              {
+                "end_s_from_first_matched_pose": 159.08888816833496,
+                "duration_s": 5.199338436126709,
+                "estimate_step_m": 8.635977322261505,
+                "gt_step_m": 8.533127122289317
+              },
+              {
+                "end_s_from_first_matched_pose": 179.08743858337402,
+                "duration_s": 5.190800666809082,
+                "estimate_step_m": 7.373538143654078,
+                "gt_step_m": 6.317280916239195
+              }
+            ]
+          },
+          "sha1": {
+            "rosbag.log": "bb4818ce09ee49b0e752a633de01ec6b35aafc14",
+            "campaign_sleep.json": "6846c069d40932d08765db6960acf1af5c25a426",
+            "launch.log": "dfbb24643b6aeeab5f037e98de82b8b193e92f1f",
+            "campaign_completion.json": "ed881ddf811a3e7ec508560279d5a3ae7838ea33",
+            "odometry.csv": "d2c7360d4694e783e0dc0222f10bbfb192f87dc3",
+            "gravity_direction.csv": "195d9e455ad09d93be2801a5edf1843f9214f097",
+            "roscore.log": "d27c7c5a2bb07389a1feda2c9c1af50417e9a791",
+            "run_meta.txt": "b2afed1b6d6c2e3623ca166fd61dfad725ddca04",
+            "state_log.csv": "430b651ac5bb27e7a9d978ddb7fcd456dc41fcee",
+            "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+          },
+          "metrics": {
+            "frames": 705,
+            "duration_s": 185.688951253891,
+            "gt_arc_length_m": 294.26620411299405,
+            "estimate_to_gt_arc_ratio": 1.0877359229651558,
+            "rmse_z_m": 8.788793744054402,
+            "ate_rmse_m": 13.204209459069347,
+            "rmse_z_mm_per_100m": 2986.681318212006,
+            "ate_mm_per_100m": 4487.164776149122,
+            "final_position_error_m": 24.093314050415028,
+            "direction_factor": {
+              "factors": 709,
+              "median_pre_residual_deg": 4.22231676618251,
+              "median_post_residual_deg": 4.227224149296032,
+              "p95_post_residual_deg": 11.377083040950843,
+              "max_measurement_age_s": 0.003104686737060547
+            }
+          }
+        }
+      },
+      "interpretation": "With usable shared GT and complete finite outputs, excess estimated travel is retained as a flagged accuracy outcome. It is not proof of factor causality; low-level IMU receipt timing was not recorded."
+    }
+  },
+  "input_sha1": {
+    "data/mcd/degraded/tuhh_day_04_drop5x20.bag": "5d237b0953651414e7ca96d579f2b65b9c7de716",
+    "data/mcd/tuhh_day_04/vn200.bag": "77b79b711a61dab52fe7b88bbaf68ac87aa7dfe6",
+    "data/mcd/tuhh_day_04/gt/pose_inW.csv": "5e217be23bd293ed2172bc17ac5263992b5964e0"
+  },
+  "serial_container_events": [
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "1f397d3b0afc81fd7df0d85cbfad5fc0e7485ace925ea1fee947b13ef78090ec",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_16131",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788191977,
+      "timeNano": 1788191977783667324
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "1f397d3b0afc81fd7df0d85cbfad5fc0e7485ace925ea1fee947b13ef78090ec",
+        "Attributes": {
+          "execDuration": "768",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_16131",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788192746,
+      "timeNano": 1788192746516209787
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "65b3f5a886a6b254013c70d80e8f048686891a69e780d80fd0e4c5c438671bf1",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_20010",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788192749,
+      "timeNano": 1788192749753435151
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "65b3f5a886a6b254013c70d80e8f048686891a69e780d80fd0e4c5c438671bf1",
+        "Attributes": {
+          "execDuration": "768",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_20010",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788193518,
+      "timeNano": 1788193518224999072
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "a9ef6162fc76361c8431081a27ffedc2de26b9d1584eed794b9a2347bba4aac4",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_24208",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788193521,
+      "timeNano": 1788193521370814903
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "a9ef6162fc76361c8431081a27ffedc2de26b9d1584eed794b9a2347bba4aac4",
+        "Attributes": {
+          "execDuration": "768",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_24208",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788194289,
+      "timeNano": 1788194289849850854
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "6fee5f39df82fa89227a30422b4104da039b38fc4a58bf874a75c4554b353f62",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_28518",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788194293,
+      "timeNano": 1788194293574145868
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "6fee5f39df82fa89227a30422b4104da039b38fc4a58bf874a75c4554b353f62",
+        "Attributes": {
+          "execDuration": "769",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_28518",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788195063,
+      "timeNano": 1788195063016034147
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "3d64a8c516a808e0b43117907f0e7218b84a6f5d045529fb8501c49e2576f6ef",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_31027",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788195066,
+      "timeNano": 1788195066030048932
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "3d64a8c516a808e0b43117907f0e7218b84a6f5d045529fb8501c49e2576f6ef",
+        "Attributes": {
+          "execDuration": "768",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_31027",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788195834,
+      "timeNano": 1788195834633282010
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "3ac4a60ceedb2dcb80b072f6d4291b4f57370ad9eea94002bab6e2ec920537ec",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_32864",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788195837,
+      "timeNano": 1788195837557091992
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "3ac4a60ceedb2dcb80b072f6d4291b4f57370ad9eea94002bab6e2ec920537ec",
+        "Attributes": {
+          "execDuration": "768",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_32864",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788196606,
+      "timeNano": 1788196606006584881
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "22b5afc6aae0ece013cbe0eff03a2958a2e4e7034489ec96cafdd25cf4052194",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_34808",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788196621,
+      "timeNano": 1788196621225522501
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "22b5afc6aae0ece013cbe0eff03a2958a2e4e7034489ec96cafdd25cf4052194",
+        "Attributes": {
+          "execDuration": "768",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_34808",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788197389,
+      "timeNano": 1788197389715920926
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "9ebe0a56cdb66f4be5092eb66cd0b0bab40a0a1b1d1db139d117537bd35e8847",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_36611",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788197392,
+      "timeNano": 1788197392588014436
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "9ebe0a56cdb66f4be5092eb66cd0b0bab40a0a1b1d1db139d117537bd35e8847",
+        "Attributes": {
+          "execDuration": "768",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_36611",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788198161,
+      "timeNano": 1788198161017760084
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "9a248054ba79c061404eb69c61f0bb109d20934e3be30aaa2e92ced812eb7a8b",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_38445",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788198163,
+      "timeNano": 1788198163945275549
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "9a248054ba79c061404eb69c61f0bb109d20934e3be30aaa2e92ced812eb7a8b",
+        "Attributes": {
+          "execDuration": "774",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_38445",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788198938,
+      "timeNano": 1788198938378342436
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "bb9c074e3ece4463245e5cb94433ddd058a540fffd7ab49598de7bd9fa25701f",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_40286",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788198941,
+      "timeNano": 1788198941445989107
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "bb9c074e3ece4463245e5cb94433ddd058a540fffd7ab49598de7bd9fa25701f",
+        "Attributes": {
+          "execDuration": "768",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_40286",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788199709,
+      "timeNano": 1788199709894600161
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "457d1fbe2b07acc2f495ccb5f1eb753e9d8e6577ded1ac6ed02c5feeea5fb258",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_42090",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788199712,
+      "timeNano": 1788199712953641453
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "457d1fbe2b07acc2f495ccb5f1eb753e9d8e6577ded1ac6ed02c5feeea5fb258",
+        "Attributes": {
+          "execDuration": "768",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_42090",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788200481,
+      "timeNano": 1788200481455385451
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "894e4b03a068a863aaec4977b5ada774c9c6976d8d2be42c77bdf2b39c2d9580",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_43917",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788200484,
+      "timeNano": 1788200484337791328
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "894e4b03a068a863aaec4977b5ada774c9c6976d8d2be42c77bdf2b39c2d9580",
+        "Attributes": {
+          "execDuration": "768",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_43917",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788201252,
+      "timeNano": 1788201252806866455
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "fec037723430b10f37feae66c0d15f196f9616e8581aa07f5d25417d30b6f395",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_45782",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788201255,
+      "timeNano": 1788201255874534093
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "fec037723430b10f37feae66c0d15f196f9616e8581aa07f5d25417d30b6f395",
+        "Attributes": {
+          "execDuration": "772",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_45782",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788202028,
+      "timeNano": 1788202028266035869
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "63d122c5661c3e9bf14664cd39e120748c9deb69fd1503a740aae6eb2c83b670",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_47650",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788202031,
+      "timeNano": 1788202031224682726
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "63d122c5661c3e9bf14664cd39e120748c9deb69fd1503a740aae6eb2c83b670",
+        "Attributes": {
+          "execDuration": "768",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_47650",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788202799,
+      "timeNano": 1788202799691713257
+    }
+  ],
+  "policy": "Shared GT is independently usable. Complete finite estimator outputs outside the arc range retain metrics plus an arc warning; no replacement or threshold change. Structural, timestamp, reset, sleep and concurrency failures still stop."
+}

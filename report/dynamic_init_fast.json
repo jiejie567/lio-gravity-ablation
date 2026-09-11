@@ -1,0 +1,651 @@
+{
+ "schema": 1,
+ "status": "completed_structural_and_gt_gates_pass",
+ "selection_source": "report/dynamic_init_fast_selection.json",
+ "design": {
+  "estimators": {
+   "A": "23D Online g + online ba",
+   "RED21": "21D FixG + online ba"
+  },
+  "unit": "paired 60 s suffix at one outcome-blind stronger-motion start",
+  "pairs": 4,
+  "noise_floor_pct": 0.4,
+  "failure_definition": "incomplete/non-finite/reset output or a failed structural gate; large finite error remains an accuracy outcome"
+ },
+ "records": [
+  {
+   "sequence": "ntu_day_10_fastinit_s130p072",
+   "platform": "vehicle",
+   "regime": "stronger_natural_motion",
+   "start_sec": 130.072,
+   "duration_sec": 60.0,
+   "selection_window": {
+    "definition": "IMU samples from 20 ms before to 130 ms after the first selected LiDAR timestamp",
+    "is_exact_estimator_buffer": false,
+    "first_selected_lidar_time": 1645008890.2574077,
+    "imu_samples": 15,
+    "mean_acceleration_norm_mps2": 8.99924644481886,
+    "acceleration_std_norm_mps2": 4.932889549164221,
+    "mean_gyro_norm_radps": 0.1929431629733657,
+    "apparent_gravity_angle_deg": 34.29581885027384
+   },
+   "gates": {
+    "frames": {
+     "A": 597,
+     "RED21": 597
+    },
+    "timestamp_equal": true,
+    "initial_gravity_pair_angle_deg": 7.059009594295286e-05,
+    "fixed_gravity_max_component_drift": 0.0,
+    "online_gravity_max_component_drift": 6.15278017,
+    "binary_sha1": {
+     "A": "655a13b3c4ca",
+     "RED21": "ac7f79d89953"
+    },
+    "gt": {
+     "path_len_m": 327.3063307921544,
+     "duration_s": 59.59179902076721,
+     "extent_scope": "estimate_timestamp_overlap",
+     "est_over_gt_ratio": 1.0020654010319576,
+     "usable": true,
+     "attitude_usable": true
+    }
+   },
+   "metrics": {
+    "A": {
+     "frames": 597,
+     "duration_s": 59.59179925918579,
+     "grav_angle_final_deg": 45.24271686903859,
+     "grav_angle_max_deg": 45.40885675701274,
+     "align_sec": 10.0,
+     "rmse_z_m": 2.1567169735052847,
+     "max_abs_z_err_m": 3.8642519254774776,
+     "final_z_drift_m": 3.1467972617395907,
+     "ate_rmse_m": 2.466966268730267,
+     "rmse_roll_deg": 1.0377943419417088,
+     "rmse_pitch_deg": 1.0375710248842849,
+     "z_drift_pct_median": 1.2569895974963923,
+     "z_drift_pct_p90": 2.094432706321648,
+     "z_drift_windows": 6
+    },
+    "RED21": {
+     "frames": 597,
+     "duration_s": 59.59179925918579,
+     "grav_angle_final_deg": 0.0,
+     "grav_angle_max_deg": 0.0,
+     "align_sec": 10.0,
+     "rmse_z_m": 2.164286455236712,
+     "max_abs_z_err_m": 3.92181685984024,
+     "final_z_drift_m": 3.167043721437725,
+     "ate_rmse_m": 2.3056345165132206,
+     "rmse_roll_deg": 1.1152367835226666,
+     "rmse_pitch_deg": 1.068725078248247,
+     "z_drift_pct_median": 1.2717736240710193,
+     "z_drift_pct_p90": 2.086717888450542,
+     "z_drift_windows": 6
+    }
+   },
+   "effects_fixg_minus_online": {
+    "rmse_z": {
+     "absolute_m": 0.007569481731427352,
+     "relative_pct": 0.35097241893193853
+    },
+    "ate": {
+     "absolute_m": -0.16133175221704654,
+     "relative_pct": -6.539682129504065
+    }
+   },
+   "time_windows": {
+    "A": {
+     "0_10s": {
+      "rmse_z_m": 0.020290678187346114,
+      "ate_rmse_m": 0.12527164284677605,
+      "frames": 101
+     },
+     "10_30s": {
+      "rmse_z_m": 0.8003821443912644,
+      "ate_rmse_m": 1.0280504270505475,
+      "frames": 200
+     },
+     "30_60s": {
+      "rmse_z_m": 2.9913945720059183,
+      "ate_rmse_m": 3.3992910863547565,
+      "frames": 296
+     }
+    },
+    "RED21": {
+     "0_10s": {
+      "rmse_z_m": 0.019959288983995606,
+      "ate_rmse_m": 0.11537484078935871,
+      "frames": 101
+     },
+     "10_30s": {
+      "rmse_z_m": 0.7977991441224711,
+      "ate_rmse_m": 0.9422711780749297,
+      "frames": 200
+     },
+     "30_60s": {
+      "rmse_z_m": 3.002865848519326,
+      "ate_rmse_m": 3.180760905333781,
+      "frames": 296
+     }
+    }
+   },
+   "time_window_effects_fixg_minus_online": {
+    "0_10s": {
+     "rmse_z_m": {
+      "absolute_m": -0.00033138920335050795,
+      "relative_pct": -1.6332091036620588
+     },
+     "ate_rmse_m": {
+      "absolute_m": -0.009896802057417345,
+      "relative_pct": -7.9002732242623
+     }
+    },
+    "10_30s": {
+     "rmse_z_m": {
+      "absolute_m": -0.002583000268793323,
+      "relative_pct": -0.3227208761332201
+     },
+     "ate_rmse_m": {
+      "absolute_m": -0.08577924897561784,
+      "relative_pct": -8.343875623077802
+     }
+    },
+    "30_60s": {
+     "rmse_z_m": {
+      "absolute_m": 0.011471276513407513,
+      "relative_pct": 0.38347587512386205
+     },
+     "ate_rmse_m": {
+      "absolute_m": -0.21853018102097543,
+      "relative_pct": -6.4286986747968395
+     }
+    }
+   }
+  },
+  {
+   "sequence": "ntu_day_10_fastinit_s189p471",
+   "platform": "vehicle",
+   "regime": "stronger_natural_motion",
+   "start_sec": 189.471,
+   "duration_sec": 60.0,
+   "selection_window": {
+    "definition": "IMU samples from 20 ms before to 130 ms after the first selected LiDAR timestamp",
+    "is_exact_estimator_buffer": false,
+    "first_selected_lidar_time": 1645008949.6557107,
+    "imu_samples": 15,
+    "mean_acceleration_norm_mps2": 8.961597371718256,
+    "acceleration_std_norm_mps2": 3.980592015983824,
+    "mean_gyro_norm_radps": 0.30477049849020765,
+    "apparent_gravity_angle_deg": 39.376516182714006
+   },
+   "gates": {
+    "frames": {
+     "A": 597,
+     "RED21": 597
+    },
+    "timestamp_equal": true,
+    "initial_gravity_pair_angle_deg": 5.929886688545646e-05,
+    "fixed_gravity_max_component_drift": 0.0,
+    "online_gravity_max_component_drift": 6.071492194,
+    "binary_sha1": {
+     "A": "655a13b3c4ca",
+     "RED21": "ac7f79d89953"
+    },
+    "gt": {
+     "path_len_m": 325.80938838468336,
+     "duration_s": 59.59874486923218,
+     "extent_scope": "estimate_timestamp_overlap",
+     "est_over_gt_ratio": 1.0021137917629803,
+     "usable": true,
+     "attitude_usable": true
+    }
+   },
+   "metrics": {
+    "A": {
+     "frames": 597,
+     "duration_s": 59.59874486923218,
+     "grav_angle_final_deg": 43.49204121432143,
+     "grav_angle_max_deg": 43.49204121432143,
+     "align_sec": 10.0,
+     "rmse_z_m": 0.6254283330055634,
+     "max_abs_z_err_m": 1.5611584121544464,
+     "final_z_drift_m": 1.4658094281210077,
+     "ate_rmse_m": 0.9051036281349996,
+     "rmse_roll_deg": 0.577069796991813,
+     "rmse_pitch_deg": 0.663773147164091,
+     "z_drift_pct_median": 0.0835387787034822,
+     "z_drift_pct_p90": 0.12925626850607716,
+     "z_drift_windows": 3
+    },
+    "RED21": {
+     "frames": 597,
+     "duration_s": 59.59874486923218,
+     "grav_angle_final_deg": 0.0,
+     "grav_angle_max_deg": 8.537736462515939e-07,
+     "align_sec": 10.0,
+     "rmse_z_m": 0.1700360276341523,
+     "max_abs_z_err_m": 0.3798831607978599,
+     "final_z_drift_m": -0.038169530155186,
+     "ate_rmse_m": 5.073512482488772,
+     "rmse_roll_deg": 0.686076548293519,
+     "rmse_pitch_deg": 0.5901723725753437,
+     "z_drift_pct_median": 0.06801382029786608,
+     "z_drift_pct_p90": 0.2674607516245606,
+     "z_drift_windows": 3
+    }
+   },
+   "effects_fixg_minus_online": {
+    "rmse_z": {
+     "absolute_m": -0.4553923053714112,
+     "relative_pct": -72.81286781220388
+    },
+    "ate": {
+     "absolute_m": 4.168408854353772,
+     "relative_pct": 460.5449282026343
+    }
+   },
+   "time_windows": {
+    "A": {
+     "0_10s": {
+      "rmse_z_m": 0.01922014276712451,
+      "ate_rmse_m": 0.10145721526823076,
+      "frames": 100
+     },
+     "10_30s": {
+      "rmse_z_m": 0.058768484000267046,
+      "ate_rmse_m": 0.9734205505093202,
+      "frames": 201
+     },
+     "30_60s": {
+      "rmse_z_m": 0.8868249925821846,
+      "ate_rmse_m": 1.002671248117033,
+      "frames": 296
+     }
+    },
+    "RED21": {
+     "0_10s": {
+      "rmse_z_m": 0.01928752539731848,
+      "ate_rmse_m": 0.10502973103205973,
+      "frames": 100
+     },
+     "10_30s": {
+      "rmse_z_m": 0.08057490950052007,
+      "ate_rmse_m": 0.6498078669982784,
+      "frames": 201
+     },
+     "30_60s": {
+      "rmse_z_m": 0.2319020739001533,
+      "ate_rmse_m": 7.185082221252988,
+      "frames": 296
+     }
+    }
+   },
+   "time_window_effects_fixg_minus_online": {
+    "0_10s": {
+     "rmse_z_m": {
+      "absolute_m": 6.738263019397117e-05,
+      "relative_pct": 0.3505834010204545
+     },
+     "ate_rmse_m": {
+      "absolute_m": 0.0035725157638289706,
+      "relative_pct": 3.5212042380465602
+     }
+    },
+    "10_30s": {
+     "rmse_z_m": {
+      "absolute_m": 0.021806425500253024,
+      "relative_pct": 37.105645774619504
+     },
+     "ate_rmse_m": {
+      "absolute_m": -0.3236126835110418,
+      "relative_pct": -33.24489947759155
+     }
+    },
+    "30_60s": {
+     "rmse_z_m": {
+      "absolute_m": -0.6549229186820313,
+      "relative_pct": -73.85030013363519
+     },
+     "ate_rmse_m": {
+      "absolute_m": 6.182410973135955,
+      "relative_pct": 616.5940216941711
+     }
+    }
+   }
+  },
+  {
+   "sequence": "tuhh_day_04_fastinit_s70p572",
+   "platform": "handheld",
+   "regime": "stronger_natural_motion",
+   "start_sec": 70.572,
+   "duration_sec": 60.0,
+   "selection_window": {
+    "definition": "IMU samples from 20 ms before to 130 ms after the first selected LiDAR timestamp",
+    "is_exact_estimator_buffer": false,
+    "first_selected_lidar_time": 1666259455.3332546,
+    "imu_samples": 15,
+    "mean_acceleration_norm_mps2": 5.4454203137226065,
+    "acceleration_std_norm_mps2": 1.0328949655129422,
+    "mean_gyro_norm_radps": 0.3070877783199269,
+    "apparent_gravity_angle_deg": 15.720814499059069
+   },
+   "gates": {
+    "frames": {
+     "A": 596,
+     "RED21": 596
+    },
+    "timestamp_equal": true,
+    "initial_gravity_pair_angle_deg": 1.4080795695456232e-05,
+    "fixed_gravity_max_component_drift": 0.0,
+    "online_gravity_max_component_drift": 1.455472335,
+    "binary_sha1": {
+     "A": "655a13b3c4ca",
+     "RED21": "ac7f79d89953"
+    },
+    "gt": {
+     "path_len_m": 108.59300355464104,
+     "duration_s": 59.50800561904907,
+     "extent_scope": "estimate_timestamp_overlap",
+     "est_over_gt_ratio": 1.0167493522691717,
+     "usable": true,
+     "attitude_usable": true
+    }
+   },
+   "metrics": {
+    "A": {
+     "frames": 596,
+     "duration_s": 59.50800561904907,
+     "grav_angle_final_deg": 10.33349800910196,
+     "grav_angle_max_deg": 10.352578421782272,
+     "align_sec": 10.0,
+     "rmse_z_m": 0.05335722534530757,
+     "max_abs_z_err_m": 0.1493025735002285,
+     "final_z_drift_m": 0.1071829037316886,
+     "ate_rmse_m": 0.1269015967545697,
+     "rmse_roll_deg": 0.8876905040804568,
+     "rmse_pitch_deg": 1.017571126227228,
+     "z_drift_pct_median": 0.08598028865028301,
+     "z_drift_pct_p90": 0.08598028865028301,
+     "z_drift_windows": 1
+    },
+    "RED21": {
+     "frames": 596,
+     "duration_s": 59.50800561904907,
+     "grav_angle_final_deg": 0.0,
+     "grav_angle_max_deg": 0.0,
+     "align_sec": 10.0,
+     "rmse_z_m": 0.04255509708136697,
+     "max_abs_z_err_m": 0.11471317568772291,
+     "final_z_drift_m": 0.06732115915753348,
+     "ate_rmse_m": 0.10734063777530797,
+     "rmse_roll_deg": 0.8991888565751741,
+     "rmse_pitch_deg": 1.0187062950485821,
+     "z_drift_pct_median": 0.0993380660979232,
+     "z_drift_pct_p90": 0.0993380660979232,
+     "z_drift_windows": 1
+    }
+   },
+   "effects_fixg_minus_online": {
+    "rmse_z": {
+     "absolute_m": -0.0108021282639406,
+     "relative_pct": -20.244921271736594
+    },
+    "ate": {
+     "absolute_m": -0.019560958979261717,
+     "relative_pct": -15.414273326357753
+    }
+   },
+   "time_windows": {
+    "A": {
+     "0_10s": {
+      "rmse_z_m": 0.027466081746521785,
+      "ate_rmse_m": 0.048180375019556555,
+      "frames": 100
+     },
+     "10_30s": {
+      "rmse_z_m": 0.030333709164253434,
+      "ate_rmse_m": 0.0912719964533716,
+      "frames": 200
+     },
+     "30_60s": {
+      "rmse_z_m": 0.06968420021785919,
+      "ate_rmse_m": 0.16128435914328337,
+      "frames": 296
+     }
+    },
+    "RED21": {
+     "0_10s": {
+      "rmse_z_m": 0.027423274255598158,
+      "ate_rmse_m": 0.050264530323645085,
+      "frames": 100
+     },
+     "10_30s": {
+      "rmse_z_m": 0.03139151458212334,
+      "ate_rmse_m": 0.11303651913266782,
+      "frames": 200
+     },
+     "30_60s": {
+      "rmse_z_m": 0.05221541247467768,
+      "ate_rmse_m": 0.11710206088416346,
+      "frames": 296
+     }
+    }
+   },
+   "time_window_effects_fixg_minus_online": {
+    "0_10s": {
+     "rmse_z_m": {
+      "absolute_m": -4.280749092362701e-05,
+      "relative_pct": -0.15585583454781338
+     },
+     "ate_rmse_m": {
+      "absolute_m": 0.0020841553040885294,
+      "relative_pct": 4.325734914355817
+     }
+    },
+    "10_30s": {
+     "rmse_z_m": {
+      "absolute_m": 0.0010578054178699038,
+      "relative_pct": 3.487227401509041
+     },
+     "ate_rmse_m": {
+      "absolute_m": 0.021764522679296225,
+      "relative_pct": 23.845783509748397
+     }
+    },
+    "30_60s": {
+     "rmse_z_m": {
+      "absolute_m": -0.01746878774318151,
+      "relative_pct": -25.068505756781978
+     },
+     "ate_rmse_m": {
+      "absolute_m": -0.044182298259119915,
+      "relative_pct": -27.394037768949943
+     }
+    }
+   }
+  },
+  {
+   "sequence": "tuhh_day_04_fastinit_s114p279",
+   "platform": "handheld",
+   "regime": "stronger_natural_motion",
+   "start_sec": 114.279,
+   "duration_sec": 60.0,
+   "selection_window": {
+    "definition": "IMU samples from 20 ms before to 130 ms after the first selected LiDAR timestamp",
+    "is_exact_estimator_buffer": false,
+    "first_selected_lidar_time": 1666259499.0396464,
+    "imu_samples": 15,
+    "mean_acceleration_norm_mps2": 5.658124488689619,
+    "acceleration_std_norm_mps2": 1.4822259592552651,
+    "mean_gyro_norm_radps": 0.35787474754540827,
+    "apparent_gravity_angle_deg": 18.826587358442563
+   },
+   "gates": {
+    "frames": {
+     "A": 597,
+     "RED21": 597
+    },
+    "timestamp_equal": true,
+    "initial_gravity_pair_angle_deg": 1.6422663987382993e-05,
+    "fixed_gravity_max_component_drift": 0.0,
+    "online_gravity_max_component_drift": 2.437100752,
+    "binary_sha1": {
+     "A": "655a13b3c4ca",
+     "RED21": "ac7f79d89953"
+    },
+    "gt": {
+     "path_len_m": 102.09857157687165,
+     "duration_s": 59.59363412857056,
+     "extent_scope": "estimate_timestamp_overlap",
+     "est_over_gt_ratio": 1.0215849637516525,
+     "usable": true,
+     "attitude_usable": true
+    }
+   },
+   "metrics": {
+    "A": {
+     "frames": 597,
+     "duration_s": 59.593634366989136,
+     "grav_angle_final_deg": 16.044932178194482,
+     "grav_angle_max_deg": 16.210289064326126,
+     "align_sec": 10.0,
+     "rmse_z_m": 0.04434161333763159,
+     "max_abs_z_err_m": 0.10965244266925578,
+     "final_z_drift_m": 0.06612044682542145,
+     "ate_rmse_m": 0.46278366411176153,
+     "rmse_roll_deg": 0.7790598537439418,
+     "rmse_pitch_deg": 0.9811572743092054,
+     "z_drift_pct_median": 0.02586494115492683,
+     "z_drift_pct_p90": 0.02586494115492683,
+     "z_drift_windows": 1
+    },
+    "RED21": {
+     "frames": 597,
+     "duration_s": 59.593634366989136,
+     "grav_angle_final_deg": 0.0,
+     "grav_angle_max_deg": 0.0,
+     "align_sec": 10.0,
+     "rmse_z_m": 0.050323777682988464,
+     "max_abs_z_err_m": 0.12104966803364292,
+     "final_z_drift_m": 0.03000435862873848,
+     "ate_rmse_m": 0.4409763227598062,
+     "rmse_roll_deg": 0.7821803200537986,
+     "rmse_pitch_deg": 0.9811272186963228,
+     "z_drift_pct_median": 0.04779842641799261,
+     "z_drift_pct_p90": 0.04779842641799261,
+     "z_drift_windows": 1
+    }
+   },
+   "effects_fixg_minus_online": {
+    "rmse_z": {
+     "absolute_m": 0.005982164345356873,
+     "relative_pct": 13.49108409702351
+    },
+    "ate": {
+     "absolute_m": -0.021807341351955334,
+     "relative_pct": -4.712210702988184
+    }
+   },
+   "time_windows": {
+    "A": {
+     "0_10s": {
+      "rmse_z_m": 0.0358410982703525,
+      "ate_rmse_m": 0.07435158209908445,
+      "frames": 101
+     },
+     "10_30s": {
+      "rmse_z_m": 0.04860690415956783,
+      "ate_rmse_m": 0.20313999317420828,
+      "frames": 200
+     },
+     "30_60s": {
+      "rmse_z_m": 0.04394173909876373,
+      "ate_rmse_m": 0.6341817733354113,
+      "frames": 296
+     }
+    },
+    "RED21": {
+     "0_10s": {
+      "rmse_z_m": 0.035822769528615774,
+      "ate_rmse_m": 0.0789138877398068,
+      "frames": 101
+     },
+     "10_30s": {
+      "rmse_z_m": 0.05442589721981705,
+      "ate_rmse_m": 0.19341868961165834,
+      "frames": 200
+     },
+     "30_60s": {
+      "rmse_z_m": 0.05165654841432411,
+      "ate_rmse_m": 0.6039888929795686,
+      "frames": 296
+     }
+    }
+   },
+   "time_window_effects_fixg_minus_online": {
+    "0_10s": {
+     "rmse_z_m": {
+      "absolute_m": -1.8328741736725607e-05,
+      "relative_pct": -0.051138895349889246
+     },
+     "ate_rmse_m": {
+      "absolute_m": 0.004562305640722353,
+      "relative_pct": 6.136124493816975
+     }
+    },
+    "10_30s": {
+     "rmse_z_m": {
+      "absolute_m": 0.005818993060249217,
+      "relative_pct": 11.971536062339005
+     },
+     "ate_rmse_m": {
+      "absolute_m": -0.009721303562549938,
+      "relative_pct": -4.785519291719753
+     }
+    },
+    "30_60s": {
+     "rmse_z_m": {
+      "absolute_m": 0.007714809315560386,
+      "relative_pct": 17.55690483305754
+     },
+     "ate_rmse_m": {
+      "absolute_m": -0.030192880355842666,
+      "relative_pct": -4.760918970762351
+     }
+    }
+   }
+  }
+ ],
+ "aggregate": {
+  "vehicle": {
+   "rmse_z_range_pct": [
+    -72.81286781220388,
+    0.35097241893193853
+   ],
+   "rmse_z_median_pct": -36.230947696635965,
+   "rmse_z_online_better_phases": 0,
+   "ate_range_pct": [
+    -6.539682129504065,
+    460.5449282026343
+   ],
+   "ate_median_pct": 227.00262303656513,
+   "ate_online_better_phases": 1
+  },
+  "handheld": {
+   "rmse_z_range_pct": [
+    -20.244921271736594,
+    13.49108409702351
+   ],
+   "rmse_z_median_pct": -3.376918587356542,
+   "rmse_z_online_better_phases": 1,
+   "ate_range_pct": [
+    -15.414273326357753,
+    -4.712210702988184
+   ],
+   "ate_median_pct": -10.06324201467297,
+   "ate_online_better_phases": 0
+  }
+ }
+}

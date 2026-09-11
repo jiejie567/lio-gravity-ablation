@@ -1,0 +1,1425 @@
+{
+  "audited_at": "2026-08-31T21:06:12.502488+08:00",
+  "cells": {
+    "r1/FG-BA_off": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r1/FG-BA_off",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 0,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:05:33.431250+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "74b1bf2e1c8a556304eb5d32a313824d06a18c29",
+        "launch.log": "21ae75b85b202309b89cdaa2bd5e3df1db5a2ebc",
+        "odometry.csv": "eda905faf46c6d920e9b973dc7bffcd0e36da0cd",
+        "roscore.log": "64e8b5b4b8be7f4d42924c79b4f16de0782ef794",
+        "run_meta.txt": "f70420f854c93dfa401b60f0f5b9368c561f3b35",
+        "state_log.csv": "8446462fe92df0e5bc8e99a5622b9fd85fc4ed21",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.1132673327907092,
+        "rmse_z_m": 2.61121939787131,
+        "ate_rmse_m": 11.214347742319251,
+        "rmse_z_mm_per_100m": 933.478690237273,
+        "ate_mm_per_100m": 4008.990838111647,
+        "final_position_error_m": 9.912178401212728
+      }
+    },
+    "r1/FG-BA_s0p5": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r1/FG-BA_s0p5",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:05:35.134305+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "49ea7970c9547d582e068ac8eab05238a908b93f",
+        "campaign_sleep.json": "b60ce94cb235390f26f6812320f03825ce6be5e5",
+        "launch.log": "fa6e2f21df6ba59682ea7970098637511e603ba4",
+        "campaign_completion.json": "dd64d6717546a32c9ed8583808c75cffc407d9ad",
+        "odometry.csv": "402d48d8eedb2d9d34e1133e79391ed895378f9c",
+        "gravity_direction.csv": "8a962d009d0df8140e2c7db84ab73bf8bbe65425",
+        "roscore.log": "8c6f33bd9cbe319bcaa1300f5a226a68cfd1ec35",
+        "run_meta.txt": "6e1afa333bacce9f99e17cd8cf44c8ffb724164f",
+        "state_log.csv": "7d819cccce26152b07e5051bdb2b43d7737daf0c",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.0530350609360435,
+        "rmse_z_m": 1.5031738528755378,
+        "ate_rmse_m": 2.6784782402661778,
+        "rmse_z_mm_per_100m": 537.3660905418587,
+        "ate_mm_per_100m": 957.522895851255,
+        "final_position_error_m": 3.3646471325928555,
+        "direction_factor": {
+          "factors": 1498,
+          "median_pre_residual_deg": 0.13595233645738658,
+          "median_post_residual_deg": 0.1287190327329354,
+          "p95_post_residual_deg": 0.3279107478630757,
+          "max_measurement_age_s": 0.019099950790405273
+        }
+      }
+    },
+    "r1/FG-BA_s2": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r1/FG-BA_s2",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:05:36.867068+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "ec522a6cb4313f3d0a5681ef444bb25286f9e658",
+        "launch.log": "95f849ec471f9bf9f4191d6e67fb5d22cf26f011",
+        "odometry.csv": "95a7cf8d91fc18402dfd6921aea1be6112749867",
+        "gravity_direction.csv": "06f3af4df332325515aab411b0fc2cf6f8480d86",
+        "roscore.log": "86799956163ce71b8871e60ebde6dbf2ccce998f",
+        "run_meta.txt": "24d9df07ee0d620520f1a76547c0d34aabe8489f",
+        "state_log.csv": "a8b3f2a98f8e944be6250b8f39a597f6dd7773b0",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.059761382289209,
+        "rmse_z_m": 1.4446326592288479,
+        "ate_rmse_m": 2.7976082295455984,
+        "rmse_z_mm_per_100m": 516.4383367059354,
+        "ate_mm_per_100m": 1000.1103959484087,
+        "final_position_error_m": 1.3284215399611536,
+        "direction_factor": {
+          "factors": 1498,
+          "median_pre_residual_deg": 0.4618849437581093,
+          "median_post_residual_deg": 0.4660374861138692,
+          "p95_post_residual_deg": 1.0529192375367804,
+          "max_measurement_age_s": 0.019099950790405273
+        }
+      }
+    },
+    "r1/FG-BA_s5": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r1/FG-BA_s5",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:05:38.529917+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "bbf8cabf3b8e86ae58691986fa1ab1357346c862",
+        "campaign_sleep.json": "784d598fe437e7a374836e625af936b06e24aea3",
+        "launch.log": "85032b0037c34911aca3851991a607ad86ce4859",
+        "campaign_completion.json": "a93172c3f3178640c8e5a98a4b33723abbdeef32",
+        "odometry.csv": "bf7013d8f57d76c7cf1102a24016e01790497c15",
+        "gravity_direction.csv": "19348e5a6c802f8f96ca201a473b70ae565d8be1",
+        "roscore.log": "28a29a48bb7d3e5c0d653974f4db3876ed149360",
+        "run_meta.txt": "3341273596bd48a57f03eb4821d588ef9b88ea2a",
+        "state_log.csv": "bebd1a20ef2fd17abbbe477a7d0795ef2d264c38",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.0586591570813788,
+        "rmse_z_m": 1.5270407804501194,
+        "ate_rmse_m": 2.7274035918323754,
+        "rmse_z_mm_per_100m": 545.8982224303054,
+        "ate_mm_per_100m": 975.013104884109,
+        "final_position_error_m": 0.9876889699326432,
+        "direction_factor": {
+          "factors": 1498,
+          "median_pre_residual_deg": 0.4080973735865912,
+          "median_post_residual_deg": 0.404829299141609,
+          "p95_post_residual_deg": 1.231874980613526,
+          "max_measurement_age_s": 0.019099950790405273
+        }
+      }
+    },
+    "r1/GE-BA_off": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r1/GE-BA_off",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 0,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:05:40.325483+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "f6f7fa6b18facbd7f327eb02f7dc9f0a177aba33",
+        "launch.log": "766950387bf03e5be92f5842a3504363b03d7593",
+        "odometry.csv": "e398979673a2f9934dde23f3f3f86f302f40e318",
+        "roscore.log": "3e1041d0e72a9586c0e257d025f71829b1eaa5e0",
+        "run_meta.txt": "06193cd3444baf300906d9411829eb36c38de0ad",
+        "state_log.csv": "dbd8a79559d47435990422ab68974a3ba1cbac0d",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.0771342780906121,
+        "rmse_z_m": 1.6274256529120141,
+        "ate_rmse_m": 2.9816877759182137,
+        "rmse_z_mm_per_100m": 581.7845747382563,
+        "ate_mm_per_100m": 1065.9165606802812,
+        "final_position_error_m": 1.6164759291759585
+      }
+    },
+    "r1/GE-BA_s0p5": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r1/GE-BA_s0p5",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:05:42.086541+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "551d5edec4c6d49fcdbcfdec618699b5ff2c5209",
+        "campaign_sleep.json": "46e19774be1966f57cb55afa972039b2797886bb",
+        "launch.log": "0bdac5272698889b8f7b54ac664db7dc3f0182ae",
+        "campaign_completion.json": "77b97bde99ed407f808952228d88554865f1aad4",
+        "odometry.csv": "e222cdd889afc240eecd14beb1ba5ee62e9000e7",
+        "gravity_direction.csv": "7b57cff0535282f4405cd29e4d97cdaa91296ad5",
+        "roscore.log": "33804be0bb32797cefcbeb9bea94203c572e89a8",
+        "run_meta.txt": "e3b0b51f3af274b4d13f710901d27ed17608d108",
+        "state_log.csv": "1d8ba43303de1923218f1f561e5c21ffff917a99",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.0521739696706565,
+        "rmse_z_m": 1.4716653635952412,
+        "ate_rmse_m": 2.648995953648614,
+        "rmse_z_mm_per_100m": 526.1021947050311,
+        "ate_mm_per_100m": 946.9833424459001,
+        "final_position_error_m": 3.0971384732355665,
+        "direction_factor": {
+          "factors": 1498,
+          "median_pre_residual_deg": 0.11800188892141625,
+          "median_post_residual_deg": 0.11082293290991002,
+          "p95_post_residual_deg": 0.27770789019809683,
+          "max_measurement_age_s": 0.019099950790405273
+        }
+      }
+    },
+    "r1/GE-BA_s2": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r1/GE-BA_s2",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:05:43.834525+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "ab5c6d43f9a8c72e9e033e89419f80fd6962e870",
+        "launch.log": "ddb111f9d490fce7df8f7b6dcd0ff730ab9609b3",
+        "odometry.csv": "d171b61344741a846882aee2fd90faeaeae1557e",
+        "gravity_direction.csv": "7f662c8b45812b9f9a67f87eeceaaef5743643e1",
+        "roscore.log": "3e41bc7ab0ce83b2eed595459374d42879728235",
+        "run_meta.txt": "78c4bf133961c44f7000d3a67a1310815ae08dbd",
+        "state_log.csv": "33a2b893a6a8ccb7faec72146c79a20676e55286",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.0916715670849764,
+        "rmse_z_m": 1.5035469991092776,
+        "ate_rmse_m": 2.8269207896335065,
+        "rmse_z_mm_per_100m": 537.4994857126446,
+        "ate_mm_per_100m": 1010.5892742152705,
+        "final_position_error_m": 1.0064344454679068,
+        "direction_factor": {
+          "factors": 1498,
+          "median_pre_residual_deg": 0.355129227221764,
+          "median_post_residual_deg": 0.35393696644310674,
+          "p95_post_residual_deg": 0.8998978746005507,
+          "max_measurement_age_s": 0.019099950790405273
+        }
+      }
+    },
+    "r1/GE-BA_s5": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r1/GE-BA_s5",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:05:45.522945+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "e10e15b5c9d19e4a48100eb06a0dc0998168c747",
+        "campaign_sleep.json": "79495241b2268e906d97fceb76842f63eec481cf",
+        "launch.log": "b94d7c87365a56037972f65da588105d950e7155",
+        "campaign_completion.json": "858cdcfdea4aa6a6b47ebf313368a976a8dcdd81",
+        "odometry.csv": "f7e1c9c9bbb9f2774c0f838a3c6a5cc6291c1839",
+        "gravity_direction.csv": "33edf0af334667d6a10ae6379414bdb37fa1666e",
+        "roscore.log": "5bcca5d6ec6cb29b3a46c4d2c0ec835d2b635d50",
+        "run_meta.txt": "e9c604102400653db16b1e06c63dbe4cfa2c6b46",
+        "state_log.csv": "041e79dfa5307783d4e06633cdc55a0015d42416",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.0817146916021398,
+        "rmse_z_m": 1.590268303374406,
+        "ate_rmse_m": 2.862096202157898,
+        "rmse_z_mm_per_100m": 568.5012811140856,
+        "ate_mm_per_100m": 1023.1640498310587,
+        "final_position_error_m": 1.483994409304143,
+        "direction_factor": {
+          "factors": 1498,
+          "median_pre_residual_deg": 0.41510832327357683,
+          "median_post_residual_deg": 0.41586303537844893,
+          "p95_post_residual_deg": 0.9533353396842562,
+          "max_measurement_age_s": 0.019099950790405273
+        }
+      }
+    },
+    "r2/FG-BA_off": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r2/FG-BA_off",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 0,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:05:47.207437+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "5b3154733745ed1a4bcb8f1fb6bd7d713f055d8d",
+        "launch.log": "3e683da00c26ac1d059e35ae89f91521c1990e39",
+        "odometry.csv": "c42bfb2f0606333eaf2d434f465af46f817c6f44",
+        "roscore.log": "132d2a58af68e662fc6830fa9b49dba13af6d917",
+        "run_meta.txt": "a02d1cbd7977d2cffdee0ba8aceabe05ee3a2a03",
+        "state_log.csv": "73370d6b3ecffe3d14b452cd71394e4c696a7e03",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.0979765511601056,
+        "rmse_z_m": 2.4285499405118776,
+        "ate_rmse_m": 10.901462367004255,
+        "rmse_z_mm_per_100m": 868.1766149152054,
+        "ate_mm_per_100m": 3897.1381800846966,
+        "final_position_error_m": 12.982958616023337
+      }
+    },
+    "r2/FG-BA_s0p5": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r2/FG-BA_s0p5",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:05:48.889921+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "4feb7c920937d8abe211e8ed3ed08c93cc3c62e8",
+        "campaign_sleep.json": "40e322f449e31276f272596286ae1f4342be6e35",
+        "launch.log": "7169bc7b3364d097411e6992c790f86c0af8d17f",
+        "campaign_completion.json": "6dae0fa9cb83d7ff6bf70da37343a9582a10120d",
+        "odometry.csv": "ceeaeced72a995a47ad787f8047e69bbc08fab5a",
+        "gravity_direction.csv": "345e8eaf7dcfa3207e7992fe7a8c4a1be73fc3c7",
+        "roscore.log": "58cbac5316bed4ef8800b6080c6b35217bf1f542",
+        "run_meta.txt": "bed64d138e0ee6811546d3237bdf55b70602eb2f",
+        "state_log.csv": "32e7be21a965e6c84a4b2f7e6abcf82bd6988339",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.056287626943609,
+        "rmse_z_m": 1.4642539562213517,
+        "ate_rmse_m": 2.560316141166182,
+        "rmse_z_mm_per_100m": 523.4527080882292,
+        "ate_mm_per_100m": 915.2814045413063,
+        "final_position_error_m": 1.5714793375145883,
+        "direction_factor": {
+          "factors": 1498,
+          "median_pre_residual_deg": 0.12056591535854905,
+          "median_post_residual_deg": 0.11404275975055825,
+          "p95_post_residual_deg": 0.3036611617729685,
+          "max_measurement_age_s": 0.019099950790405273
+        }
+      }
+    },
+    "r2/FG-BA_s2": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r2/FG-BA_s2",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:05:50.578396+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "8fa3e823f77f27b06cfaaeac1afcbbb4d18d2c6d",
+        "launch.log": "42896492b72b799751bc8282192c628dae7f4b68",
+        "odometry.csv": "db34f6f1b7df226f464845fa99fa4b898a4c4205",
+        "gravity_direction.csv": "957a4302b564a0ac66cf59826740ac1dc987d30a",
+        "roscore.log": "d327683fefa3721275860fd70fcf69abd8ef127c",
+        "run_meta.txt": "c5a7c5ad3e2b0123ff867b4e1c1c1979c129808b",
+        "state_log.csv": "7ccc11ce0b2f8a4db6d2b27613ffdacada4976bd",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.0599125077958758,
+        "rmse_z_m": 1.4445828588810639,
+        "ate_rmse_m": 2.798273467750693,
+        "rmse_z_mm_per_100m": 516.4205336965596,
+        "ate_mm_per_100m": 1000.348210392072,
+        "final_position_error_m": 1.3306199279094915,
+        "direction_factor": {
+          "factors": 1498,
+          "median_pre_residual_deg": 0.4619009789505514,
+          "median_post_residual_deg": 0.46558356133882095,
+          "p95_post_residual_deg": 1.0529192375367804,
+          "max_measurement_age_s": 0.019099950790405273
+        }
+      }
+    },
+    "r2/FG-BA_s5": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r2/FG-BA_s5",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:05:52.258174+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "89c780620a417f06924283382a5cce7e72cb3364",
+        "campaign_sleep.json": "20091767f678e0057a5d06b45cb52d20905d7011",
+        "launch.log": "39dab67772e7b911eb1e363357b6de56538473cf",
+        "campaign_completion.json": "b7b954314a3a7fd138adb6ffdc21779b4b20d05f",
+        "odometry.csv": "6d1c06aeaa4a095f20ed254ad379f951d7f85c7a",
+        "gravity_direction.csv": "4bec89205408db633662a61501de0e4ca29de3f7",
+        "roscore.log": "2ec68384d677f64e7a64386d974d672b5e773d79",
+        "run_meta.txt": "b99d075ce94bb7680ac5d8adf25a507c18e4d26c",
+        "state_log.csv": "e70402a202764c5f86757f4e91841c8f09d7c6b2",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.11885695570695,
+        "rmse_z_m": 1.9571422406110428,
+        "ate_rmse_m": 4.094791958003794,
+        "rmse_z_mm_per_100m": 699.6541833531816,
+        "ate_mm_per_100m": 1463.8375606689951,
+        "final_position_error_m": 4.976667515439983,
+        "direction_factor": {
+          "factors": 1498,
+          "median_pre_residual_deg": 0.7161928303096894,
+          "median_post_residual_deg": 0.7187414650649895,
+          "p95_post_residual_deg": 1.637838297284014,
+          "max_measurement_age_s": 0.019099950790405273
+        }
+      }
+    },
+    "r2/GE-BA_off": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r2/GE-BA_off",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 0,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:05:53.946160+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "494a8db193e300812e183a92b03ab98cbff43c8e",
+        "launch.log": "1aa2428b79ba4e47b3ae3a1b7ff2ecd88f5bb05b",
+        "odometry.csv": "c94eb1e79f2519f3452087fc04438e26c0812cae",
+        "roscore.log": "bf1acbc3e3b405b9a976712af57c3e4899a3078b",
+        "run_meta.txt": "7a8fa587bb748192cf7f57a01f61141d71d59258",
+        "state_log.csv": "d61297cfa24b314f887bd6a7c84936e091ee6f4e",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.0769891037496366,
+        "rmse_z_m": 1.6272983190624564,
+        "ate_rmse_m": 2.9816690501834398,
+        "rmse_z_mm_per_100m": 581.7390544594145,
+        "ate_mm_per_100m": 1065.9098664613332,
+        "final_position_error_m": 1.6223566490780497
+      }
+    },
+    "r2/GE-BA_s0p5": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r2/GE-BA_s0p5",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:05:55.624586+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "b3e273f20e882d3293c70fd572efd6191e42dba7",
+        "campaign_sleep.json": "4894c2a35dc56781eb6af08bf7ed0d0f8707f6de",
+        "launch.log": "3acdaf1d08535b8413784a0ed98d426f85b98fd9",
+        "campaign_completion.json": "bfb5b43abca1fa7b2cf8c2da4d968d8777c139cf",
+        "odometry.csv": "0ebdc965e5bef5c52e97a55852e8f11c8fedf958",
+        "gravity_direction.csv": "80e87d2de66e2e6e38c18075f300ce953dbfab33",
+        "roscore.log": "a30940ab8683c5e5dff0a21ea500dfc6da643367",
+        "run_meta.txt": "12546883561b6eecb9d4e567ae2366d0bd1a0b22",
+        "state_log.csv": "d1a8afb961a75edc5e82827e4b1fdbdbca70732d",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.0492024977552374,
+        "rmse_z_m": 1.474835746829166,
+        "ate_rmse_m": 2.661710747199329,
+        "rmse_z_mm_per_100m": 527.235567561853,
+        "ate_mm_per_100m": 951.5287241323392,
+        "final_position_error_m": 3.2567651511108116,
+        "direction_factor": {
+          "factors": 1498,
+          "median_pre_residual_deg": 0.11417492871218252,
+          "median_post_residual_deg": 0.10696686020125318,
+          "p95_post_residual_deg": 0.2761486005637038,
+          "max_measurement_age_s": 0.019099950790405273
+        }
+      }
+    },
+    "r2/GE-BA_s2": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r2/GE-BA_s2",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:05:57.322723+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "5608f0dff42beb2f29ad2dfe87e229e53ba04557",
+        "launch.log": "5d728e228de6de5211d56ab8da68013ee5e18f40",
+        "odometry.csv": "10ae35dc186f69d3b8eda2d576718ec631175a20",
+        "gravity_direction.csv": "a86f660cca301f34fa0258aeb6329c19672dfa8d",
+        "roscore.log": "0bb3b4cbd739c1b269fadeb9970b107698c4d918",
+        "run_meta.txt": "9a24f1a9d7d62be6099492805731e8ad8dab38dd",
+        "state_log.csv": "994284c851f4ac7dfa0a76066e78c0050a585f63",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.0916547521272195,
+        "rmse_z_m": 1.5033041628561266,
+        "ate_rmse_m": 2.8271312439250917,
+        "rmse_z_mm_per_100m": 537.4126747507935,
+        "ate_mm_per_100m": 1010.6645090257289,
+        "final_position_error_m": 1.009275125789895,
+        "direction_factor": {
+          "factors": 1498,
+          "median_pre_residual_deg": 0.3564426091374813,
+          "median_post_residual_deg": 0.3538369483454835,
+          "p95_post_residual_deg": 0.8998978746005507,
+          "max_measurement_age_s": 0.019099950790405273
+        }
+      }
+    },
+    "r2/GE-BA_s5": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r2/GE-BA_s5",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:05:59.016479+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "597b6bc4b735d9cba815ff23e7d1859073d626fe",
+        "campaign_sleep.json": "db34bb43e887769952e9b9eab29fe213352c450f",
+        "launch.log": "ee56fb1bdda37adace1fb35842db8f88f2dc4d05",
+        "campaign_completion.json": "a9243feabcb874f3ee69fe183d2772a3fe1070ec",
+        "odometry.csv": "170e20755c0af7304485739dfdc9673a7fcc1fb6",
+        "gravity_direction.csv": "5dd790942b48212a713ed04b4f6a6c321c995218",
+        "roscore.log": "a6563ab0861bb881f3c2e66a129f98ec09954753",
+        "run_meta.txt": "c083628127ac6cd92cba3ea25e5110811a82c259",
+        "state_log.csv": "e1047aec0bc13bf9491c4484bd1af4b5a8fbdbd9",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.0767236960911784,
+        "rmse_z_m": 1.6064090891102174,
+        "ate_rmse_m": 2.9549576638570105,
+        "rmse_z_mm_per_100m": 574.2714127010171,
+        "ate_mm_per_100m": 1056.3608756937465,
+        "final_position_error_m": 1.568975692652663,
+        "direction_factor": {
+          "factors": 1498,
+          "median_pre_residual_deg": 0.4199685517876113,
+          "median_post_residual_deg": 0.41631807016217803,
+          "p95_post_residual_deg": 0.9546185018776691,
+          "max_measurement_age_s": 0.019099950790405273
+        }
+      }
+    },
+    "r3/FG-BA_off": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r3/FG-BA_off",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 0,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:06:00.711748+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "ba7d8e5b527062826a5b9519f9ad4c228af96f2d",
+        "launch.log": "9346277cb0b1b7469cf03a66fdc232beefb659a3",
+        "odometry.csv": "8300b340e15d4bf2b3add9831d89f61abb53f81d",
+        "roscore.log": "9308fe3eeb4ee9d3dc27c0022b9b380fe7a3d4f7",
+        "run_meta.txt": "7cab8d5388d62e77c32062d56ee6e5e19d02e6f5",
+        "state_log.csv": "f668d121e149b4563d8da7d938032c8fb16b9ade",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.1126619595759906,
+        "rmse_z_m": 2.6001699038781303,
+        "ate_rmse_m": 11.136738401561216,
+        "rmse_z_mm_per_100m": 929.5286325787911,
+        "ate_mm_per_100m": 3981.246457145403,
+        "final_position_error_m": 9.912014917454359
+      }
+    },
+    "r3/FG-BA_s0p5": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r3/FG-BA_s0p5",
+      "issues": [
+        "state_timestamps",
+        "odometry_timestamps"
+      ],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 37,
+      "odometry_time_mismatches": 37,
+      "sleep": {
+        "checked_at": "2026-08-31T21:06:02.413695+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "b69329abbf2c55dd570d7e8ee0edb7196df0d163",
+        "campaign_sleep.json": "33a4da31b5d0c01a2642260fc7d17a9aaa6ecb0e",
+        "launch.log": "f2ec4a23d80c96e3873b520de5d01b8d79a5e78e",
+        "campaign_completion.json": "470899c6e363218d347fe110c04dc8828c9efb57",
+        "odometry.csv": "08cd92fd885f6de6c5c7a2fe7746db72bfddb7f5",
+        "gravity_direction.csv": "377ebf43f9e70dcdbf7863dc3696400b8dbf2dc3",
+        "roscore.log": "ada15375866c40de907b6226d969a398d8142965",
+        "run_meta.txt": "51595b4df360819f7fffe1f725a2836549bfb1a3",
+        "state_log.csv": "2d1f516ffd2fd72119da8cb7f195cc182a29dd6f",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "instrument_timestamp_mismatch_not_accuracy_run"
+    },
+    "r3/FG-BA_s2": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r3/FG-BA_s2",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:06:04.092373+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "5d84f8781233f61d0c8ec478bec08968aacba29e",
+        "launch.log": "6c4a92d04af0edc5a2f04b7aa3785bf87ccb67d4",
+        "odometry.csv": "74c0b2c605c4358f7402b38232924a89eb5e5e7d",
+        "gravity_direction.csv": "fe269fe3fe81179f72265e182da96d41971c83a3",
+        "roscore.log": "6e65b6da02e363d76da13636c1f42502eb9ac115",
+        "run_meta.txt": "400b92c69144a5600392ab7fb48b6aa965ceef82",
+        "state_log.csv": "0e52105cbf1fede8c1158ca333a4795ec9dee169",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.08540301879265,
+        "rmse_z_m": 1.4616397738786384,
+        "ate_rmse_m": 2.7866787783890077,
+        "rmse_z_mm_per_100m": 522.5181701817987,
+        "ate_mm_per_100m": 996.2032521216648,
+        "final_position_error_m": 1.781064633271231,
+        "direction_factor": {
+          "factors": 1498,
+          "median_pre_residual_deg": 0.5106961238402126,
+          "median_post_residual_deg": 0.5161408193754089,
+          "p95_post_residual_deg": 1.0954631135011357,
+          "max_measurement_age_s": 0.019099950790405273
+        }
+      }
+    },
+    "r3/FG-BA_s5": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r3/FG-BA_s5",
+      "issues": [
+        "stability_reset",
+        "state_timestamps",
+        "frame_count",
+        "factor_state_count"
+      ],
+      "fatal_markers": {
+        "Large velocity": 56
+      },
+      "state_rows": 1386,
+      "odometry_rows": 1499,
+      "factor_rows": 1442,
+      "state_time_mismatches": 224,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:06:05.790777+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "3c7f3a1ac4af6657c46a90acac28fd9f581b3a1a",
+        "campaign_sleep.json": "f115ba8e487b3ce137d6455ab0a25a1b8d04dbab",
+        "launch.log": "fa2967a4fb58d8e0c1293274b347d2b5c5117f3c",
+        "campaign_completion.json": "7bc3c0b6b5554b1263977fdc167006561fa9be12",
+        "odometry.csv": "3681faba83e1fadd45df14ad018a96f1022885d0",
+        "gravity_direction.csv": "91b744c9437fa441b9a68e5f4154c966bfaaf58c",
+        "roscore.log": "584916135ee09c0d957f64bb0f1cf99fc7024e96",
+        "run_meta.txt": "eaefd61167766799573790f209a4545f88d0c692",
+        "state_log.csv": "1bb04dd13a9b80c96ccd38325e02518af1d663fe",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "observed_estimator_failure_not_accuracy_run",
+      "missing_state_rows": 112,
+      "factors_without_accepted_state": 56
+    },
+    "r3/GE-BA_off": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r3/GE-BA_off",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 0,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:06:07.469745+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "c9564e59a6543d02cf4c952dc2573a01411aab9d",
+        "launch.log": "6f4ed13daff498a60bd49411323ea72017297445",
+        "odometry.csv": "924aebae664e3f9a24b18144c1318eaa6a15e353",
+        "roscore.log": "b307871b7bc13d69cba348b6fdfef0172f4bbd6a",
+        "run_meta.txt": "02b1369253c39ab2defa0132a8001d306a3c0e89",
+        "state_log.csv": "f00d4a5e86a9696230ab100076d60bc0c749c163",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.077285535700124,
+        "rmse_z_m": 1.6273704607987438,
+        "ate_rmse_m": 2.9803351855530145,
+        "rmse_z_mm_per_100m": 581.764844239299,
+        "ate_mm_per_100m": 1065.4330263271115,
+        "final_position_error_m": 1.615617629347508
+      }
+    },
+    "r3/GE-BA_s0p5": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r3/GE-BA_s0p5",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:06:09.089602+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "9d2bc3380eb66801843f51c841d31f9d6f06c68d",
+        "campaign_sleep.json": "3a16d0e19724039caea3ec231acbac3e9247433e",
+        "launch.log": "18f012df1ae192dd4f3165616a3044e3a89f7a49",
+        "campaign_completion.json": "e7a7d63495ed94f2e8698f8ef3ec9cddc034911f",
+        "odometry.csv": "5159404238bf69bbd057628b76fe773c88921e42",
+        "gravity_direction.csv": "e5babec6ba9a28dd100c1ebc17787c3ae83f81e7",
+        "roscore.log": "6c9aecb6b4a4cfb43fbc59049f8f5daa54f1352a",
+        "run_meta.txt": "c6de78aaaafb4dca584f9b7a7879a654286e1867",
+        "state_log.csv": "c16b8fe3811ab5bf436dc48d0efb353ca31e478c",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.0405655759445418,
+        "rmse_z_m": 1.461379249188475,
+        "ate_rmse_m": 2.545322599643138,
+        "rmse_z_mm_per_100m": 522.4250358221403,
+        "ate_mm_per_100m": 909.9213985937557,
+        "final_position_error_m": 1.0673068106431214,
+        "direction_factor": {
+          "factors": 1498,
+          "median_pre_residual_deg": 0.11386211940775505,
+          "median_post_residual_deg": 0.10555715173318107,
+          "p95_post_residual_deg": 0.2821759511984816,
+          "max_measurement_age_s": 0.019099950790405273
+        }
+      }
+    },
+    "r3/GE-BA_s2": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r3/GE-BA_s2",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:06:10.777389+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "801879abaca43f6114801ab935d56f7657954bc1",
+        "launch.log": "a23e53bbde6cd70119310c9e78a07f238ea63f5b",
+        "odometry.csv": "d6c8dfd9ea075440e0f63294439fa75e44c23264",
+        "gravity_direction.csv": "42a48539072c9cc8783fdb012f1646de6efcc563",
+        "roscore.log": "190e0468ad5656f1af4668515755139658100a5f",
+        "run_meta.txt": "79266d468676a5d866256f2ca98338197395bbf2",
+        "state_log.csv": "4e502e16030d0e86389acb49f4da8e687e904dce",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.0916447825986255,
+        "rmse_z_m": 1.5032848015507152,
+        "ate_rmse_m": 2.8271048273624033,
+        "rmse_z_mm_per_100m": 537.405753323191,
+        "ate_mm_per_100m": 1010.6550654307713,
+        "final_position_error_m": 1.0092748217289478,
+        "direction_factor": {
+          "factors": 1498,
+          "median_pre_residual_deg": 0.3563155633977557,
+          "median_post_residual_deg": 0.3538434997269494,
+          "p95_post_residual_deg": 0.8998978746005507,
+          "max_measurement_age_s": 0.019099950790405273
+        }
+      }
+    },
+    "r3/GE-BA_s5": {
+      "path": "results/strengthening_20260831/liosam_weights/hall05/r3/GE-BA_s5",
+      "issues": [],
+      "fatal_markers": {},
+      "state_rows": 1498,
+      "odometry_rows": 1499,
+      "factor_rows": 1498,
+      "state_time_mismatches": 0,
+      "odometry_time_mismatches": 0,
+      "sleep": {
+        "checked_at": "2026-08-31T21:06:12.474981+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T21:25:11+08:00"
+      },
+      "sha1": {
+        "rosbag.log": "9feb6433f0587405e098662b5679fc6edbb065ae",
+        "campaign_sleep.json": "d16b79dad016a43537d0cf2cd9932ce30e93d4c2",
+        "launch.log": "dbb929940508823f7e94ef471ecaed526faabf55",
+        "campaign_completion.json": "9e87fcb471e12ac2354802cef6b5d5891575b40b",
+        "odometry.csv": "e0ec403ec84962c7abb3ee2b6baf81481204dc45",
+        "gravity_direction.csv": "56094156392d431071133fa95b481e9bae405b5b",
+        "roscore.log": "ddb74cb16a338635e0e7765ee1b175b83bce0d0a",
+        "run_meta.txt": "4efb7445bd7851e20dd60052764848b50f3d47ac",
+        "state_log.csv": "541a38e5e03414f3377e36029e686e93c7b367ac",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "status": "admitted_accuracy",
+      "metrics": {
+        "frames": 1499,
+        "duration_s": 394.674334526062,
+        "gt_arc_length_m": 279.7299419023252,
+        "estimate_to_gt_arc_ratio": 1.0816495634650312,
+        "rmse_z_m": 1.5903725043790498,
+        "ate_rmse_m": 2.8621813617546166,
+        "rmse_z_mm_per_100m": 568.5385316865252,
+        "ate_mm_per_100m": 1023.1944933352968,
+        "final_position_error_m": 1.4857220158909061,
+        "direction_factor": {
+          "factors": 1498,
+          "median_pre_residual_deg": 0.4152749649745765,
+          "median_post_residual_deg": 0.41586303537844893,
+          "p95_post_residual_deg": 0.9533353396842562,
+          "max_measurement_age_s": 0.019099950790405273
+        }
+      }
+    }
+  },
+  "interpretation": "A reset is an observed stability outcome, not proof that the factor alone caused it; low-level IMU receipt timing was not recorded. Timestamp-mismatched runs remain excluded by the original zero-tolerance rule.",
+  "input_bag_sha1": "6711595e9b9aa05318e7df578032fab50d7dcf38",
+  "serial_container_events": [
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "46dd2cc547f983b749a1dd5ae527dda463871c4927c07d79c4ebe9793bb66e84",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_35112",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788165804,
+      "timeNano": 1788165804450166808
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "46dd2cc547f983b749a1dd5ae527dda463871c4927c07d79c4ebe9793bb66e84",
+        "Attributes": {
+          "execDuration": "821",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_35112",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788166625,
+      "timeNano": 1788166625579243406
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "111959f21a88246159a66fa92519fa9ec7399d187b068923d05d50b18ca81f0f",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_38622",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788166628,
+      "timeNano": 1788166628435862975
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "111959f21a88246159a66fa92519fa9ec7399d187b068923d05d50b18ca81f0f",
+        "Attributes": {
+          "execDuration": "820",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_38622",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788167449,
+      "timeNano": 1788167449325981330
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "98877c6fd9d533d5da22d68d0e19f7f8a19175f9b3211feb46a88856fc099272",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_41778",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788167452,
+      "timeNano": 1788167452203529096
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "98877c6fd9d533d5da22d68d0e19f7f8a19175f9b3211feb46a88856fc099272",
+        "Attributes": {
+          "execDuration": "820",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_41778",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788168273,
+      "timeNano": 1788168273098960344
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "9031cc536a60ccecd55382a7c7b73a12a7c6870079d756f09d65bfbc2c5f9677",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_44669",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788168276,
+      "timeNano": 1788168276164312447
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "9031cc536a60ccecd55382a7c7b73a12a7c6870079d756f09d65bfbc2c5f9677",
+        "Attributes": {
+          "execDuration": "821",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_44669",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788169097,
+      "timeNano": 1788169097495562827
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "b999c78659543efb2940802d8ef4d2d4d9f57f59ddf553149d4a6a0941ea3e7d",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_47851",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788169101,
+      "timeNano": 1788169101364461425
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "b999c78659543efb2940802d8ef4d2d4d9f57f59ddf553149d4a6a0941ea3e7d",
+        "Attributes": {
+          "execDuration": "820",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_47851",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788169922,
+      "timeNano": 1788169922037451846
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "84b542088e09f0e97d4fdf73cf5de3a2e054ae1844c8640010a75803c85ae653",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_50044",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788169924,
+      "timeNano": 1788169924798452206
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "84b542088e09f0e97d4fdf73cf5de3a2e054ae1844c8640010a75803c85ae653",
+        "Attributes": {
+          "execDuration": "820",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_50044",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788170745,
+      "timeNano": 1788170745606829040
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "dcfe8a92e9acce0e227fa448c919cbb3d61ef7cc8eff957acb724ef11565a07d",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_51370",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788170748,
+      "timeNano": 1788170748415609244
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "dcfe8a92e9acce0e227fa448c919cbb3d61ef7cc8eff957acb724ef11565a07d",
+        "Attributes": {
+          "execDuration": "820",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_51370",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788171569,
+      "timeNano": 1788171569436474545
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "4607fadbea14530bfd6e9617e5dde930da1ffe1502af7ddff33dfda2afc3d79a",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_53206",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788171573,
+      "timeNano": 1788171573372582566
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "4607fadbea14530bfd6e9617e5dde930da1ffe1502af7ddff33dfda2afc3d79a",
+        "Attributes": {
+          "execDuration": "820",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_53206",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788172393,
+      "timeNano": 1788172393977839352
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "fcbb44074f952b628980c648e74090fe08d546a40c859ed8e6c5076aa2531cab",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_55407",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788172397,
+      "timeNano": 1788172397694747064
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "fcbb44074f952b628980c648e74090fe08d546a40c859ed8e6c5076aa2531cab",
+        "Attributes": {
+          "execDuration": "821",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_55407",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788173219,
+      "timeNano": 1788173219163545247
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "1a4d625ff42894e2d6cb5c0eb52c5aabc1c6160b5fdbf15dd8c75edc40fe1da6",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_58182",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788173222,
+      "timeNano": 1788173222706754109
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "1a4d625ff42894e2d6cb5c0eb52c5aabc1c6160b5fdbf15dd8c75edc40fe1da6",
+        "Attributes": {
+          "execDuration": "820",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_58182",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788174043,
+      "timeNano": 1788174043666039607
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "d1927dfefa602348bdb0d13f40f04faff5673429b5fcb82742500128284b7b3a",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_61927",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788174046,
+      "timeNano": 1788174046310593302
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "d1927dfefa602348bdb0d13f40f04faff5673429b5fcb82742500128284b7b3a",
+        "Attributes": {
+          "execDuration": "820",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_61927",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788174866,
+      "timeNano": 1788174866771439341
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "c50e3230788b191da2ff9b0f8bc822cc8f2cbb034d1a31f21544dc5286dd352b",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_64043",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788174869,
+      "timeNano": 1788174869285505458
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "c50e3230788b191da2ff9b0f8bc822cc8f2cbb034d1a31f21544dc5286dd352b",
+        "Attributes": {
+          "execDuration": "820",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_gravity_direction_64043",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788175689,
+      "timeNano": 1788175689595777589
+    }
+  ]
+}

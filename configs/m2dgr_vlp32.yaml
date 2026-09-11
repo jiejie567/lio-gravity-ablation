@@ -1,0 +1,35 @@
+# M2DGR (SJTU): Velodyne VLP-32C + Handsfree A9 外置 IMU 150Hz
+# 外参与 IMU 噪声取自 M2DGR 官方 my_params_lidar.yaml (lidar->IMU, R=I)
+common:
+    lid_topic:  "/velodyne_points"
+    imu_topic:  "/handsfree/imu"
+    time_sync_en: false
+    time_offset_lidar_to_imu: 0.0
+
+preprocess:
+    lidar_type: 2                # velodyne
+    scan_line: 32
+    blind: 1.0
+
+mapping:
+    acc_cov: 3.77e-2
+    gyr_cov: 2.34e-3
+    b_acc_cov: 1.14e-3
+    b_gyr_cov: 1.44e-5
+    fov_degree:    180
+    det_range:     100.0
+    extrinsic_est_en:  false
+    extrinsic_T: [ 0.27255, -0.00053, 0.17954 ]
+    extrinsic_R: [ 1, 0, 0,
+                   0, 1, 0,
+                   0, 0, 1 ]
+
+publish:
+    path_en:  false
+    scan_publish_en:  true
+    dense_publish_en: true
+    scan_bodyframe_pub_en: true
+
+pcd_save:
+    pcd_save_en: false
+    interval: -1

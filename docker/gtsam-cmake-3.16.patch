@@ -1,0 +1,41 @@
+diff --git a/gtsam/CMakeLists.txt b/gtsam/CMakeLists.txt
+index 9897b519a..8d7dc6b6d 100644
+--- a/gtsam/CMakeLists.txt
++++ b/gtsam/CMakeLists.txt
+@@ -127,9 +127,13 @@ foreach(subdir ${gtsam_subdirs})
+       list(APPEND subdir_srcs ${subdir_cuda_srcs})
+     else()
+       file(GLOB_RECURSE subdir_cuda_srcs "${subdir}/cuda/*")
+-      list(REMOVE_ITEM subdir_srcs ${subdir_cuda_srcs})
++      if(subdir_cuda_srcs)
++        list(REMOVE_ITEM subdir_srcs ${subdir_cuda_srcs})
++      endif()
++    endif()
++    if(excluded_sources)
++      list(REMOVE_ITEM subdir_srcs ${excluded_sources})
+     endif()
+-    list(REMOVE_ITEM subdir_srcs ${excluded_sources})
+ 	file(GLOB subdir_test_files "${subdir}/tests/*")
+ 	list(REMOVE_ITEM subdir_srcs ${subdir_test_files}) # Remove test files from sources compiled into library
+     gtsam_assign_source_folders("${subdir_srcs}") # Create MSVC structure
+diff --git a/gtsam/constrained/QpCost.h b/gtsam/constrained/QpCost.h
+index 194243c02..96fa12a6f 100644
+--- a/gtsam/constrained/QpCost.h
++++ b/gtsam/constrained/QpCost.h
+@@ -58,9 +58,13 @@ class GTSAM_EXPORT QpCost : public HessianFactor {
+    * factor.
+    */
+   explicit QpCost(const GaussianFactor::shared_ptr& factor)
+-      : QpCost(factor ? *factor
+-                      : throw std::invalid_argument(
+-                            "QpCost: shared Gaussian factor is null.")) {}
++      : QpCost([&factor]() -> const GaussianFactor& {
++          if (!factor) {
++            throw std::invalid_argument(
++                "QpCost: shared Gaussian factor is null.");
++          }
++          return *factor;
++        }()) {}
+ 
+   /**
+    * Construct a row-space quadratic cost over direct Vector or Matrix Values.

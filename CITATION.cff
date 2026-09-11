@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying preprint when using this research software."
+type: software
+title: "Does Online Gravity Estimation Matter? Revisiting a Silent Design Split in LiDAR-Inertial Odometry"
+authors:
+  - family-names: Xu
+    given-names: Jie
+  - family-names: Jin
+    given-names: Ziyi
+  - family-names: Yu
+    given-names: Kangjin
+  - family-names: Huang
+    given-names: Hongjun
+  - family-names: Xia
+    given-names: Zhongpu
+repository-code: "https://github.com/jiejie567/lio-gravity-ablation"
+url: "https://github.com/jiejie567/lio-gravity-ablation"
+version: 1.0.0
+date-released: 2026-09-11

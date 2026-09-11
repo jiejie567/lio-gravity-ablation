@@ -1,0 +1,22 @@
+{
+  "integrity": {
+    "files_verified": 3078,
+    "passed": true
+  },
+  "tables_byte_identical": [
+    "stats.tex",
+    "t1_nominal.tex",
+    "t2_boundary.tex",
+    "t5_direction.tex"
+  ],
+  "figure_pixels_identical_on_this_host": {
+    "fig_factorial.png": true,
+    "fig_teaser.png": true,
+    "fig_boundary.png": true,
+    "fig_direction.png": true,
+    "fig_design.png": true
+  },
+  "passed": true,
+  "unique_runs_recomputed": 333,
+  "report_entries_checked": 341
+}

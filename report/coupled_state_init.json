@@ -1,0 +1,254 @@
+{
+ "schema": 1,
+ "generated_by": "scripts/collect_coupled_state_init.py",
+ "status": "completed_structural_gates_pass",
+ "planned_runs": 10,
+ "included_runs": 10,
+ "trajectory_units": 2,
+ "question": "Can different online gravity/accelerometer-bias allocations preserve the propagation-relevant combination and pose?",
+ "intervention": {
+  "gravity_tilt_deg": [
+   -2.0,
+   2.0
+  ],
+  "paired_rule": "ba1 = ba0 + R0^T (g1 - g0)",
+  "invariant_at_boundary": "g1 - R0 ba1 = g0 - R0 ba0",
+  "duration_s": 60.0,
+  "all_states": "Online g + Online ba"
+ },
+ "interpretation_boundary": "This tests state allocation and compensation, not absolute ba truth or the frequency of marginal-state error.",
+ "sequences": {
+  "vehicle": {
+   "result_group": "ntu_day_10_coupledinit60",
+   "frames": 597,
+   "baseline": {
+    "rmse_z_m": 2.129171409084093,
+    "ate_rmse_m": 3.4754042472980475
+   },
+   "plus": {
+    "gravity_only": {
+     "initial": {
+      "gravity_angle_to_base_deg": 1.9999999140885527,
+      "ba_distance_to_base_mps2": 1.5066519173319363e-08,
+      "effective_term_distance_to_base_mps2": 0.34238127981306415
+     },
+     "whole_run": {
+      "gravity_component_rms_mps2": 0.0725944991002595,
+      "rotated_ba_component_rms_mps2": 0.04411442254100847,
+      "effective_term_rms_mps2": 0.050368509729061775,
+      "cancellation_ratio": 0.4315737736304437,
+      "direct_position_rms_to_base_m": 0.0054425873531592315
+     },
+     "last_10s": {
+      "gravity_angle_to_base_deg_median": 0.06931114671008966,
+      "ba_distance_to_base_mps2_median": 0.008515859797468842,
+      "effective_term_distance_to_base_mps2_median": 0.009535045492544424,
+      "position_distance_to_base_m_median": 0.008062309415710765
+     },
+     "trajectory_metrics": {
+      "rmse_z_m": 2.1312593833873787,
+      "ate_rmse_m": 3.4795584987203356,
+      "rmse_z_change_pct": 0.09806511088665815,
+      "ate_change_pct": 0.1195328982381838
+     }
+    },
+    "paired": {
+     "initial": {
+      "gravity_angle_to_base_deg": 1.9999999958635262,
+      "ba_distance_to_base_mps2": 0.3423813006618135,
+      "effective_term_distance_to_base_mps2": 4.599105896249205e-08
+     },
+     "whole_run": {
+      "gravity_component_rms_mps2": 0.11012941332735904,
+      "rotated_ba_component_rms_mps2": 0.10968431495183266,
+      "effective_term_rms_mps2": 0.06734540753955248,
+      "cancellation_ratio": 0.3063748932642421,
+      "direct_position_rms_to_base_m": 0.006639141281267975
+     },
+     "last_10s": {
+      "gravity_angle_to_base_deg_median": 0.03817460836269075,
+      "ba_distance_to_base_mps2_median": 0.002969311294275836,
+      "effective_term_distance_to_base_mps2_median": 0.0038877561710483717,
+      "position_distance_to_base_m_median": 0.011001132502708275
+     },
+     "trajectory_metrics": {
+      "rmse_z_m": 2.1338427056024343,
+      "ate_rmse_m": 3.489503455904809,
+      "rmse_z_change_pct": 0.21939504252268538,
+      "ate_change_pct": 0.40568542832744026
+     }
+    }
+   },
+   "minus": {
+    "gravity_only": {
+     "initial": {
+      "gravity_angle_to_base_deg": 1.999999918270359,
+      "ba_distance_to_base_mps2": 1.5066519173319366e-08,
+      "effective_term_distance_to_base_mps2": 0.3423812804735355
+     },
+     "whole_run": {
+      "gravity_component_rms_mps2": 0.07284005547246589,
+      "rotated_ba_component_rms_mps2": 0.04406315580009391,
+      "effective_term_rms_mps2": 0.050720721092251266,
+      "cancellation_ratio": 0.4338693568818732,
+      "direct_position_rms_to_base_m": 0.009987589421247545
+     },
+     "last_10s": {
+      "gravity_angle_to_base_deg_median": 0.07382079435781595,
+      "ba_distance_to_base_mps2_median": 0.008308879811045436,
+      "effective_term_distance_to_base_mps2_median": 0.009658274275944498,
+      "position_distance_to_base_m_median": 0.018385434808573544
+     },
+     "trajectory_metrics": {
+      "rmse_z_m": 2.131431142975997,
+      "ate_rmse_m": 3.474753596561791,
+      "rmse_z_change_pct": 0.10613207946821301,
+      "ate_change_pct": -0.01872158430957782
+     }
+    },
+    "paired": {
+     "initial": {
+      "gravity_angle_to_base_deg": 2.0000000002545777,
+      "ba_distance_to_base_mps2": 0.34238131890466295,
+      "effective_term_distance_to_base_mps2": 2.0378252027102807e-07
+     },
+     "whole_run": {
+      "gravity_component_rms_mps2": 0.11010999144386191,
+      "rotated_ba_component_rms_mps2": 0.10973441364487382,
+      "effective_term_rms_mps2": 0.06756733309889863,
+      "cancellation_ratio": 0.30734160858733905,
+      "direct_position_rms_to_base_m": 0.010162651804805842
+     },
+     "last_10s": {
+      "gravity_angle_to_base_deg_median": 0.03991477149296654,
+      "ba_distance_to_base_mps2_median": 0.0028923409892348383,
+      "effective_term_distance_to_base_mps2_median": 0.0046260349130779746,
+      "position_distance_to_base_m_median": 0.016480748967407845
+     },
+     "trajectory_metrics": {
+      "rmse_z_m": 2.132676574803545,
+      "ate_rmse_m": 3.472016293403717,
+      "rmse_z_change_pct": 0.16462581192371317,
+      "ate_change_pct": -0.09748373579748781
+     }
+    }
+   }
+  },
+  "handheld": {
+   "result_group": "tuhh_day_04_coupledinit60",
+   "frames": 597,
+   "baseline": {
+    "rmse_z_m": 0.06330124173687292,
+    "ate_rmse_m": 0.10369147233410392
+   },
+   "plus": {
+    "gravity_only": {
+     "initial": {
+      "gravity_angle_to_base_deg": 1.9999999383332965,
+      "ba_distance_to_base_mps2": 1.2083045973594573e-08,
+      "effective_term_distance_to_base_mps2": 0.3423812869001947
+     },
+     "whole_run": {
+      "gravity_component_rms_mps2": 0.12313102819089095,
+      "rotated_ba_component_rms_mps2": 0.10338504447850588,
+      "effective_term_rms_mps2": 0.04533618057961794,
+      "cancellation_ratio": 0.20014553512847932,
+      "direct_position_rms_to_base_m": 0.004840551572376281
+     },
+     "last_10s": {
+      "gravity_angle_to_base_deg_median": 0.37869645994244505,
+      "ba_distance_to_base_mps2_median": 0.06242128461218345,
+      "effective_term_distance_to_base_mps2_median": 0.005215490245834498,
+      "position_distance_to_base_m_median": 0.007425422745472355
+     },
+     "trajectory_metrics": {
+      "rmse_z_m": 0.059709230251546584,
+      "ate_rmse_m": 0.10213256099739647,
+      "rmse_z_change_pct": -5.674472390695595,
+      "ate_change_pct": -1.503413252426855
+     }
+    },
+    "paired": {
+     "initial": {
+      "gravity_angle_to_base_deg": 2.000000002833142,
+      "ba_distance_to_base_mps2": 0.3423814647344022,
+      "effective_term_distance_to_base_mps2": 1.737256383340703e-07
+     },
+     "whole_run": {
+      "gravity_component_rms_mps2": 0.2215811529229789,
+      "rotated_ba_component_rms_mps2": 0.2207910473710034,
+      "effective_term_rms_mps2": 0.051994651955701826,
+      "cancellation_ratio": 0.11753598422583592,
+      "direct_position_rms_to_base_m": 0.00309967589418167
+     },
+     "last_10s": {
+      "gravity_angle_to_base_deg_median": 0.7434869597294578,
+      "ba_distance_to_base_mps2_median": 0.12604991266151316,
+      "effective_term_distance_to_base_mps2_median": 0.009074408830296747,
+      "position_distance_to_base_m_median": 0.0041622247232180505
+     },
+     "trajectory_metrics": {
+      "rmse_z_m": 0.05885195613830732,
+      "ate_rmse_m": 0.10277786044205797,
+      "rmse_z_change_pct": -7.028749320684957,
+      "ate_change_pct": -0.8810868159940921
+     }
+    }
+   },
+   "minus": {
+    "gravity_only": {
+     "initial": {
+      "gravity_angle_to_base_deg": 1.9999999364023346,
+      "ba_distance_to_base_mps2": 1.135781669160053e-08,
+      "effective_term_distance_to_base_mps2": 0.342381287567329
+     },
+     "whole_run": {
+      "gravity_component_rms_mps2": 0.12445479318273969,
+      "rotated_ba_component_rms_mps2": 0.1042597880973716,
+      "effective_term_rms_mps2": 0.04581265525679115,
+      "cancellation_ratio": 0.20030491716084983,
+      "direct_position_rms_to_base_m": 0.006107263142738778
+     },
+     "last_10s": {
+      "gravity_angle_to_base_deg_median": 0.39230681025117264,
+      "ba_distance_to_base_mps2_median": 0.06263034922029931,
+      "effective_term_distance_to_base_mps2_median": 0.006193804916410093,
+      "position_distance_to_base_m_median": 0.012043671787114359
+     },
+     "trajectory_metrics": {
+      "rmse_z_m": 0.060236966856134104,
+      "ate_rmse_m": 0.10136724259729288,
+      "rmse_z_change_pct": -4.8407816287020395,
+      "ate_change_pct": -2.2414859047638402
+     }
+    },
+    "paired": {
+     "initial": {
+      "gravity_angle_to_base_deg": 2.0000000006541123,
+      "ba_distance_to_base_mps2": 0.34238115301156546,
+      "effective_term_distance_to_base_mps2": 1.7391343975332117e-07
+     },
+     "whole_run": {
+      "gravity_component_rms_mps2": 0.22131585804047044,
+      "rotated_ba_component_rms_mps2": 0.22050423580361855,
+      "effective_term_rms_mps2": 0.05199333343332355,
+      "cancellation_ratio": 0.11767987503907222,
+      "direct_position_rms_to_base_m": 0.004413396027688592
+     },
+     "last_10s": {
+      "gravity_angle_to_base_deg_median": 0.7284927318625187,
+      "ba_distance_to_base_mps2_median": 0.1223808601169852,
+      "effective_term_distance_to_base_mps2_median": 0.0076826267302203734,
+      "position_distance_to_base_m_median": 0.00842811990169267
+     },
+     "trajectory_metrics": {
+      "rmse_z_m": 0.06300032794445111,
+      "ate_rmse_m": 0.1003063950967935,
+      "rmse_z_change_pct": -0.4753679140649836,
+      "ate_change_pct": -3.2645666621488156
+     }
+    }
+   }
+  }
+ }
+}

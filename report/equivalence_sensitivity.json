@@ -1,0 +1,155 @@
+{
+  "created_at": "2026-09-02T04:25:46.161913+00:00",
+  "status": "complete_existing_results_only",
+  "scope": "Sensitivity analysis of the same 12 admitted sequence units; not additional experiments or independent samples.",
+  "source_sha256": {
+    "summary_json": "691f42ad77d8b5a42f3a6c88051d744b37b17d14db40f89245997c8951270994",
+    "strengthening_json": "976d381cd5ac66e9dcb72298bc718c43fea49deb65b7337e5664ec4c0518078c"
+  },
+  "margins": {
+    "formal_pre_specified_pct": 5.0,
+    "posthoc_sensitivity_pct": 2.0,
+    "log_ratio_lower_definition": "1 / (1 + margin)",
+    "log_ratio_upper_definition": "1 + margin"
+  },
+  "primary": {
+    "rmse_z_m": {
+      "n_sequence_units": 12,
+      "mean_paired_effect_pct": -0.10816464622731559,
+      "ci90_pct": [
+        -1.539853356527232,
+        1.3443419546920632
+      ],
+      "formal_5pct_tost_p": 4.90129159763791e-05,
+      "posthoc_2pct_tost_p": 0.019974532647674414,
+      "absolute_difference_m": {
+        "median": 0.016736672723796753,
+        "signed_range": [
+          -0.16728332039360883,
+          0.062179190675291096
+        ]
+      }
+    },
+    "ate_rmse_m": {
+      "n_sequence_units": 12,
+      "mean_paired_effect_pct": 0.08577928454416295,
+      "ci90_pct": [
+        -1.1606264156056034,
+        1.347902680112556
+      ],
+      "formal_5pct_tost_p": 1.3474623112679005e-05,
+      "posthoc_2pct_tost_p": 0.010054907211484507,
+      "absolute_difference_m": {
+        "median": 0.01389874166639038,
+        "signed_range": [
+          -0.04987993045652761,
+          0.2734664357714456
+        ]
+      }
+    }
+  },
+  "launch_specific_reproduction": {
+    "rmse_z_m": {
+      "n_sequence_units": 12,
+      "mean_paired_effect_pct": -0.28144801651207585,
+      "ci90_pct": [
+        -1.8418899217410245,
+        1.3038005902482608
+      ],
+      "formal_5pct_tost_p": 0.00013958613601173744,
+      "posthoc_2pct_tost_p": 0.039630612326722554
+    },
+    "ate_rmse_m": {
+      "n_sequence_units": 12,
+      "mean_paired_effect_pct": -0.10531226560726026,
+      "ci90_pct": [
+        -1.4977138244804955,
+        1.306771903451276
+      ],
+      "formal_5pct_tost_p": 3.827717372200095e-05,
+      "posthoc_2pct_tost_p": 0.017654625227204863
+    }
+  },
+  "trajectory_family_balanced": {
+    "families": {
+      "NTU": [
+        "ntu_day_01_os1",
+        "ntu_day_02_os1",
+        "ntu_day_10_os1",
+        "ntu_night_04_os1",
+        "ntu_night_13_os1"
+      ],
+      "KTH": [
+        "kth_day_10_os1",
+        "kth_night_05_os1"
+      ],
+      "TUHH": [
+        "tuhh_day_02_os1",
+        "tuhh_day_04_os1",
+        "tuhh_night_09_os1"
+      ],
+      "TIERS": [
+        "IndoorOffice1"
+      ],
+      "M2DGR": [
+        "hall_05_run"
+      ]
+    },
+    "method": "mean log ratio within family, then equal weight across families",
+    "metrics": {
+      "rmse_z_m": {
+        "n_sequence_units": 5,
+        "mean_paired_effect_pct": 0.4104570051602696,
+        "ci90_pct": [
+          -0.6911452629081438,
+          1.5242790048953792
+        ],
+        "formal_5pct_tost_p": 0.0004940936023164798,
+        "posthoc_2pct_tost_p": 0.019290613887920426,
+        "family_effect_pct": {
+          "NTU": -0.7358059026493854,
+          "KTH": 0.024010753198457656,
+          "TUHH": -0.20811589861598115,
+          "TIERS": 0.7160887056595566,
+          "M2DGR": 2.283070931554021
+        }
+      },
+      "ate_rmse_m": {
+        "n_sequence_units": 5,
+        "mean_paired_effect_pct": -0.5726395868425938,
+        "ci90_pct": [
+          -2.177458963852652,
+          1.0585075179646353
+        ],
+        "formal_5pct_tost_p": 0.0024330508794726848,
+        "posthoc_2pct_tost_p": 0.06963898583410474,
+        "family_effect_pct": {
+          "NTU": 1.2236215551312342,
+          "KTH": 0.34731966868954006,
+          "TUHH": -0.653437619957881,
+          "TIERS": -3.2721436740799636,
+          "M2DGR": -0.4508641222076726
+        }
+      }
+    }
+  },
+  "small_baseline_example": {
+    "sequence": "hall_05_run",
+    "metrics": {
+      "rmse_z_m": {
+        "online_m": 0.042196174132117945,
+        "fixg_m": 0.043159542717956245,
+        "difference_m": 0.0009633685858383007,
+        "difference_mm": 0.9633685858383007,
+        "relative_pct": 2.283070931554021
+      },
+      "ate_rmse_m": {
+        "online_m": 1.2725215399811929,
+        "fixg_m": 1.266784196910053,
+        "difference_m": -0.005737343071139822,
+        "difference_mm": -5.737343071139822,
+        "relative_pct": -0.4508641222076726
+      }
+    }
+  }
+}

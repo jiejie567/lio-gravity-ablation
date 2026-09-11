@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "sequence": "ntu_night_04_os1",
+  "runs": {
+    "Online": "A",
+    "FixG": "RED21"
+  },
+  "admission": {
+    "timestamps_exact": true,
+    "frames_each": 2962
+  },
+  "metrics": {
+    "duration_s": 296.0935444831848,
+    "online_gravity_wander_max_deg": 4.013513457795269,
+    "paired_z_separation_max_m": 0.07752604300000066
+  }
+}

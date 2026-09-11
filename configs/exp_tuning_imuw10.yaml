@@ -1,0 +1,14 @@
+# 本实验统一调参(所有序列、所有方法一致,保证 A/B/C/D 可比)
+# 作者基准的 0.2m/filter1 在本机(arm64 容器)地图长大后掉到 7帧/分,不可用;
+# 此处取健壮折中,绝对 ATE 会略高于论文数字,但消融对比不受影响。
+point_filter_num: 3
+max_iteration: 4
+filter_size_surf: 0.4
+filter_size_map: 0.4
+
+# IMU 权重消融: 过程噪声整体 ×10.0 —— 越小 = 越信任 IMU 递推,重力误差越容易传进位姿
+mapping:
+  acc_cov: 1
+  gyr_cov: 1
+  b_acc_cov: 0.001
+  b_gyr_cov: 0.001

@@ -1,0 +1,18 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+With continuous LiDAR correction, FAST-LIO2's mean paired effects of fixing gravity
+on vertical and 3D position error satisfy practical equivalence across
+\NumCoreSeq{} dataset sequences. A descriptive
+\NumLioSamSeq{}-sequence LIO-SAM ablation also
+finds no consistent benefit from online gravity estimation. This does not
+justify fixing gravity or bias by default. The
+matched-dropout and dynamic-start tests show recovery and failure costs that
+nominal averages miss, while the runtime saving is negligible. We recommend
+keeping both $\mathbf g$ and $\mathbf b_a$ online, without treating their
+individual estimates as calibrated measurements. FixG remains an optional,
+validated steady-state simplification.
+Do not add the tested same-IMU gravity-direction factor as a generic $z$-drift
+remedy; the factor can reduce its residual while improving, leaving unchanged,
+or worsening trajectory error. Independent gravity sensing and global loop-closure PGO priors remain
+outside this claim.

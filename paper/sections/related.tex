@@ -1,0 +1,62 @@
+\section{Related Work}
+\label{sec:related}
+
+\textbf{State representation.}
+Modern LIO includes iterated filters, smoothers, and continuous-time
+estimators. FAST-LIO/FAST-LIO2 place gravity on $S^2$ inside an iterated
+error-state filter \cite{xu2021fastlio,xu2022fastlio2,he2021ikfom}, and
+Point-LIO retains the same convention \cite{he2023pointlio}. VE-LIOM also
+estimates gravity online in an optimization framework \cite{gao2024veliom},
+whereas LIO-SAM initializes a gravity-aligned frame without an equivalent
+online direction state \cite{shan2020liosam}. Related pipelines also differ in
+feature construction and map access. LOAM introduced edge/plane registration
+\cite{zhang2014loam}, while FAST-LIO2 couples raw points to an incremental
+$k$-d tree \cite{cai2021ikdtree}. Direct and continuous-time systems change
+scan matching and propagation together
+\cite{wang2023dliom,nguyen2023slict,chen2023dlio}. Cross-system accuracy
+therefore confounds gravity handling with the front end, trajectory model,
+map, and parameter settings. Our primary intervention changes only the compiled state
+manifold; LIO-SAM provides a descriptive transfer check.
+
+\textbf{Gravity--attitude--bias observability.}
+Gravity direction, roll/pitch, and accelerometer bias have coupled
+linearizations. Visual--inertial consistency analyses identify unobservable
+and weakly observable directions \cite{hesch2014consistency,qin2018vinsmono},
+and planar motion further limits excitation \cite{wu2017vinswheels}. LIO
+initializers consequently estimate gravity, biases, timing, and extrinsics
+before normal operation \cite{zhu2022liinit}; joint on-manifold calibration
+makes the coupling explicit \cite{nemiroff2023gravity}. These analyses
+establish when gravity is identifiable, but not whether its continued freedom
+improves pose under frequent LiDAR correction. We test the latter while
+intervening independently on $\mathbf g$ and $\mathbf b_a$. Mature
+visual--inertial systems combine observability decisions with initialization,
+relocalization, and map management \cite{campos2021orbslam3}; their aggregate
+robustness cannot isolate one state's post-initialization utility.
+
+\textbf{Gravity-enhanced residuals.}
+Gravity-constrained registration removes rotational freedom using an
+IMU-derived vertical direction \cite{kubelka2022gravity}. Recent radar--LiDAR
+and radar--leg estimators add velocity-supported or soft $S^2$ gravity
+information and report improved vertical accuracy
+\cite{noh2025garlio,noh2025garlileo}. Elevator-specific models likewise show
+that non-inertial motion can violate a nominal gravity model
+\cite{elevator2026lio}. These methods add sensor information or residual
+constraints; fixing an initialized gravity state does neither. We therefore
+cross a same-IMU gravity-direction factor with fixed/online gravity and pair
+its residual reduction with trajectory error. This design tests whether
+tighter down-direction consistency reliably reduces vertical drift.
+
+\textbf{Degradation and correction absence.}
+Perceptual degeneracy is commonly detected from LiDAR geometry or estimator
+observability and handled through selective updates, alternate odometry, or
+direction-dependent weighting \cite{tagliabue2021lion,yao2025d2lio}. Weak
+geometry and missing correction are often discussed within the same robustness
+setting, although their estimator inputs differ. We separate them
+experimentally: range/FoV degradation preserves the scan-update rhythm,
+whereas periodic dropout removes correction entirely. Because the expected
+effects are small, our protocol also audits reference-path plausibility and
+exact correction timestamps, consistent with uncertainty-aware benchmark
+generation \cite{hu2024paloc}. Our claim concerns an observation regime, not a
+ranking of complete estimators. It distinguishes weak but accepted updates
+from rejected or unavailable ones, a difference hidden by a single trajectory
+score.

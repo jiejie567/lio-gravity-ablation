@@ -1,0 +1,2988 @@
+{
+  "schema_version": 2,
+  "design": {
+    "name": "Matched Online-to-Warm-FixG21 active-subspace intervention",
+    "intervention": "At a pre-specified time, snapshot the Online gravity mean, condition the active covariance on that value, and continue with a 21D local error-state update while preserving the full pre-switch history.",
+    "causal_control": "The clean and dropout branches use the same trigger, Online state, map, covariance, and bit-identical pre-switch trajectory; only the subsequent LiDAR-correction regime differs.",
+    "primary_projection": "conditional (Schur complement)",
+    "inference": "Three serial pairs at the original phase plus two shifted phases per trajectory; effects remain trajectory-level and are not pooled"
+  },
+  "trajectories": {
+    "vehicle": {
+      "requested_switch_s": 17.0,
+      "dropout_label": "3 s/20 s",
+      "clean": {
+        "sequence": "ntu_day_10_os1",
+        "runs": {
+          "online": "A_warm21",
+          "warm_fixg21": "WarmFixG21C"
+        },
+        "frames": 3244,
+        "event": {
+          "requested_elapsed_s": 17.0,
+          "snapshot_elapsed_s": 16.998844623566,
+          "activation_elapsed_s": 17.003364086151,
+          "correction_gap_s": 0.00451970100402832,
+          "gravity_m_s2": [
+            -0.074396016866,
+            -0.024746234255,
+            -9.808686652991
+          ],
+          "accelerometer_bias_m_s2": [
+            0.320897391591,
+            -0.185636187376,
+            -0.02658362963
+          ],
+          "pre_switch_gravity_covariance": [
+            [
+              7.23038e-07,
+              -1.22e-10
+            ],
+            [
+              -1.22e-10,
+              7.22519e-07
+            ]
+          ],
+          "pre_switch_state_gravity_cross_covariance_fro": 3.620684e-06,
+          "projected_active_covariance_min_eigenvalue": 1.18e-09
+        },
+        "structure": {
+          "matched_frames": true,
+          "matched_correction_timestamps": true,
+          "bit_identical_pre_switch_prefix": true,
+          "snapshot_is_preceding_correction": true,
+          "active_dof_before_after": [
+            23,
+            21
+          ],
+          "conditional_covariance_projection": true,
+          "fixed_gravity_max_abs_deviation": 2.550000002821129e-10,
+          "binary_sha1": "655a13b3c4ca"
+        },
+        "metrics": {
+          "online": {
+            "rmse_z_m": 2.4927835572446027,
+            "ate_rmse_m": 6.600002496257447,
+            "rmse_roll_deg": 2.3124910082432675,
+            "rmse_pitch_deg": 1.3162095483575789
+          },
+          "warm_fixg21_conditional": {
+            "rmse_z_m": 2.4480169214196357,
+            "ate_rmse_m": 6.5451579713986066,
+            "rmse_roll_deg": 2.3084339371778806,
+            "rmse_pitch_deg": 1.2970933102785358
+          },
+          "warm_effect_vs_online": {
+            "rmse_z_m": {
+              "absolute": -0.04476663582496698,
+              "percent": -1.7958492904393886
+            },
+            "ate_rmse_m": {
+              "absolute": -0.05484452485884006,
+              "percent": -0.8309773350834271
+            },
+            "rmse_roll_deg": {
+              "absolute": -0.004057071065386886,
+              "percent": -0.17544159310997065
+            },
+            "rmse_pitch_deg": {
+              "absolute": -0.019116238079043057,
+              "percent": -1.4523704149462469
+            }
+          }
+        },
+        "implementation_sensitivity": {
+          "marginal_projection_metrics": {
+            "rmse_z_m": 53.67023458710932,
+            "ate_rmse_m": 102.66741981223313,
+            "rmse_roll_deg": 19.860203904558155,
+            "rmse_pitch_deg": 18.06548023536351
+          },
+          "marginal_effect_vs_online": {
+            "rmse_z_m": {
+              "absolute": 51.17745102986472,
+              "percent": 2053.0242539963515
+            },
+            "ate_rmse_m": {
+              "absolute": 96.06741731597569,
+              "percent": 1455.5663785044178
+            },
+            "rmse_roll_deg": {
+              "absolute": 17.547712896314888,
+              "percent": 758.8229676899534
+            },
+            "rmse_pitch_deg": {
+              "absolute": 16.74927068700593,
+              "percent": 1272.5383057664615
+            }
+          },
+          "interpretation": "Retaining P_xx while declaring the snapshot gravity exact is not the primary intervention; its clean divergence is an implementation-validity counterexample, not evidence about fixed gravity."
+        }
+      },
+      "dropout": {
+        "sequence": "ntu_day_10_drop3x20",
+        "runs": {
+          "online": "A_warm21",
+          "warm_fixg21": "WarmFixG21C"
+        },
+        "frames": 2763,
+        "event": {
+          "requested_elapsed_s": 17.0,
+          "snapshot_elapsed_s": 16.998844623566,
+          "activation_elapsed_s": 20.098079681396,
+          "correction_gap_s": 3.0992352962493896,
+          "gravity_m_s2": [
+            -0.074396016866,
+            -0.024746234255,
+            -9.808686652991
+          ],
+          "accelerometer_bias_m_s2": [
+            0.320897391591,
+            -0.185636187376,
+            -0.02658362963
+          ],
+          "pre_switch_gravity_covariance": [
+            [
+              7.23038e-07,
+              -1.22e-10
+            ],
+            [
+              -1.22e-10,
+              7.22519e-07
+            ]
+          ],
+          "pre_switch_state_gravity_cross_covariance_fro": 3.620684e-06,
+          "projected_active_covariance_min_eigenvalue": 1.18e-09
+        },
+        "structure": {
+          "matched_frames": true,
+          "matched_correction_timestamps": true,
+          "bit_identical_pre_switch_prefix": true,
+          "snapshot_is_preceding_correction": true,
+          "active_dof_before_after": [
+            23,
+            21
+          ],
+          "conditional_covariance_projection": true,
+          "fixed_gravity_max_abs_deviation": 2.550000002821129e-10,
+          "binary_sha1": "655a13b3c4ca"
+        },
+        "metrics": {
+          "online": {
+            "rmse_z_m": 3.093166372762335,
+            "ate_rmse_m": 8.421632925725785,
+            "rmse_roll_deg": 2.7798514689045692,
+            "rmse_pitch_deg": 1.5746095982976918
+          },
+          "warm_fixg21_conditional": {
+            "rmse_z_m": 3.664388097076383,
+            "ate_rmse_m": 12.530258476409136,
+            "rmse_roll_deg": 2.8770222700273504,
+            "rmse_pitch_deg": 1.6403568739276535
+          },
+          "warm_effect_vs_online": {
+            "rmse_z_m": {
+              "absolute": 0.5712217243140483,
+              "percent": 18.467216291502673
+            },
+            "ate_rmse_m": {
+              "absolute": 4.108625550683351,
+              "percent": 48.78656653548297
+            },
+            "rmse_roll_deg": {
+              "absolute": 0.0971708011227812,
+              "percent": 3.4955393196267615
+            },
+            "rmse_pitch_deg": {
+              "absolute": 0.06574727562996174,
+              "percent": 4.1754651883896265
+            }
+          }
+        },
+        "implementation_sensitivity": {
+          "marginal_projection_metrics": {
+            "rmse_z_m": 3.951895696402548,
+            "ate_rmse_m": 13.757797268817633,
+            "rmse_roll_deg": 2.9575278429392293,
+            "rmse_pitch_deg": 1.7130832949431063
+          },
+          "marginal_effect_vs_online": {
+            "rmse_z_m": {
+              "absolute": 0.8587293236402131,
+              "percent": 27.762144681319857
+            },
+            "ate_rmse_m": {
+              "absolute": 5.336164343091848,
+              "percent": 63.36258526290462
+            },
+            "rmse_roll_deg": {
+              "absolute": 0.17767637403466008,
+              "percent": 6.391577968180995
+            },
+            "rmse_pitch_deg": {
+              "absolute": 0.13847369664541453,
+              "percent": 8.79416058400242
+            }
+          },
+          "interpretation": "Retaining P_xx while declaring the snapshot gravity exact is not the primary intervention; its clean divergence is an implementation-validity counterexample, not evidence about fixed gravity."
+        }
+      },
+      "warm_fixg21_by_dropout_interaction": {
+        "rmse_z_m": {
+          "absolute_difference_in_differences": 0.6159883601390153,
+          "effect_difference_percentage_points": 20.26306558194206
+        },
+        "ate_rmse_m": {
+          "absolute_difference_in_differences": 4.163470075542191,
+          "effect_difference_percentage_points": 49.617543870566394
+        },
+        "rmse_roll_deg": {
+          "absolute_difference_in_differences": 0.10122787218816809,
+          "effect_difference_percentage_points": 3.670980912736732
+        },
+        "rmse_pitch_deg": {
+          "absolute_difference_in_differences": 0.0848635137090048,
+          "effect_difference_percentage_points": 5.627835603335873
+        }
+      },
+      "repeatability": {
+        "pairs": [
+          {
+            "repeat": "r1",
+            "clean": {
+              "sequence": "ntu_day_10_os1",
+              "runs": {
+                "online": "A_warm21",
+                "warm_fixg21": "WarmFixG21C"
+              },
+              "frames": 3244,
+              "event": {
+                "requested_elapsed_s": 17.0,
+                "snapshot_elapsed_s": 16.998844623566,
+                "activation_elapsed_s": 17.003364086151,
+                "correction_gap_s": 0.00451970100402832,
+                "gravity_m_s2": [
+                  -0.074396016866,
+                  -0.024746234255,
+                  -9.808686652991
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.320897391591,
+                  -0.185636187376,
+                  -0.02658362963
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    7.23038e-07,
+                    -1.22e-10
+                  ],
+                  [
+                    -1.22e-10,
+                    7.22519e-07
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 3.620684e-06,
+                "projected_active_covariance_min_eigenvalue": 1.18e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 2.550000002821129e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 2.4927835572446027,
+                  "ate_rmse_m": 6.600002496257447,
+                  "rmse_roll_deg": 2.3124910082432675,
+                  "rmse_pitch_deg": 1.3162095483575789
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 2.4480169214196357,
+                  "ate_rmse_m": 6.5451579713986066,
+                  "rmse_roll_deg": 2.3084339371778806,
+                  "rmse_pitch_deg": 1.2970933102785358
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": -0.04476663582496698,
+                    "percent": -1.7958492904393886
+                  },
+                  "ate_rmse_m": {
+                    "absolute": -0.05484452485884006,
+                    "percent": -0.8309773350834271
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": -0.004057071065386886,
+                    "percent": -0.17544159310997065
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": -0.019116238079043057,
+                    "percent": -1.4523704149462469
+                  }
+                }
+              }
+            },
+            "dropout": {
+              "sequence": "ntu_day_10_drop3x20",
+              "runs": {
+                "online": "A_warm21",
+                "warm_fixg21": "WarmFixG21C"
+              },
+              "frames": 2763,
+              "event": {
+                "requested_elapsed_s": 17.0,
+                "snapshot_elapsed_s": 16.998844623566,
+                "activation_elapsed_s": 20.098079681396,
+                "correction_gap_s": 3.0992352962493896,
+                "gravity_m_s2": [
+                  -0.074396016866,
+                  -0.024746234255,
+                  -9.808686652991
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.320897391591,
+                  -0.185636187376,
+                  -0.02658362963
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    7.23038e-07,
+                    -1.22e-10
+                  ],
+                  [
+                    -1.22e-10,
+                    7.22519e-07
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 3.620684e-06,
+                "projected_active_covariance_min_eigenvalue": 1.18e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 2.550000002821129e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 3.093166372762335,
+                  "ate_rmse_m": 8.421632925725785,
+                  "rmse_roll_deg": 2.7798514689045692,
+                  "rmse_pitch_deg": 1.5746095982976918
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 3.664388097076383,
+                  "ate_rmse_m": 12.530258476409136,
+                  "rmse_roll_deg": 2.8770222700273504,
+                  "rmse_pitch_deg": 1.6403568739276535
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": 0.5712217243140483,
+                    "percent": 18.467216291502673
+                  },
+                  "ate_rmse_m": {
+                    "absolute": 4.108625550683351,
+                    "percent": 48.78656653548297
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": 0.0971708011227812,
+                    "percent": 3.4955393196267615
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": 0.06574727562996174,
+                    "percent": 4.1754651883896265
+                  }
+                }
+              }
+            },
+            "interaction": {
+              "rmse_z_m": {
+                "absolute_difference_in_differences": 0.6159883601390153,
+                "effect_difference_percentage_points": 20.26306558194206
+              },
+              "ate_rmse_m": {
+                "absolute_difference_in_differences": 4.163470075542191,
+                "effect_difference_percentage_points": 49.617543870566394
+              },
+              "rmse_roll_deg": {
+                "absolute_difference_in_differences": 0.10122787218816809,
+                "effect_difference_percentage_points": 3.670980912736732
+              },
+              "rmse_pitch_deg": {
+                "absolute_difference_in_differences": 0.0848635137090048,
+                "effect_difference_percentage_points": 5.627835603335873
+              }
+            }
+          },
+          {
+            "repeat": "r2",
+            "clean": {
+              "sequence": "ntu_day_10_os1",
+              "runs": {
+                "online": "A_warm21_r2",
+                "warm_fixg21": "WarmFixG21C_r2"
+              },
+              "frames": 3244,
+              "event": {
+                "requested_elapsed_s": 17.0,
+                "snapshot_elapsed_s": 16.998844623566,
+                "activation_elapsed_s": 17.003364086151,
+                "correction_gap_s": 0.00451970100402832,
+                "gravity_m_s2": [
+                  -0.074396016866,
+                  -0.024746234255,
+                  -9.808686652991
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.320897391591,
+                  -0.185636187376,
+                  -0.02658362963
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    7.23038e-07,
+                    -1.22e-10
+                  ],
+                  [
+                    -1.22e-10,
+                    7.22519e-07
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 3.620684e-06,
+                "projected_active_covariance_min_eigenvalue": 1.18e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 2.550000002821129e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 2.4927835572446027,
+                  "ate_rmse_m": 6.600002496257447,
+                  "rmse_roll_deg": 2.3124910082432675,
+                  "rmse_pitch_deg": 1.3162095483575789
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 2.448273552421894,
+                  "ate_rmse_m": 6.544153689271037,
+                  "rmse_roll_deg": 2.3085510098240785,
+                  "rmse_pitch_deg": 1.297270861981011
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": -0.044510004822708726,
+                    "percent": -1.7855543331611101
+                  },
+                  "ate_rmse_m": {
+                    "absolute": -0.05584880698640937,
+                    "percent": -0.8461937252005391
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": -0.003939998419189017,
+                    "percent": -0.17037897250817835
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": -0.018938686376567926,
+                    "percent": -1.4388807922112723
+                  }
+                }
+              }
+            },
+            "dropout": {
+              "sequence": "ntu_day_10_drop3x20",
+              "runs": {
+                "online": "A_warm21_r2",
+                "warm_fixg21": "WarmFixG21C_r2"
+              },
+              "frames": 2763,
+              "event": {
+                "requested_elapsed_s": 17.0,
+                "snapshot_elapsed_s": 16.998844623566,
+                "activation_elapsed_s": 20.098079681396,
+                "correction_gap_s": 3.0992352962493896,
+                "gravity_m_s2": [
+                  -0.074396016866,
+                  -0.024746234255,
+                  -9.808686652991
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.320897391591,
+                  -0.185636187376,
+                  -0.02658362963
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    7.23038e-07,
+                    -1.22e-10
+                  ],
+                  [
+                    -1.22e-10,
+                    7.22519e-07
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 3.620684e-06,
+                "projected_active_covariance_min_eigenvalue": 1.18e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 2.550000002821129e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 3.093166372762335,
+                  "ate_rmse_m": 8.421632925725785,
+                  "rmse_roll_deg": 2.7798514689045692,
+                  "rmse_pitch_deg": 1.5746095982976918
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 3.669769224940435,
+                  "ate_rmse_m": 12.53073596932306,
+                  "rmse_roll_deg": 2.8769647136191008,
+                  "rmse_pitch_deg": 1.6422519793623243
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": 0.5766028521780999,
+                    "percent": 18.641184556237377
+                  },
+                  "ate_rmse_m": {
+                    "absolute": 4.109103043597276,
+                    "percent": 48.79223637312771
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": 0.09711324471453153,
+                    "percent": 3.4934688346064835
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": 0.0676423810646325,
+                    "percent": 4.295819175607751
+                  }
+                }
+              }
+            },
+            "interaction": {
+              "rmse_z_m": {
+                "absolute_difference_in_differences": 0.6211128570008086,
+                "effect_difference_percentage_points": 20.426738889398486
+              },
+              "ate_rmse_m": {
+                "absolute_difference_in_differences": 4.1649518505836856,
+                "effect_difference_percentage_points": 49.63843009832824
+              },
+              "rmse_roll_deg": {
+                "absolute_difference_in_differences": 0.10105324313372055,
+                "effect_difference_percentage_points": 3.663847807114662
+              },
+              "rmse_pitch_deg": {
+                "absolute_difference_in_differences": 0.08658106744120042,
+                "effect_difference_percentage_points": 5.734699967819024
+              }
+            }
+          },
+          {
+            "repeat": "r3",
+            "clean": {
+              "sequence": "ntu_day_10_os1",
+              "runs": {
+                "online": "A_warm21_r3",
+                "warm_fixg21": "WarmFixG21C_r3"
+              },
+              "frames": 3244,
+              "event": {
+                "requested_elapsed_s": 17.0,
+                "snapshot_elapsed_s": 16.998844623566,
+                "activation_elapsed_s": 17.003364086151,
+                "correction_gap_s": 0.00451970100402832,
+                "gravity_m_s2": [
+                  -0.074396016866,
+                  -0.024746234255,
+                  -9.808686652991
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.320897391591,
+                  -0.185636187376,
+                  -0.02658362963
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    7.23038e-07,
+                    -1.22e-10
+                  ],
+                  [
+                    -1.22e-10,
+                    7.22519e-07
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 3.620684e-06,
+                "projected_active_covariance_min_eigenvalue": 1.18e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 2.550000002821129e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 2.4927835572446027,
+                  "ate_rmse_m": 6.600002496257447,
+                  "rmse_roll_deg": 2.3124910082432675,
+                  "rmse_pitch_deg": 1.3162095483575789
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 2.4480169214186898,
+                  "ate_rmse_m": 6.545157972856598,
+                  "rmse_roll_deg": 2.308433937199942,
+                  "rmse_pitch_deg": 1.2970933100459818
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": -0.04476663582591289,
+                    "percent": -1.795849290477336
+                  },
+                  "ate_rmse_m": {
+                    "absolute": -0.054844523400849,
+                    "percent": -0.8309773129926645
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": -0.004057071043325422,
+                    "percent": -0.175441592155956
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": -0.019116238311597034,
+                    "percent": -1.4523704326147024
+                  }
+                }
+              }
+            },
+            "dropout": {
+              "sequence": "ntu_day_10_drop3x20",
+              "runs": {
+                "online": "A_warm21_r3",
+                "warm_fixg21": "WarmFixG21C_r3"
+              },
+              "frames": 2763,
+              "event": {
+                "requested_elapsed_s": 17.0,
+                "snapshot_elapsed_s": 16.998844623566,
+                "activation_elapsed_s": 20.098079681396,
+                "correction_gap_s": 3.0992352962493896,
+                "gravity_m_s2": [
+                  -0.074396016866,
+                  -0.024746234255,
+                  -9.808686652991
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.320897391591,
+                  -0.185636187376,
+                  -0.02658362963
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    7.23038e-07,
+                    -1.22e-10
+                  ],
+                  [
+                    -1.22e-10,
+                    7.22519e-07
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 3.620684e-06,
+                "projected_active_covariance_min_eigenvalue": 1.18e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 2.550000002821129e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 3.093166372762335,
+                  "ate_rmse_m": 8.421632925725785,
+                  "rmse_roll_deg": 2.7798514689045692,
+                  "rmse_pitch_deg": 1.5746095982976918
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 3.6704272916496143,
+                  "ate_rmse_m": 12.600002336240712,
+                  "rmse_roll_deg": 2.8784776126420506,
+                  "rmse_pitch_deg": 1.6435565498313407
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": 0.5772609188872795,
+                    "percent": 18.66245941280422
+                  },
+                  "ate_rmse_m": {
+                    "absolute": 4.178369410514927,
+                    "percent": 49.61471780313711
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": 0.09862614373748135,
+                    "percent": 3.547892570546085
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": 0.06894695153364894,
+                    "percent": 4.378669583126338
+                  }
+                }
+              }
+            },
+            "interaction": {
+              "rmse_z_m": {
+                "absolute_difference_in_differences": 0.6220275547131924,
+                "effect_difference_percentage_points": 20.458308703281556
+              },
+              "ate_rmse_m": {
+                "absolute_difference_in_differences": 4.233213933915776,
+                "effect_difference_percentage_points": 50.44569511612978
+              },
+              "rmse_roll_deg": {
+                "absolute_difference_in_differences": 0.10268321478080678,
+                "effect_difference_percentage_points": 3.723334162702041
+              },
+              "rmse_pitch_deg": {
+                "absolute_difference_in_differences": 0.08806318984524597,
+                "effect_difference_percentage_points": 5.83104001574104
+              }
+            }
+          }
+        ],
+        "summary": {
+          "clean_effect": {
+            "rmse_z_m": {
+              "absolute": {
+                "n": 3,
+                "median": -0.04476663582496698,
+                "range": [
+                  -0.04476663582591289,
+                  -0.044510004822708726
+                ]
+              },
+              "percent": {
+                "n": 3,
+                "median": -1.7958492904393886,
+                "range": [
+                  -1.795849290477336,
+                  -1.7855543331611101
+                ]
+              }
+            },
+            "ate_rmse_m": {
+              "absolute": {
+                "n": 3,
+                "median": -0.05484452485884006,
+                "range": [
+                  -0.05584880698640937,
+                  -0.054844523400849
+                ]
+              },
+              "percent": {
+                "n": 3,
+                "median": -0.8309773350834271,
+                "range": [
+                  -0.8461937252005391,
+                  -0.8309773129926645
+                ]
+              }
+            },
+            "rmse_roll_deg": {
+              "absolute": {
+                "n": 3,
+                "median": -0.004057071043325422,
+                "range": [
+                  -0.004057071065386886,
+                  -0.003939998419189017
+                ]
+              },
+              "percent": {
+                "n": 3,
+                "median": -0.175441592155956,
+                "range": [
+                  -0.17544159310997065,
+                  -0.17037897250817835
+                ]
+              }
+            },
+            "rmse_pitch_deg": {
+              "absolute": {
+                "n": 3,
+                "median": -0.019116238079043057,
+                "range": [
+                  -0.019116238311597034,
+                  -0.018938686376567926
+                ]
+              },
+              "percent": {
+                "n": 3,
+                "median": -1.4523704149462469,
+                "range": [
+                  -1.4523704326147024,
+                  -1.4388807922112723
+                ]
+              }
+            }
+          },
+          "dropout_effect": {
+            "rmse_z_m": {
+              "absolute": {
+                "n": 3,
+                "median": 0.5766028521780999,
+                "range": [
+                  0.5712217243140483,
+                  0.5772609188872795
+                ]
+              },
+              "percent": {
+                "n": 3,
+                "median": 18.641184556237377,
+                "range": [
+                  18.467216291502673,
+                  18.66245941280422
+                ]
+              }
+            },
+            "ate_rmse_m": {
+              "absolute": {
+                "n": 3,
+                "median": 4.109103043597276,
+                "range": [
+                  4.108625550683351,
+                  4.178369410514927
+                ]
+              },
+              "percent": {
+                "n": 3,
+                "median": 48.79223637312771,
+                "range": [
+                  48.78656653548297,
+                  49.61471780313711
+                ]
+              }
+            },
+            "rmse_roll_deg": {
+              "absolute": {
+                "n": 3,
+                "median": 0.0971708011227812,
+                "range": [
+                  0.09711324471453153,
+                  0.09862614373748135
+                ]
+              },
+              "percent": {
+                "n": 3,
+                "median": 3.4955393196267615,
+                "range": [
+                  3.4934688346064835,
+                  3.547892570546085
+                ]
+              }
+            },
+            "rmse_pitch_deg": {
+              "absolute": {
+                "n": 3,
+                "median": 0.0676423810646325,
+                "range": [
+                  0.06574727562996174,
+                  0.06894695153364894
+                ]
+              },
+              "percent": {
+                "n": 3,
+                "median": 4.295819175607751,
+                "range": [
+                  4.1754651883896265,
+                  4.378669583126338
+                ]
+              }
+            }
+          },
+          "interaction": {
+            "rmse_z_m": {
+              "absolute_difference_in_differences": {
+                "n": 3,
+                "median": 0.6211128570008086,
+                "range": [
+                  0.6159883601390153,
+                  0.6220275547131924
+                ]
+              },
+              "effect_difference_percentage_points": {
+                "n": 3,
+                "median": 20.426738889398486,
+                "range": [
+                  20.26306558194206,
+                  20.458308703281556
+                ]
+              }
+            },
+            "ate_rmse_m": {
+              "absolute_difference_in_differences": {
+                "n": 3,
+                "median": 4.1649518505836856,
+                "range": [
+                  4.163470075542191,
+                  4.233213933915776
+                ]
+              },
+              "effect_difference_percentage_points": {
+                "n": 3,
+                "median": 49.63843009832824,
+                "range": [
+                  49.617543870566394,
+                  50.44569511612978
+                ]
+              }
+            },
+            "rmse_roll_deg": {
+              "absolute_difference_in_differences": {
+                "n": 3,
+                "median": 0.10122787218816809,
+                "range": [
+                  0.10105324313372055,
+                  0.10268321478080678
+                ]
+              },
+              "effect_difference_percentage_points": {
+                "n": 3,
+                "median": 3.670980912736732,
+                "range": [
+                  3.663847807114662,
+                  3.723334162702041
+                ]
+              }
+            },
+            "rmse_pitch_deg": {
+              "absolute_difference_in_differences": {
+                "n": 3,
+                "median": 0.08658106744120042,
+                "range": [
+                  0.0848635137090048,
+                  0.08806318984524597
+                ]
+              },
+              "effect_difference_percentage_points": {
+                "n": 3,
+                "median": 5.734699967819024,
+                "range": [
+                  5.627835603335873,
+                  5.83104001574104
+                ]
+              }
+            }
+          }
+        }
+      },
+      "phase_robustness": {
+        "phases": [
+          {
+            "dropout_start_s": 17.0,
+            "replicated": true,
+            "interaction_summary": {
+              "rmse_z_m": {
+                "absolute_difference_in_differences": {
+                  "n": 3,
+                  "median": 0.6211128570008086,
+                  "range": [
+                    0.6159883601390153,
+                    0.6220275547131924
+                  ]
+                },
+                "effect_difference_percentage_points": {
+                  "n": 3,
+                  "median": 20.426738889398486,
+                  "range": [
+                    20.26306558194206,
+                    20.458308703281556
+                  ]
+                }
+              },
+              "ate_rmse_m": {
+                "absolute_difference_in_differences": {
+                  "n": 3,
+                  "median": 4.1649518505836856,
+                  "range": [
+                    4.163470075542191,
+                    4.233213933915776
+                  ]
+                },
+                "effect_difference_percentage_points": {
+                  "n": 3,
+                  "median": 49.63843009832824,
+                  "range": [
+                    49.617543870566394,
+                    50.44569511612978
+                  ]
+                }
+              },
+              "rmse_roll_deg": {
+                "absolute_difference_in_differences": {
+                  "n": 3,
+                  "median": 0.10122787218816809,
+                  "range": [
+                    0.10105324313372055,
+                    0.10268321478080678
+                  ]
+                },
+                "effect_difference_percentage_points": {
+                  "n": 3,
+                  "median": 3.670980912736732,
+                  "range": [
+                    3.663847807114662,
+                    3.723334162702041
+                  ]
+                }
+              },
+              "rmse_pitch_deg": {
+                "absolute_difference_in_differences": {
+                  "n": 3,
+                  "median": 0.08658106744120042,
+                  "range": [
+                    0.0848635137090048,
+                    0.08806318984524597
+                  ]
+                },
+                "effect_difference_percentage_points": {
+                  "n": 3,
+                  "median": 5.734699967819024,
+                  "range": [
+                    5.627835603335873,
+                    5.83104001574104
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "dropout_start_s": 12,
+            "replicated": false,
+            "clean": {
+              "sequence": "ntu_day_10_os1",
+              "runs": {
+                "online": "A_warm21",
+                "warm_fixg21": "WarmFixG21C_s12"
+              },
+              "frames": 3244,
+              "event": {
+                "requested_elapsed_s": 12.0,
+                "snapshot_elapsed_s": 12.097778081894,
+                "activation_elapsed_s": 12.100304841995,
+                "correction_gap_s": 0.0025267601013183594,
+                "gravity_m_s2": [
+                  -0.106216982616,
+                  -0.046083124382,
+                  -9.808316639376
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.295061559429,
+                  -0.219741029291,
+                  -0.045152149478
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    9.40531e-07,
+                    -2.55e-10
+                  ],
+                  [
+                    -2.55e-10,
+                    9.39132e-07
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 3.312322e-06,
+                "projected_active_covariance_min_eigenvalue": 1.165e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 3.839999984656117e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 2.4927835572446027,
+                  "ate_rmse_m": 6.600002496257447,
+                  "rmse_roll_deg": 2.3124910082432675,
+                  "rmse_pitch_deg": 1.3162095483575789
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 2.4552637995520983,
+                  "ate_rmse_m": 6.510982071137527,
+                  "rmse_roll_deg": 2.308797950961164,
+                  "rmse_pitch_deg": 1.2983282906648872
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": -0.037519757692504374,
+                    "percent": -1.5051349959150362
+                  },
+                  "ate_rmse_m": {
+                    "absolute": -0.08902042511991937,
+                    "percent": -1.3487938098568741
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": -0.0036930572821036733,
+                    "percent": -0.15970039532863245
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": -0.017881257692691666,
+                    "percent": -1.358541860982898
+                  }
+                }
+              }
+            },
+            "dropout": {
+              "sequence": "ntu_day_10_drop3x20_s12",
+              "runs": {
+                "online": "A_warm21",
+                "warm_fixg21": "WarmFixG21C"
+              },
+              "frames": 2765,
+              "event": {
+                "requested_elapsed_s": 12.0,
+                "snapshot_elapsed_s": 12.097778081894,
+                "activation_elapsed_s": 15.002120733261,
+                "correction_gap_s": 2.9043426513671875,
+                "gravity_m_s2": [
+                  -0.106216982616,
+                  -0.046083124382,
+                  -9.808316639376
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.295061559429,
+                  -0.219741029291,
+                  -0.045152149478
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    9.40531e-07,
+                    -2.55e-10
+                  ],
+                  [
+                    -2.55e-10,
+                    9.39132e-07
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 3.312322e-06,
+                "projected_active_covariance_min_eigenvalue": 1.165e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 3.839999984656117e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 5.664801899396057,
+                  "ate_rmse_m": 9.494200121315053,
+                  "rmse_roll_deg": 3.3407415546821952,
+                  "rmse_pitch_deg": 3.169338665839257
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 5.395308145412311,
+                  "ate_rmse_m": 10.278909648229126,
+                  "rmse_roll_deg": 3.3752989958508923,
+                  "rmse_pitch_deg": 3.2018901463714866
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": -0.2694937539837463,
+                    "percent": -4.757337657517691
+                  },
+                  "ate_rmse_m": {
+                    "absolute": 0.7847095269140727,
+                    "percent": 8.265146267059965
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": 0.03455744116869708,
+                    "percent": 1.0344242618906874
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": 0.03255148053222978,
+                    "percent": 1.027074855807819
+                  }
+                }
+              }
+            },
+            "interaction": {
+              "rmse_z_m": {
+                "absolute_difference_in_differences": -0.23197399629124194,
+                "effect_difference_percentage_points": -3.2522026616026545
+              },
+              "ate_rmse_m": {
+                "absolute_difference_in_differences": 0.8737299520339921,
+                "effect_difference_percentage_points": 9.613940076916839
+              },
+              "rmse_roll_deg": {
+                "absolute_difference_in_differences": 0.03825049845080075,
+                "effect_difference_percentage_points": 1.1941246572193198
+              },
+              "rmse_pitch_deg": {
+                "absolute_difference_in_differences": 0.05043273822492145,
+                "effect_difference_percentage_points": 2.385616716790717
+              }
+            }
+          },
+          {
+            "dropout_start_s": 22,
+            "replicated": false,
+            "clean": {
+              "sequence": "ntu_day_10_os1",
+              "runs": {
+                "online": "A_warm21",
+                "warm_fixg21": "WarmFixG21C_s22"
+              },
+              "frames": 3244,
+              "event": {
+                "requested_elapsed_s": 22.0,
+                "snapshot_elapsed_s": 22.095899343491,
+                "activation_elapsed_s": 22.097693681717,
+                "correction_gap_s": 0.0017943382263183594,
+                "gravity_m_s2": [
+                  -0.081369092969,
+                  0.027467883,
+                  -9.80862404143
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.291055444597,
+                  -0.131000908002,
+                  -0.00959241744
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    6.41972e-07,
+                    -1.01e-10
+                  ],
+                  [
+                    -1.01e-10,
+                    6.41871e-07
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 4.521002e-06,
+                "projected_active_covariance_min_eigenvalue": 1.077e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 4.3000092375677923e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 2.4927835572446027,
+                  "ate_rmse_m": 6.600002496257447,
+                  "rmse_roll_deg": 2.3124910082432675,
+                  "rmse_pitch_deg": 1.3162095483575789
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 2.414345794540606,
+                  "ate_rmse_m": 6.52290714628884,
+                  "rmse_roll_deg": 2.3066517945028018,
+                  "rmse_pitch_deg": 1.2831047065715326
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": -0.0784377627039965,
+                    "percent": -3.1465933925967304
+                  },
+                  "ate_rmse_m": {
+                    "absolute": -0.0770953499686069,
+                    "percent": -1.1681109213568353
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": -0.0058392137404656985,
+                    "percent": -0.2525075219601214
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": -0.033104841786046224,
+                    "percent": -2.515164992333918
+                  }
+                }
+              }
+            },
+            "dropout": {
+              "sequence": "ntu_day_10_drop3x20_s22",
+              "runs": {
+                "online": "A_warm21",
+                "warm_fixg21": "WarmFixG21C"
+              },
+              "frames": 2766,
+              "event": {
+                "requested_elapsed_s": 22.0,
+                "snapshot_elapsed_s": 22.095899343491,
+                "activation_elapsed_s": 25.097869157791,
+                "correction_gap_s": 3.001969814300537,
+                "gravity_m_s2": [
+                  -0.081369092969,
+                  0.027467883,
+                  -9.80862404143
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.291055444597,
+                  -0.131000908002,
+                  -0.00959241744
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    6.41972e-07,
+                    -1.01e-10
+                  ],
+                  [
+                    -1.01e-10,
+                    6.41871e-07
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 4.521002e-06,
+                "projected_active_covariance_min_eigenvalue": 1.077e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 4.3000092375677923e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 1.3291422033789262,
+                  "ate_rmse_m": 6.513080172905565,
+                  "rmse_roll_deg": 2.5306238657928675,
+                  "rmse_pitch_deg": 1.3954911312208786
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 3.9870617736501925,
+                  "ate_rmse_m": 8.368553215223555,
+                  "rmse_roll_deg": 2.683226000298707,
+                  "rmse_pitch_deg": 1.5462007303937582
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": 2.6579195702712664,
+                    "percent": 199.97255098170393
+                  },
+                  "ate_rmse_m": {
+                    "absolute": 1.85547304231799,
+                    "percent": 28.488410906359853
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": 0.1526021345058397,
+                    "percent": 6.0302179461991345
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": 0.15070959917287952,
+                    "percent": 10.799753276900281
+                  }
+                }
+              }
+            },
+            "interaction": {
+              "rmse_z_m": {
+                "absolute_difference_in_differences": 2.736357332975263,
+                "effect_difference_percentage_points": 203.11914437430067
+              },
+              "ate_rmse_m": {
+                "absolute_difference_in_differences": 1.9325683922865968,
+                "effect_difference_percentage_points": 29.656521827716688
+              },
+              "rmse_roll_deg": {
+                "absolute_difference_in_differences": 0.1584413482463054,
+                "effect_difference_percentage_points": 6.282725468159256
+              },
+              "rmse_pitch_deg": {
+                "absolute_difference_in_differences": 0.18381444095892574,
+                "effect_difference_percentage_points": 13.3149182692342
+              }
+            }
+          }
+        ],
+        "summary": {
+          "rmse_z_m": {
+            "absolute_difference_in_differences": {
+              "n": 3,
+              "median": 0.6211128570008086,
+              "range": [
+                -0.23197399629124194,
+                2.736357332975263
+              ]
+            },
+            "all_positive": false,
+            "all_negative": false
+          },
+          "ate_rmse_m": {
+            "absolute_difference_in_differences": {
+              "n": 3,
+              "median": 1.9325683922865968,
+              "range": [
+                0.8737299520339921,
+                4.1649518505836856
+              ]
+            },
+            "all_positive": true,
+            "all_negative": false
+          },
+          "rmse_roll_deg": {
+            "absolute_difference_in_differences": {
+              "n": 3,
+              "median": 0.10122787218816809,
+              "range": [
+                0.03825049845080075,
+                0.1584413482463054
+              ]
+            },
+            "all_positive": true,
+            "all_negative": false
+          },
+          "rmse_pitch_deg": {
+            "absolute_difference_in_differences": {
+              "n": 3,
+              "median": 0.08658106744120042,
+              "range": [
+                0.05043273822492145,
+                0.18381444095892574
+              ]
+            },
+            "all_positive": true,
+            "all_negative": false
+          }
+        }
+      }
+    },
+    "handheld": {
+      "requested_switch_s": 15.0,
+      "dropout_label": "5 s/20 s",
+      "clean": {
+        "sequence": "tuhh_day_04_os1",
+        "runs": {
+          "online": "A_warm21",
+          "warm_fixg21": "WarmFixG21C"
+        },
+        "frames": 1875,
+        "event": {
+          "requested_elapsed_s": 15.0,
+          "snapshot_elapsed_s": 14.99751830101,
+          "activation_elapsed_s": 15.007957935333,
+          "correction_gap_s": 0.010439634323120117,
+          "gravity_m_s2": [
+            0.205027591783,
+            -0.05847412858,
+            -9.806682694107
+          ],
+          "accelerometer_bias_m_s2": [
+            0.0613563522,
+            -0.037768693067,
+            -0.027011509809
+          ],
+          "pre_switch_gravity_covariance": [
+            [
+              4.197941e-06,
+              -9.072e-09
+            ],
+            [
+              -9.072e-09,
+              4.203555e-06
+            ]
+          ],
+          "pre_switch_state_gravity_cross_covariance_fro": 5.3377293e-05,
+          "projected_active_covariance_min_eigenvalue": 2.557e-09
+        },
+        "structure": {
+          "matched_frames": true,
+          "matched_correction_timestamps": true,
+          "bit_identical_pre_switch_prefix": true,
+          "snapshot_is_preceding_correction": true,
+          "active_dof_before_after": [
+            23,
+            21
+          ],
+          "conditional_covariance_projection": true,
+          "fixed_gravity_max_abs_deviation": 4.200000000564863e-10,
+          "binary_sha1": "655a13b3c4ca"
+        },
+        "metrics": {
+          "online": {
+            "rmse_z_m": 0.4519835406431589,
+            "ate_rmse_m": 0.5456555951748396,
+            "rmse_roll_deg": 0.8610700702371656,
+            "rmse_pitch_deg": 1.0322124458666784
+          },
+          "warm_fixg21_conditional": {
+            "rmse_z_m": 0.45159782007032334,
+            "ate_rmse_m": 0.5431458426980365,
+            "rmse_roll_deg": 0.8599181212755737,
+            "rmse_pitch_deg": 1.0319619166289826
+          },
+          "warm_effect_vs_online": {
+            "rmse_z_m": {
+              "absolute": -0.00038572057283553507,
+              "percent": -0.08533951751575897
+            },
+            "ate_rmse_m": {
+              "absolute": -0.0025097524768031843,
+              "percent": -0.4599517532664521
+            },
+            "rmse_roll_deg": {
+              "absolute": -0.0011519489615919865,
+              "percent": -0.13378109417677697
+            },
+            "rmse_pitch_deg": {
+              "absolute": -0.0002505292376957513,
+              "percent": -0.024271092515781856
+            }
+          }
+        }
+      },
+      "dropout": {
+        "sequence": "tuhh_day_04_drop5x20",
+        "runs": {
+          "online": "A_warm21",
+          "warm_fixg21": "WarmFixG21C"
+        },
+        "frames": 1423,
+        "event": {
+          "requested_elapsed_s": 15.0,
+          "snapshot_elapsed_s": 14.99751830101,
+          "activation_elapsed_s": 20.004555940628,
+          "correction_gap_s": 5.00703763961792,
+          "gravity_m_s2": [
+            0.205027591783,
+            -0.05847412858,
+            -9.806682694107
+          ],
+          "accelerometer_bias_m_s2": [
+            0.0613563522,
+            -0.037768693067,
+            -0.027011509809
+          ],
+          "pre_switch_gravity_covariance": [
+            [
+              4.197941e-06,
+              -9.072e-09
+            ],
+            [
+              -9.072e-09,
+              4.203555e-06
+            ]
+          ],
+          "pre_switch_state_gravity_cross_covariance_fro": 5.3377293e-05,
+          "projected_active_covariance_min_eigenvalue": 2.557e-09
+        },
+        "structure": {
+          "matched_frames": true,
+          "matched_correction_timestamps": true,
+          "bit_identical_pre_switch_prefix": true,
+          "snapshot_is_preceding_correction": true,
+          "active_dof_before_after": [
+            23,
+            21
+          ],
+          "conditional_covariance_projection": true,
+          "fixed_gravity_max_abs_deviation": 4.200000000564863e-10,
+          "binary_sha1": "655a13b3c4ca"
+        },
+        "metrics": {
+          "online": {
+            "rmse_z_m": 3.2840345928930526,
+            "ate_rmse_m": 4.072943962540487,
+            "rmse_roll_deg": 6.917748018622308,
+            "rmse_pitch_deg": 4.387865755286554
+          },
+          "warm_fixg21_conditional": {
+            "rmse_z_m": 3.3669010558711854,
+            "ate_rmse_m": 5.0836949473290005,
+            "rmse_roll_deg": 6.965531641538159,
+            "rmse_pitch_deg": 4.376219432283538
+          },
+          "warm_effect_vs_online": {
+            "rmse_z_m": {
+              "absolute": 0.08286646297813283,
+              "percent": 2.523312731158911
+            },
+            "ate_rmse_m": {
+              "absolute": 1.0107509847885137,
+              "percent": 24.816226152005804
+            },
+            "rmse_roll_deg": {
+              "absolute": 0.047783622915851254,
+              "percent": 0.69073956997594
+            },
+            "rmse_pitch_deg": {
+              "absolute": -0.011646323003016157,
+              "percent": -0.26542113301858405
+            }
+          }
+        }
+      },
+      "warm_fixg21_by_dropout_interaction": {
+        "rmse_z_m": {
+          "absolute_difference_in_differences": 0.08325218355096836,
+          "effect_difference_percentage_points": 2.60865224867467
+        },
+        "ate_rmse_m": {
+          "absolute_difference_in_differences": 1.0132607372653168,
+          "effect_difference_percentage_points": 25.276177905272256
+        },
+        "rmse_roll_deg": {
+          "absolute_difference_in_differences": 0.04893557187744324,
+          "effect_difference_percentage_points": 0.824520664152717
+        },
+        "rmse_pitch_deg": {
+          "absolute_difference_in_differences": -0.011395793765320406,
+          "effect_difference_percentage_points": -0.2411500405028022
+        }
+      },
+      "repeatability": {
+        "pairs": [
+          {
+            "repeat": "r1",
+            "clean": {
+              "sequence": "tuhh_day_04_os1",
+              "runs": {
+                "online": "A_warm21",
+                "warm_fixg21": "WarmFixG21C"
+              },
+              "frames": 1875,
+              "event": {
+                "requested_elapsed_s": 15.0,
+                "snapshot_elapsed_s": 14.99751830101,
+                "activation_elapsed_s": 15.007957935333,
+                "correction_gap_s": 0.010439634323120117,
+                "gravity_m_s2": [
+                  0.205027591783,
+                  -0.05847412858,
+                  -9.806682694107
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.0613563522,
+                  -0.037768693067,
+                  -0.027011509809
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    4.197941e-06,
+                    -9.072e-09
+                  ],
+                  [
+                    -9.072e-09,
+                    4.203555e-06
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 5.3377293e-05,
+                "projected_active_covariance_min_eigenvalue": 2.557e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 4.200000000564863e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 0.4519835406431589,
+                  "ate_rmse_m": 0.5456555951748396,
+                  "rmse_roll_deg": 0.8610700702371656,
+                  "rmse_pitch_deg": 1.0322124458666784
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 0.45159782007032334,
+                  "ate_rmse_m": 0.5431458426980365,
+                  "rmse_roll_deg": 0.8599181212755737,
+                  "rmse_pitch_deg": 1.0319619166289826
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": -0.00038572057283553507,
+                    "percent": -0.08533951751575897
+                  },
+                  "ate_rmse_m": {
+                    "absolute": -0.0025097524768031843,
+                    "percent": -0.4599517532664521
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": -0.0011519489615919865,
+                    "percent": -0.13378109417677697
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": -0.0002505292376957513,
+                    "percent": -0.024271092515781856
+                  }
+                }
+              }
+            },
+            "dropout": {
+              "sequence": "tuhh_day_04_drop5x20",
+              "runs": {
+                "online": "A_warm21",
+                "warm_fixg21": "WarmFixG21C"
+              },
+              "frames": 1423,
+              "event": {
+                "requested_elapsed_s": 15.0,
+                "snapshot_elapsed_s": 14.99751830101,
+                "activation_elapsed_s": 20.004555940628,
+                "correction_gap_s": 5.00703763961792,
+                "gravity_m_s2": [
+                  0.205027591783,
+                  -0.05847412858,
+                  -9.806682694107
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.0613563522,
+                  -0.037768693067,
+                  -0.027011509809
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    4.197941e-06,
+                    -9.072e-09
+                  ],
+                  [
+                    -9.072e-09,
+                    4.203555e-06
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 5.3377293e-05,
+                "projected_active_covariance_min_eigenvalue": 2.557e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 4.200000000564863e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 3.2840345928930526,
+                  "ate_rmse_m": 4.072943962540487,
+                  "rmse_roll_deg": 6.917748018622308,
+                  "rmse_pitch_deg": 4.387865755286554
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 3.3669010558711854,
+                  "ate_rmse_m": 5.0836949473290005,
+                  "rmse_roll_deg": 6.965531641538159,
+                  "rmse_pitch_deg": 4.376219432283538
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": 0.08286646297813283,
+                    "percent": 2.523312731158911
+                  },
+                  "ate_rmse_m": {
+                    "absolute": 1.0107509847885137,
+                    "percent": 24.816226152005804
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": 0.047783622915851254,
+                    "percent": 0.69073956997594
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": -0.011646323003016157,
+                    "percent": -0.26542113301858405
+                  }
+                }
+              }
+            },
+            "interaction": {
+              "rmse_z_m": {
+                "absolute_difference_in_differences": 0.08325218355096836,
+                "effect_difference_percentage_points": 2.60865224867467
+              },
+              "ate_rmse_m": {
+                "absolute_difference_in_differences": 1.0132607372653168,
+                "effect_difference_percentage_points": 25.276177905272256
+              },
+              "rmse_roll_deg": {
+                "absolute_difference_in_differences": 0.04893557187744324,
+                "effect_difference_percentage_points": 0.824520664152717
+              },
+              "rmse_pitch_deg": {
+                "absolute_difference_in_differences": -0.011395793765320406,
+                "effect_difference_percentage_points": -0.2411500405028022
+              }
+            }
+          },
+          {
+            "repeat": "r2",
+            "clean": {
+              "sequence": "tuhh_day_04_os1",
+              "runs": {
+                "online": "A_warm21_r2",
+                "warm_fixg21": "WarmFixG21C_r2"
+              },
+              "frames": 1875,
+              "event": {
+                "requested_elapsed_s": 15.0,
+                "snapshot_elapsed_s": 14.99751830101,
+                "activation_elapsed_s": 15.007957935333,
+                "correction_gap_s": 0.010439634323120117,
+                "gravity_m_s2": [
+                  0.205027591783,
+                  -0.05847412858,
+                  -9.806682694107
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.0613563522,
+                  -0.037768693067,
+                  -0.027011509809
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    4.197941e-06,
+                    -9.072e-09
+                  ],
+                  [
+                    -9.072e-09,
+                    4.203555e-06
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 5.3377293e-05,
+                "projected_active_covariance_min_eigenvalue": 2.557e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 4.200000000564863e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 0.45383328808803275,
+                  "ate_rmse_m": 0.5452502952700321,
+                  "rmse_roll_deg": 0.8619438611583895,
+                  "rmse_pitch_deg": 1.0327829669126842
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 0.4507313738855666,
+                  "ate_rmse_m": 0.5436001211546608,
+                  "rmse_roll_deg": 0.8596835228227239,
+                  "rmse_pitch_deg": 1.031586972161512
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": -0.0031019142024661384,
+                    "percent": -0.6834919967052877
+                  },
+                  "ate_rmse_m": {
+                    "absolute": -0.0016501741153712723,
+                    "percent": -0.3026452492894127
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": -0.002260338335665635,
+                    "percent": -0.26223730309162807
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": -0.001195994751172158,
+                    "percent": -0.11580310573356956
+                  }
+                }
+              }
+            },
+            "dropout": {
+              "sequence": "tuhh_day_04_drop5x20",
+              "runs": {
+                "online": "A_warm21_r2",
+                "warm_fixg21": "WarmFixG21C_r2"
+              },
+              "frames": 1423,
+              "event": {
+                "requested_elapsed_s": 15.0,
+                "snapshot_elapsed_s": 14.99751830101,
+                "activation_elapsed_s": 20.004555940628,
+                "correction_gap_s": 5.00703763961792,
+                "gravity_m_s2": [
+                  0.205027591783,
+                  -0.05847412858,
+                  -9.806682694107
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.0613563522,
+                  -0.037768693067,
+                  -0.027011509809
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    4.197941e-06,
+                    -9.072e-09
+                  ],
+                  [
+                    -9.072e-09,
+                    4.203555e-06
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 5.3377293e-05,
+                "projected_active_covariance_min_eigenvalue": 2.557e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 4.200000000564863e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 3.2840345928930526,
+                  "ate_rmse_m": 4.072943962540487,
+                  "rmse_roll_deg": 6.917748018622308,
+                  "rmse_pitch_deg": 4.387865755286554
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 3.4002603731142886,
+                  "ate_rmse_m": 5.048064475369743,
+                  "rmse_roll_deg": 7.017142575978089,
+                  "rmse_pitch_deg": 4.396560698507796
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": 0.11622578022123609,
+                    "percent": 3.539115588878361
+                  },
+                  "ate_rmse_m": {
+                    "absolute": 0.9751205128292559,
+                    "percent": 23.941417357999374
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": 0.09939455735578129,
+                    "percent": 1.4368051147311878
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": 0.008694943221241758,
+                    "percent": 0.19815882495415327
+                  }
+                }
+              }
+            },
+            "interaction": {
+              "rmse_z_m": {
+                "absolute_difference_in_differences": 0.11932769442370222,
+                "effect_difference_percentage_points": 4.222607585583649
+              },
+              "ate_rmse_m": {
+                "absolute_difference_in_differences": 0.9767706869446272,
+                "effect_difference_percentage_points": 24.244062607288786
+              },
+              "rmse_roll_deg": {
+                "absolute_difference_in_differences": 0.10165489569144692,
+                "effect_difference_percentage_points": 1.6990424178228158
+              },
+              "rmse_pitch_deg": {
+                "absolute_difference_in_differences": 0.009890937972413916,
+                "effect_difference_percentage_points": 0.3139619306877228
+              }
+            }
+          },
+          {
+            "repeat": "r3",
+            "clean": {
+              "sequence": "tuhh_day_04_os1",
+              "runs": {
+                "online": "A_warm21_r3",
+                "warm_fixg21": "WarmFixG21C_r3"
+              },
+              "frames": 1875,
+              "event": {
+                "requested_elapsed_s": 15.0,
+                "snapshot_elapsed_s": 14.99751830101,
+                "activation_elapsed_s": 15.007957935333,
+                "correction_gap_s": 0.010439634323120117,
+                "gravity_m_s2": [
+                  0.205027591783,
+                  -0.05847412858,
+                  -9.806682694107
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.0613563522,
+                  -0.037768693067,
+                  -0.027011509809
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    4.197941e-06,
+                    -9.072e-09
+                  ],
+                  [
+                    -9.072e-09,
+                    4.203555e-06
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 5.3377293e-05,
+                "projected_active_covariance_min_eigenvalue": 2.557e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 4.200000000564863e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 0.45383328808803275,
+                  "ate_rmse_m": 0.5452502952700321,
+                  "rmse_roll_deg": 0.8619438611583895,
+                  "rmse_pitch_deg": 1.0327829669126842
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 0.4507313738855666,
+                  "ate_rmse_m": 0.5436001211546608,
+                  "rmse_roll_deg": 0.8596835228227239,
+                  "rmse_pitch_deg": 1.031586972161512
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": -0.0031019142024661384,
+                    "percent": -0.6834919967052877
+                  },
+                  "ate_rmse_m": {
+                    "absolute": -0.0016501741153712723,
+                    "percent": -0.3026452492894127
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": -0.002260338335665635,
+                    "percent": -0.26223730309162807
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": -0.001195994751172158,
+                    "percent": -0.11580310573356956
+                  }
+                }
+              }
+            },
+            "dropout": {
+              "sequence": "tuhh_day_04_drop5x20",
+              "runs": {
+                "online": "A_warm21_r3",
+                "warm_fixg21": "WarmFixG21C_r3"
+              },
+              "frames": 1423,
+              "event": {
+                "requested_elapsed_s": 15.0,
+                "snapshot_elapsed_s": 14.99751830101,
+                "activation_elapsed_s": 20.004555940628,
+                "correction_gap_s": 5.00703763961792,
+                "gravity_m_s2": [
+                  0.205027591783,
+                  -0.05847412858,
+                  -9.806682694107
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.0613563522,
+                  -0.037768693067,
+                  -0.027011509809
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    4.197941e-06,
+                    -9.072e-09
+                  ],
+                  [
+                    -9.072e-09,
+                    4.203555e-06
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 5.3377293e-05,
+                "projected_active_covariance_min_eigenvalue": 2.557e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 4.200000000564863e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 3.2840345928930526,
+                  "ate_rmse_m": 4.072943962540487,
+                  "rmse_roll_deg": 6.917748018622308,
+                  "rmse_pitch_deg": 4.387865755286554
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 3.3663342237751066,
+                  "ate_rmse_m": 5.153996657550858,
+                  "rmse_roll_deg": 7.082245459557431,
+                  "rmse_pitch_deg": 4.444879426163939
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": 0.08229963088205405,
+                    "percent": 2.506052495919442
+                  },
+                  "ate_rmse_m": {
+                    "absolute": 1.0810526950103707,
+                    "percent": 26.542292379983223
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": 0.16449744093512297,
+                    "percent": 2.377904492795957
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": 0.05701367087738518,
+                    "percent": 1.2993485684627881
+                  }
+                }
+              }
+            },
+            "interaction": {
+              "rmse_z_m": {
+                "absolute_difference_in_differences": 0.08540154508452019,
+                "effect_difference_percentage_points": 3.1895444926247296
+              },
+              "ate_rmse_m": {
+                "absolute_difference_in_differences": 1.0827028691257419,
+                "effect_difference_percentage_points": 26.844937629272636
+              },
+              "rmse_roll_deg": {
+                "absolute_difference_in_differences": 0.1667577792707886,
+                "effect_difference_percentage_points": 2.640141795887585
+              },
+              "rmse_pitch_deg": {
+                "absolute_difference_in_differences": 0.05820966562855734,
+                "effect_difference_percentage_points": 1.4151516741963577
+              }
+            }
+          }
+        ],
+        "summary": {
+          "clean_effect": {
+            "rmse_z_m": {
+              "absolute": {
+                "n": 3,
+                "median": -0.0031019142024661384,
+                "range": [
+                  -0.0031019142024661384,
+                  -0.00038572057283553507
+                ]
+              },
+              "percent": {
+                "n": 3,
+                "median": -0.6834919967052877,
+                "range": [
+                  -0.6834919967052877,
+                  -0.08533951751575897
+                ]
+              }
+            },
+            "ate_rmse_m": {
+              "absolute": {
+                "n": 3,
+                "median": -0.0016501741153712723,
+                "range": [
+                  -0.0025097524768031843,
+                  -0.0016501741153712723
+                ]
+              },
+              "percent": {
+                "n": 3,
+                "median": -0.3026452492894127,
+                "range": [
+                  -0.4599517532664521,
+                  -0.3026452492894127
+                ]
+              }
+            },
+            "rmse_roll_deg": {
+              "absolute": {
+                "n": 3,
+                "median": -0.002260338335665635,
+                "range": [
+                  -0.002260338335665635,
+                  -0.0011519489615919865
+                ]
+              },
+              "percent": {
+                "n": 3,
+                "median": -0.26223730309162807,
+                "range": [
+                  -0.26223730309162807,
+                  -0.13378109417677697
+                ]
+              }
+            },
+            "rmse_pitch_deg": {
+              "absolute": {
+                "n": 3,
+                "median": -0.001195994751172158,
+                "range": [
+                  -0.001195994751172158,
+                  -0.0002505292376957513
+                ]
+              },
+              "percent": {
+                "n": 3,
+                "median": -0.11580310573356956,
+                "range": [
+                  -0.11580310573356956,
+                  -0.024271092515781856
+                ]
+              }
+            }
+          },
+          "dropout_effect": {
+            "rmse_z_m": {
+              "absolute": {
+                "n": 3,
+                "median": 0.08286646297813283,
+                "range": [
+                  0.08229963088205405,
+                  0.11622578022123609
+                ]
+              },
+              "percent": {
+                "n": 3,
+                "median": 2.523312731158911,
+                "range": [
+                  2.506052495919442,
+                  3.539115588878361
+                ]
+              }
+            },
+            "ate_rmse_m": {
+              "absolute": {
+                "n": 3,
+                "median": 1.0107509847885137,
+                "range": [
+                  0.9751205128292559,
+                  1.0810526950103707
+                ]
+              },
+              "percent": {
+                "n": 3,
+                "median": 24.816226152005804,
+                "range": [
+                  23.941417357999374,
+                  26.542292379983223
+                ]
+              }
+            },
+            "rmse_roll_deg": {
+              "absolute": {
+                "n": 3,
+                "median": 0.09939455735578129,
+                "range": [
+                  0.047783622915851254,
+                  0.16449744093512297
+                ]
+              },
+              "percent": {
+                "n": 3,
+                "median": 1.4368051147311878,
+                "range": [
+                  0.69073956997594,
+                  2.377904492795957
+                ]
+              }
+            },
+            "rmse_pitch_deg": {
+              "absolute": {
+                "n": 3,
+                "median": 0.008694943221241758,
+                "range": [
+                  -0.011646323003016157,
+                  0.05701367087738518
+                ]
+              },
+              "percent": {
+                "n": 3,
+                "median": 0.19815882495415327,
+                "range": [
+                  -0.26542113301858405,
+                  1.2993485684627881
+                ]
+              }
+            }
+          },
+          "interaction": {
+            "rmse_z_m": {
+              "absolute_difference_in_differences": {
+                "n": 3,
+                "median": 0.08540154508452019,
+                "range": [
+                  0.08325218355096836,
+                  0.11932769442370222
+                ]
+              },
+              "effect_difference_percentage_points": {
+                "n": 3,
+                "median": 3.1895444926247296,
+                "range": [
+                  2.60865224867467,
+                  4.222607585583649
+                ]
+              }
+            },
+            "ate_rmse_m": {
+              "absolute_difference_in_differences": {
+                "n": 3,
+                "median": 1.0132607372653168,
+                "range": [
+                  0.9767706869446272,
+                  1.0827028691257419
+                ]
+              },
+              "effect_difference_percentage_points": {
+                "n": 3,
+                "median": 25.276177905272256,
+                "range": [
+                  24.244062607288786,
+                  26.844937629272636
+                ]
+              }
+            },
+            "rmse_roll_deg": {
+              "absolute_difference_in_differences": {
+                "n": 3,
+                "median": 0.10165489569144692,
+                "range": [
+                  0.04893557187744324,
+                  0.1667577792707886
+                ]
+              },
+              "effect_difference_percentage_points": {
+                "n": 3,
+                "median": 1.6990424178228158,
+                "range": [
+                  0.824520664152717,
+                  2.640141795887585
+                ]
+              }
+            },
+            "rmse_pitch_deg": {
+              "absolute_difference_in_differences": {
+                "n": 3,
+                "median": 0.009890937972413916,
+                "range": [
+                  -0.011395793765320406,
+                  0.05820966562855734
+                ]
+              },
+              "effect_difference_percentage_points": {
+                "n": 3,
+                "median": 0.3139619306877228,
+                "range": [
+                  -0.2411500405028022,
+                  1.4151516741963577
+                ]
+              }
+            }
+          }
+        }
+      },
+      "phase_robustness": {
+        "phases": [
+          {
+            "dropout_start_s": 15.0,
+            "replicated": true,
+            "interaction_summary": {
+              "rmse_z_m": {
+                "absolute_difference_in_differences": {
+                  "n": 3,
+                  "median": 0.08540154508452019,
+                  "range": [
+                    0.08325218355096836,
+                    0.11932769442370222
+                  ]
+                },
+                "effect_difference_percentage_points": {
+                  "n": 3,
+                  "median": 3.1895444926247296,
+                  "range": [
+                    2.60865224867467,
+                    4.222607585583649
+                  ]
+                }
+              },
+              "ate_rmse_m": {
+                "absolute_difference_in_differences": {
+                  "n": 3,
+                  "median": 1.0132607372653168,
+                  "range": [
+                    0.9767706869446272,
+                    1.0827028691257419
+                  ]
+                },
+                "effect_difference_percentage_points": {
+                  "n": 3,
+                  "median": 25.276177905272256,
+                  "range": [
+                    24.244062607288786,
+                    26.844937629272636
+                  ]
+                }
+              },
+              "rmse_roll_deg": {
+                "absolute_difference_in_differences": {
+                  "n": 3,
+                  "median": 0.10165489569144692,
+                  "range": [
+                    0.04893557187744324,
+                    0.1667577792707886
+                  ]
+                },
+                "effect_difference_percentage_points": {
+                  "n": 3,
+                  "median": 1.6990424178228158,
+                  "range": [
+                    0.824520664152717,
+                    2.640141795887585
+                  ]
+                }
+              },
+              "rmse_pitch_deg": {
+                "absolute_difference_in_differences": {
+                  "n": 3,
+                  "median": 0.009890937972413916,
+                  "range": [
+                    -0.011395793765320406,
+                    0.05820966562855734
+                  ]
+                },
+                "effect_difference_percentage_points": {
+                  "n": 3,
+                  "median": 0.3139619306877228,
+                  "range": [
+                    -0.2411500405028022,
+                    1.4151516741963577
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "dropout_start_s": 12,
+            "replicated": false,
+            "clean": {
+              "sequence": "tuhh_day_04_os1",
+              "runs": {
+                "online": "A_warm21",
+                "warm_fixg21": "WarmFixG21C_s12"
+              },
+              "frames": 1875,
+              "event": {
+                "requested_elapsed_s": 12.0,
+                "snapshot_elapsed_s": 12.006227254868,
+                "activation_elapsed_s": 12.007991313934,
+                "correction_gap_s": 0.001764059066772461,
+                "gravity_m_s2": [
+                  0.224380631722,
+                  -0.035199779875,
+                  -9.806370139231
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.075383290707,
+                  -0.005960207832,
+                  -0.031615655669
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    4.617885e-06,
+                    -5.956e-09
+                  ],
+                  [
+                    -5.956e-09,
+                    4.620917e-06
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 5.7885393e-05,
+                "projected_active_covariance_min_eigenvalue": 2.424e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 2.779999841440173e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 0.4519835406431589,
+                  "ate_rmse_m": 0.5456555951748396,
+                  "rmse_roll_deg": 0.8610700702371656,
+                  "rmse_pitch_deg": 1.0322124458666784
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 0.4514586884623393,
+                  "ate_rmse_m": 0.5458787606235534,
+                  "rmse_roll_deg": 0.8625799933136005,
+                  "rmse_pitch_deg": 1.0326435672457295
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": -0.0005248521808196016,
+                    "percent": -0.11612196764350102
+                  },
+                  "ate_rmse_m": {
+                    "absolute": 0.0002231654487138135,
+                    "percent": 0.040898590738769336
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": 0.001509923076434827,
+                    "percent": 0.17535426309951418
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": 0.0004311213790511026,
+                    "percent": 0.04176672939544268
+                  }
+                }
+              }
+            },
+            "dropout": {
+              "sequence": "tuhh_day_04_drop5x20_s12",
+              "runs": {
+                "online": "A_warm21",
+                "warm_fixg21": "WarmFixG21C"
+              },
+              "frames": 1425,
+              "event": {
+                "requested_elapsed_s": 12.0,
+                "snapshot_elapsed_s": 12.006227254868,
+                "activation_elapsed_s": 17.006098031998,
+                "correction_gap_s": 4.999870777130127,
+                "gravity_m_s2": [
+                  0.224380631722,
+                  -0.035199779875,
+                  -9.806370139231
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.075383290707,
+                  -0.005960207832,
+                  -0.031615655669
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    4.617885e-06,
+                    -5.956e-09
+                  ],
+                  [
+                    -5.956e-09,
+                    4.620917e-06
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 5.7885393e-05,
+                "projected_active_covariance_min_eigenvalue": 2.424e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 2.779999841440173e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 3.601911079616596,
+                  "ate_rmse_m": 5.3856374348016685,
+                  "rmse_roll_deg": 8.46577438156876,
+                  "rmse_pitch_deg": 5.630008207150746
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 3.823622911050923,
+                  "ate_rmse_m": 6.47299160396589,
+                  "rmse_roll_deg": 8.264217024065198,
+                  "rmse_pitch_deg": 5.37753289013233
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": 0.22171183143432716,
+                    "percent": 6.155394359649957
+                  },
+                  "ate_rmse_m": {
+                    "absolute": 1.0873541691642217,
+                    "percent": 20.189888055549442
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": -0.20155735750356207,
+                    "percent": -2.380849623660919
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": -0.2524753170184155,
+                    "percent": -4.484457352970528
+                  }
+                }
+              }
+            },
+            "interaction": {
+              "rmse_z_m": {
+                "absolute_difference_in_differences": 0.22223668361514676,
+                "effect_difference_percentage_points": 6.271516327293458
+              },
+              "ate_rmse_m": {
+                "absolute_difference_in_differences": 1.0871310037155077,
+                "effect_difference_percentage_points": 20.148989464810672
+              },
+              "rmse_roll_deg": {
+                "absolute_difference_in_differences": -0.2030672805799969,
+                "effect_difference_percentage_points": -2.556203886760433
+              },
+              "rmse_pitch_deg": {
+                "absolute_difference_in_differences": -0.2529064383974666,
+                "effect_difference_percentage_points": -4.526224082365971
+              }
+            }
+          },
+          {
+            "dropout_start_s": 22,
+            "replicated": false,
+            "clean": {
+              "sequence": "tuhh_day_04_os1",
+              "runs": {
+                "online": "A_warm21",
+                "warm_fixg21": "WarmFixG21C_s22"
+              },
+              "frames": 1875,
+              "event": {
+                "requested_elapsed_s": 22.0,
+                "snapshot_elapsed_s": 22.091455698013,
+                "activation_elapsed_s": 22.093490362167,
+                "correction_gap_s": 0.0020346641540527344,
+                "gravity_m_s2": [
+                  0.205212731164,
+                  -0.084612074993,
+                  -9.806488134482
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.049872559328,
+                  -0.068955953901,
+                  -0.023703834747
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    3.309417e-06,
+                    -1.725e-09
+                  ],
+                  [
+                    -1.725e-09,
+                    3.316369e-06
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 4.2625428e-05,
+                "projected_active_covariance_min_eigenvalue": 2.659e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 4.820002175165428e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 0.4519835406431589,
+                  "ate_rmse_m": 0.5456555951748396,
+                  "rmse_roll_deg": 0.8610700702371656,
+                  "rmse_pitch_deg": 1.0322124458666784
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 0.45377549875245843,
+                  "ate_rmse_m": 0.5436997487223678,
+                  "rmse_roll_deg": 0.8614123406597298,
+                  "rmse_pitch_deg": 1.032872233769698
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": 0.0017919581092995518,
+                    "percent": 0.3964653462269041
+                  },
+                  "ate_rmse_m": {
+                    "absolute": -0.001955846452471821,
+                    "percent": -0.35843973190545775
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": 0.0003422704225641837,
+                    "percent": 0.03974942741533649
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": 0.0006597879030196818,
+                    "percent": 0.06391977791604386
+                  }
+                }
+              }
+            },
+            "dropout": {
+              "sequence": "tuhh_day_04_drop5x20_s22",
+              "runs": {
+                "online": "A_warm21",
+                "warm_fixg21": "WarmFixG21C"
+              },
+              "frames": 1424,
+              "event": {
+                "requested_elapsed_s": 22.0,
+                "snapshot_elapsed_s": 22.091455698013,
+                "activation_elapsed_s": 27.096393108368,
+                "correction_gap_s": 5.004937171936035,
+                "gravity_m_s2": [
+                  0.205212731164,
+                  -0.084612074993,
+                  -9.806488134482
+                ],
+                "accelerometer_bias_m_s2": [
+                  0.049872559328,
+                  -0.068955953901,
+                  -0.023703834747
+                ],
+                "pre_switch_gravity_covariance": [
+                  [
+                    3.309417e-06,
+                    -1.725e-09
+                  ],
+                  [
+                    -1.725e-09,
+                    3.316369e-06
+                  ]
+                ],
+                "pre_switch_state_gravity_cross_covariance_fro": 4.2625428e-05,
+                "projected_active_covariance_min_eigenvalue": 2.659e-09
+              },
+              "structure": {
+                "matched_frames": true,
+                "matched_correction_timestamps": true,
+                "bit_identical_pre_switch_prefix": true,
+                "snapshot_is_preceding_correction": true,
+                "active_dof_before_after": [
+                  23,
+                  21
+                ],
+                "conditional_covariance_projection": true,
+                "fixed_gravity_max_abs_deviation": 4.820002175165428e-10,
+                "binary_sha1": "655a13b3c4ca"
+              },
+              "metrics": {
+                "online": {
+                  "rmse_z_m": 6.1511273310489925,
+                  "ate_rmse_m": 6.5801046146198665,
+                  "rmse_roll_deg": 13.808909622006661,
+                  "rmse_pitch_deg": 8.986251006212685
+                },
+                "warm_fixg21_conditional": {
+                  "rmse_z_m": 6.072626394583231,
+                  "ate_rmse_m": 6.881401224060158,
+                  "rmse_roll_deg": 13.84324690080123,
+                  "rmse_pitch_deg": 9.045974017215466
+                },
+                "warm_effect_vs_online": {
+                  "rmse_z_m": {
+                    "absolute": -0.07850093646576184,
+                    "percent": -1.276204055629171
+                  },
+                  "ate_rmse_m": {
+                    "absolute": 0.3012966094402918,
+                    "percent": 4.57890302793762
+                  },
+                  "rmse_roll_deg": {
+                    "absolute": 0.034337278794568604,
+                    "percent": 0.2486603195653192
+                  },
+                  "rmse_pitch_deg": {
+                    "absolute": 0.05972301100278088,
+                    "percent": 0.6646043045257732
+                  }
+                }
+              }
+            },
+            "interaction": {
+              "rmse_z_m": {
+                "absolute_difference_in_differences": -0.08029289457506139,
+                "effect_difference_percentage_points": -1.672669401856075
+              },
+              "ate_rmse_m": {
+                "absolute_difference_in_differences": 0.3032524558927636,
+                "effect_difference_percentage_points": 4.9373427598430775
+              },
+              "rmse_roll_deg": {
+                "absolute_difference_in_differences": 0.03399500837200442,
+                "effect_difference_percentage_points": 0.2089108921499827
+              },
+              "rmse_pitch_deg": {
+                "absolute_difference_in_differences": 0.0590632230997612,
+                "effect_difference_percentage_points": 0.6006845266097294
+              }
+            }
+          }
+        ],
+        "summary": {
+          "rmse_z_m": {
+            "absolute_difference_in_differences": {
+              "n": 3,
+              "median": 0.08540154508452019,
+              "range": [
+                -0.08029289457506139,
+                0.22223668361514676
+              ]
+            },
+            "all_positive": false,
+            "all_negative": false
+          },
+          "ate_rmse_m": {
+            "absolute_difference_in_differences": {
+              "n": 3,
+              "median": 1.0132607372653168,
+              "range": [
+                0.3032524558927636,
+                1.0871310037155077
+              ]
+            },
+            "all_positive": true,
+            "all_negative": false
+          },
+          "rmse_roll_deg": {
+            "absolute_difference_in_differences": {
+              "n": 3,
+              "median": 0.03399500837200442,
+              "range": [
+                -0.2030672805799969,
+                0.10165489569144692
+              ]
+            },
+            "all_positive": false,
+            "all_negative": false
+          },
+          "rmse_pitch_deg": {
+            "absolute_difference_in_differences": {
+              "n": 3,
+              "median": 0.009890937972413916,
+              "range": [
+                -0.2529064383974666,
+                0.0590632230997612
+              ]
+            },
+            "all_positive": false,
+            "all_negative": false
+          }
+        }
+      }
+    }
+  }
+}

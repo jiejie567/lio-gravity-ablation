@@ -1,0 +1,9 @@
+# 开环里程计模式: 缩小局部地图,消除隐式回环,暴露真实 z 漂移
+# 约束: cube_side_length > 2*1.5*det_range (lasermap_fov_segment 的移动逻辑要求)
+point_filter_num: 3
+max_iteration: 4
+filter_size_surf: 0.4
+filter_size_map: 0.4
+cube_side_length: 200
+mapping:
+  det_range: 50.0

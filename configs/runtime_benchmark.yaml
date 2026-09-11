@@ -1,0 +1,8 @@
+# Dedicated timing overlay for the true-manifold Online/FixG benchmark.
+# The numerical settings are identical to configs/exp_tuning.yaml; only the
+# built-in FAST-LIO per-scan timing logger is enabled.
+point_filter_num: 3
+max_iteration: 4
+filter_size_surf: 0.4
+filter_size_map: 0.4
+runtime_pos_log_enable: true

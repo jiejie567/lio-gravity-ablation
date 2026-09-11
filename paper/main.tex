@@ -1,0 +1,81 @@
+% Public arXiv version.
+\documentclass[letterpaper, 10pt, conference]{ieeeconf}
+\IEEEoverridecommandlockouts
+\overrideIEEEmargins
+\usepackage{newtxtext,newtxmath}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{cite}
+\usepackage{xspace}
+\usepackage{balance}
+\usepackage{placeins}
+
+\definecolor{TableBand}{HTML}{F2F4F5}
+
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\dbltopfraction}{0.95}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.82}
+\renewcommand{\dblfloatpagefraction}{0.82}
+\setcounter{dbltopnumber}{2}
+\setcounter{topnumber}{1}
+\setlength{\textfloatsep}{11pt plus 2pt minus 2pt}
+\setlength{\dbltextfloatsep}{11pt plus 2pt minus 2pt}
+\setlength{\floatsep}{10pt plus 2pt minus 2pt}
+\setlength{\dblfloatsep}{10pt plus 2pt minus 2pt}
+\makeatletter
+\setlength{\@fptop}{0pt}
+\setlength{\@fpsep}{10pt}
+\setlength{\@fpbot}{0pt plus 1fil}
+\setlength{\@dblfptop}{0pt}
+\setlength{\@dblfpsep}{10pt}
+\setlength{\@dblfpbot}{0pt plus 1fil}
+\makeatother
+
+\newcommand{\methodA}{\textsc{Online}}
+\newcommand{\methodG}{\textsc{FixG}}
+\newcommand{\methodB}{\textsc{FixBa}}
+\newcommand{\methodGB}{\textsc{FixG+Ba}}
+\newcommand{\lsFGBA}{\textsc{FG--BA}}
+\newcommand{\lsFGBZ}{\textsc{FG--B0}}
+\newcommand{\lsGEBA}{\textsc{GE--BA}}
+\newcommand{\lsGEBZ}{\textsc{GE--B0}}
+\input{tables/stats}
+
+\title{\LARGE\bfseries Does Online Gravity Estimation Matter?\\
+Revisiting a Silent Design Split in LiDAR-Inertial Odometry}
+
+\author{Xu Jie \quad Jin Ziyi \quad Yu Kangjin \quad
+Huang Hongjun \quad Xia Zhongpu}
+
+\hypersetup{
+  pdftitle={Does Online Gravity Estimation Matter? Revisiting a Silent Design Split in LiDAR-Inertial Odometry},
+  pdfauthor={Xu Jie; Jin Ziyi; Yu Kangjin; Huang Hongjun; Xia Zhongpu}
+}
+
+\begin{document}
+\maketitle
+\thispagestyle{plain}
+\pagestyle{plain}
+
+\begin{abstract}
+\input{sections/abstract}
+\end{abstract}
+
+\noindent{\small Code, evidence, and video:\par
+\url{https://github.com/jiejie567/lio-gravity-ablation}\par}
+
+\input{sections/intro}
+\input{sections/related}
+\input{sections/method}
+\input{sections/results}
+\input{sections/analysis}
+\input{sections/conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}

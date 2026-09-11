@@ -1,0 +1,58 @@
+<launch>
+  <arg name="imu_node" default="lio_sam_imuPreintegration" />
+  <arg name="state_log" default="/tmp/lio_sam_state.csv" />
+  <arg name="gravity_direction_sigma" default="-1.0" />
+  <arg name="gravity_direction_log" default="" />
+  <arg name="mapping_process_interval" default="0.15" />
+
+  <rosparam file="$(find lio_sam)/config/params.yaml" command="load" />
+  <param name="lio_sam/mappingProcessInterval"
+         value="$(arg mapping_process_interval)" />
+
+  <!-- Official M2DGR LIO-SAM calibration and IMU noise parameters. -->
+  <param name="lio_sam/pointCloudTopic" value="/velodyne_points" />
+  <param name="lio_sam/imuTopic" value="/handsfree/imu" />
+  <param name="lio_sam/useImuHeadingInitialization" value="false" />
+  <param name="lio_sam/savePCD" value="false" />
+  <param name="lio_sam/sensor" value="velodyne" />
+  <param name="lio_sam/N_SCAN" value="32" />
+  <param name="lio_sam/Horizon_SCAN" value="1800" />
+  <param name="lio_sam/downsampleRate" value="1" />
+  <param name="lio_sam/numberOfCores" value="1" />
+  <!-- Offline evaluation must process every feature message.  Upstream's
+       default queue size remains 1 outside this launch. -->
+  <param name="lio_sam/mappingInputQueueSize" value="4096" />
+  <param name="lio_sam/imuAccNoise" value="3.7686306102624571e-02" />
+  <param name="lio_sam/imuGyrNoise" value="2.3417543020438883e-03" />
+  <param name="lio_sam/imuAccBiasN" value="1.1416642385952368e-03" />
+  <param name="lio_sam/imuGyrBiasN" value="1.4428407712885209e-05" />
+  <param name="lio_sam/imuGravity" value="9.805" />
+  <rosparam param="lio_sam/extrinsicTrans">[0.27255, -0.00053, 0.17954]</rosparam>
+  <rosparam param="lio_sam/extrinsicRot">[1, 0, 0, 0, 1, 0, 0, 0, 1]</rosparam>
+  <rosparam param="lio_sam/extrinsicRPY">[1, 0, 0, 0, 1, 0, 0, 0, 1]</rosparam>
+
+  <!-- Evaluate odometry, not place-recognition/loop-closure performance. -->
+  <param name="lio_sam/loopClosureEnableFlag" value="false" />
+  <!-- GTSAM 4.3 rejects LIO-SAM's intentionally weak 1e8 translation prior
+       under Cholesky; QR is the documented robust factorization for this
+       nearly ill-conditioned graph and leaves the factors unchanged. -->
+  <param name="lio_sam/useQrFactorization" value="true" />
+  <!-- One-time 30-degree prior initializes the new Unit3 variable without
+       constraining it to remain fixed. Subsequent graph resets carry the
+       estimated marginal, as stock LIO-SAM does for pose, velocity and bias. -->
+  <param name="lio_sam/gravityPriorSigma" value="0.5235987755982988" />
+  <param name="lio_sam/ablationLogPath" value="$(arg state_log)" />
+  <param name="lio_sam/gravityDirectionSigma"
+         value="$(arg gravity_direction_sigma)" />
+  <param name="lio_sam/gravityDirectionLogPath"
+         value="$(arg gravity_direction_log)" />
+
+  <node pkg="lio_sam" type="$(arg imu_node)"
+        name="lio_sam_imuPreintegration" output="screen" required="true" />
+  <node pkg="lio_sam" type="lio_sam_imageProjection"
+        name="lio_sam_imageProjection" output="screen" required="true" />
+  <node pkg="lio_sam" type="lio_sam_featureExtraction"
+        name="lio_sam_featureExtraction" output="screen" required="true" />
+  <node pkg="lio_sam" type="lio_sam_mapOptmization"
+        name="lio_sam_mapOptmization" output="screen" required="true" />
+</launch>

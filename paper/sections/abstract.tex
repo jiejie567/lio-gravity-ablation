@@ -1,0 +1,16 @@
+LiDAR--inertial odometry (LIO) systems differ in whether they continue estimating
+gravity after initialization. We compare four gravity--bias state configurations
+in each of FAST-LIO2 and LIO-SAM, then separately test a gravity-direction factor.
+Across \NumCoreSeq{} dataset sequences evaluated with FAST-LIO2,
+fixing gravity under continuous LiDAR correction produces mean paired changes
+in vertical and 3D position errors with 90\% confidence intervals within $\pm$\StrictEquivMargin{}.
+Tests on \NumLioSamSeq{} sequences with LIO-SAM likewise show no consistent benefit from
+online gravity. Multi-second LiDAR outages, unlike reduced range or field of
+view, reveal trajectory-dependent costs of fixing gravity. A history-matched
+23D-to-21D switch places the repeatable 3D error increase after LiDAR updates
+resume. Under 5-s outages, a direction factor from the same IMU used for
+preintegration improves accuracy on Hall05 but worsens both errors with online
+gravity on TUHH. Dynamic-start tests also show fixed-bias failures at
+particular starting phases. We recommend keeping gravity and accelerometer
+bias online for robustness; use a direction factor only after verifying
+vertical and 3D accuracy gains under the intended operating conditions.

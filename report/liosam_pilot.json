@@ -1,0 +1,48 @@
+{
+  "status": "pilot_only_not_paper_evidence",
+  "sequence": "M2DGR Hall05 first 60 s",
+  "playback_rate": 0.5,
+  "alignment": "rigid SE(3), first 10 s",
+  "runs": {
+    "FG-BA": {
+      "frames": 299,
+      "duration_s": 59.716683864593506,
+      "gt_arc_length_m": 26.373563572783844,
+      "rmse_z_m": 0.2934485034532396,
+      "ate_rmse_m": 1.6601373429860207,
+      "final_position_error_m": 1.324006739838823,
+      "delta_rmse_z_pct_vs_fg_ba": 0.0,
+      "delta_ate_pct_vs_fg_ba": 0.0
+    },
+    "FG-B0": {
+      "frames": 299,
+      "duration_s": 59.716683864593506,
+      "gt_arc_length_m": 26.373563572783844,
+      "rmse_z_m": 0.2970337379995915,
+      "ate_rmse_m": 1.662484035900549,
+      "final_position_error_m": 1.3205879000091758,
+      "delta_rmse_z_pct_vs_fg_ba": 1.2217593561260731,
+      "delta_ate_pct_vs_fg_ba": 0.14135534776342773
+    },
+    "GE-BA": {
+      "frames": 299,
+      "duration_s": 59.716683864593506,
+      "gt_arc_length_m": 26.373563572783844,
+      "rmse_z_m": 0.2913192828608335,
+      "ate_rmse_m": 1.6597617923583565,
+      "final_position_error_m": 1.3166641588137828,
+      "delta_rmse_z_pct_vs_fg_ba": -0.7255857730913196,
+      "delta_ate_pct_vs_fg_ba": -0.022621660144617195
+    },
+    "GE-B0": {
+      "frames": 299,
+      "duration_s": 59.716683864593506,
+      "gt_arc_length_m": 26.373563572783844,
+      "rmse_z_m": 0.2972448559056907,
+      "ate_rmse_m": 1.6623972968339529,
+      "final_position_error_m": 1.3235803602737022,
+      "delta_rmse_z_pct_vs_fg_ba": 1.2937031226182727,
+      "delta_ate_pct_vs_fg_ba": 0.13613053507171013
+    }
+  }
+}

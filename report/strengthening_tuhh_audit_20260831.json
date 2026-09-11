@@ -1,0 +1,950 @@
+{
+  "audited_at": "2026-08-31T23:55:29.742641+08:00",
+  "structural_validation_stdout": "LIO-SAM gravity-direction sweep structural validation: PASS\ndataset: mcd\nstate/odometry rows per run: 709/710\ngravity norm: 9.805000305176 (max error 3.55e-15)\nFG-BA_s0p5: factors=709, median=2.3323->1.7842 deg, max_age=0.003105 s\nFG-BA_s2: factors=709, median=3.6732->3.6315 deg, max_age=0.003105 s\nFG-BA_s5: factors=709, median=4.2131->4.1903 deg, max_age=0.003105 s\nGE-BA_s0p5: factors=709, median=2.3054->1.7591 deg, max_age=0.003105 s\nGE-BA_s2: factors=709, median=3.6912->3.6507 deg, max_age=0.003105 s\nGE-BA_s5: factors=709, median=4.2315->4.2337 deg, max_age=0.003105 s\n",
+  "cells": {
+    "FG-BA_off": {
+      "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r1/FG-BA_off",
+      "status": "admitted_accuracy",
+      "state_rows": 709,
+      "odometry_rows": 710,
+      "sleep": {
+        "checked_at": "2026-08-31T16:42:24.254719+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T16:47:40+08:00"
+      },
+      "diagnostics": {
+        "gt_overlap_rows": 705,
+        "gt_arc_length_m": 294.26620411299405,
+        "estimated_arc_length_m": 304.48003907415057,
+        "estimate_to_gt_arc_ratio": 1.0347095073045989,
+        "gap_transition_arc_m": 77.96414240566973,
+        "nongap_arc_m": 226.51589666848082,
+        "gap_transitions": [
+          {
+            "end_s_from_first_matched_pose": 18.9999783039093,
+            "duration_s": 5.206595182418823,
+            "estimate_step_m": 9.623601996694354,
+            "gt_step_m": 8.893099361366573
+          },
+          {
+            "end_s_from_first_matched_pose": 39.09098839759827,
+            "duration_s": 5.10196590423584,
+            "estimate_step_m": 10.894381879198233,
+            "gt_step_m": 8.826521049850722
+          },
+          {
+            "end_s_from_first_matched_pose": 59.091503381729126,
+            "duration_s": 5.197057008743286,
+            "estimate_step_m": 9.449065040761003,
+            "gt_step_m": 9.205427373940001
+          },
+          {
+            "end_s_from_first_matched_pose": 79.092116355896,
+            "duration_s": 5.199793815612793,
+            "estimate_step_m": 11.466487591431095,
+            "gt_step_m": 9.218230873189725
+          },
+          {
+            "end_s_from_first_matched_pose": 99.0911340713501,
+            "duration_s": 5.195026397705078,
+            "estimate_step_m": 4.157539818020714,
+            "gt_step_m": 9.315475275114284
+          },
+          {
+            "end_s_from_first_matched_pose": 119.0970675945282,
+            "duration_s": 5.200582027435303,
+            "estimate_step_m": 3.909059174862994,
+            "gt_step_m": 9.401939244680607
+          },
+          {
+            "end_s_from_first_matched_pose": 139.09086322784424,
+            "duration_s": 5.193096160888672,
+            "estimate_step_m": 14.12190426171301,
+            "gt_step_m": 9.283478488231669
+          },
+          {
+            "end_s_from_first_matched_pose": 159.08888816833496,
+            "duration_s": 5.199338436126709,
+            "estimate_step_m": 9.641540188323251,
+            "gt_step_m": 8.533127122289317
+          },
+          {
+            "end_s_from_first_matched_pose": 179.08743858337402,
+            "duration_s": 5.190800666809082,
+            "estimate_step_m": 4.700562454665072,
+            "gt_step_m": 6.317280916239195
+          }
+        ]
+      },
+      "sha1": {
+        "rosbag.log": "cc9e2b5332736eccd9d920e8daf857e57747ef75",
+        "launch.log": "eba121bbb3d81eab90f53a6fcbc1457a1a01c5ff",
+        "odometry.csv": "64f28993620e7c0f418e80208c399e65342bac1d",
+        "roscore.log": "87155684eac818534420ef520375cf2027cd8d1f",
+        "run_meta.txt": "5eebde5eb97edf630502ebab28ff25b9309b8b00",
+        "state_log.csv": "f7fea0b51d1b7ab2febeacf23bb6c1a3509a6b9a",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "metrics": {
+        "frames": 705,
+        "duration_s": 185.688951253891,
+        "gt_arc_length_m": 294.26620411299405,
+        "estimate_to_gt_arc_ratio": 1.0347095073045989,
+        "rmse_z_m": 17.26318921503964,
+        "ate_rmse_m": 26.879152845064198,
+        "rmse_z_mm_per_100m": 5866.521188553077,
+        "ate_mm_per_100m": 9134.29828820675,
+        "final_position_error_m": 26.93645964959043
+      }
+    },
+    "FG-BA_s0p5": {
+      "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r1/FG-BA_s0p5",
+      "status": "arc_gate_failure_not_accuracy_run",
+      "state_rows": 709,
+      "odometry_rows": 710,
+      "sleep": {
+        "checked_at": "2026-08-31T23:55:24.000875+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T23:56:19+08:00"
+      },
+      "diagnostics": {
+        "gt_overlap_rows": 705,
+        "gt_arc_length_m": 294.26620411299405,
+        "estimated_arc_length_m": 482.8490538710546,
+        "estimate_to_gt_arc_ratio": 1.640857995659085,
+        "gap_transition_arc_m": 110.49691194238412,
+        "nongap_arc_m": 372.35214192867045,
+        "gap_transitions": [
+          {
+            "end_s_from_first_matched_pose": 18.9999783039093,
+            "duration_s": 5.206595182418823,
+            "estimate_step_m": 7.89255452626149,
+            "gt_step_m": 8.893099361366573
+          },
+          {
+            "end_s_from_first_matched_pose": 39.09098839759827,
+            "duration_s": 5.10196590423584,
+            "estimate_step_m": 7.535917295609536,
+            "gt_step_m": 8.826521049850722
+          },
+          {
+            "end_s_from_first_matched_pose": 59.091503381729126,
+            "duration_s": 5.197057008743286,
+            "estimate_step_m": 14.109378182824296,
+            "gt_step_m": 9.205427373940001
+          },
+          {
+            "end_s_from_first_matched_pose": 79.092116355896,
+            "duration_s": 5.199793815612793,
+            "estimate_step_m": 14.376695645090246,
+            "gt_step_m": 9.218230873189725
+          },
+          {
+            "end_s_from_first_matched_pose": 99.0911340713501,
+            "duration_s": 5.195026397705078,
+            "estimate_step_m": 3.803386074729637,
+            "gt_step_m": 9.315475275114284
+          },
+          {
+            "end_s_from_first_matched_pose": 119.0970675945282,
+            "duration_s": 5.200582027435303,
+            "estimate_step_m": 19.619449722207225,
+            "gt_step_m": 9.401939244680607
+          },
+          {
+            "end_s_from_first_matched_pose": 139.09086322784424,
+            "duration_s": 5.193096160888672,
+            "estimate_step_m": 11.628823542291693,
+            "gt_step_m": 9.283478488231669
+          },
+          {
+            "end_s_from_first_matched_pose": 159.08888816833496,
+            "duration_s": 5.199338436126709,
+            "estimate_step_m": 16.596267145146935,
+            "gt_step_m": 8.533127122289317
+          },
+          {
+            "end_s_from_first_matched_pose": 179.08743858337402,
+            "duration_s": 5.190800666809082,
+            "estimate_step_m": 14.934439808223063,
+            "gt_step_m": 6.317280916239195
+          }
+        ]
+      },
+      "sha1": {
+        "rosbag.log": "ff3cd3600e72bc53bc31e2f0537dafeb61194698",
+        "campaign_sleep.json": "20bf1d13cd8b1fce76fea6236a5a1106987dc4be",
+        "launch.log": "94def7f1935e28204880e20ec06a466409ae09cc",
+        "campaign_completion.json": "9f3aea21b31cf98f753f705955b023e14a2336fd",
+        "odometry.csv": "cfd9d64f7f4d399fbbc32d4411dd37f2e5fd88b1",
+        "gravity_direction.csv": "420602c04c80794f70fa3c9d5d5f6fa72b488987",
+        "roscore.log": "e0857a18d31c5b8401b87a0df8174f3fccdc0a27",
+        "run_meta.txt": "a2f882d20586a7021284551a4f1ea3fc251dd79b",
+        "state_log.csv": "de464388b1569049d4d0907c72793677182820bd",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "original_gate_error": "./results/strengthening_20260831/liosam_weights/tuhh_day04/r1/FG-BA_s0p5: arc-length gate failed (1.641)"
+    },
+    "FG-BA_s2": {
+      "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r1/FG-BA_s2",
+      "status": "admitted_accuracy",
+      "state_rows": 709,
+      "odometry_rows": 710,
+      "sleep": {
+        "checked_at": "2026-08-31T16:42:25.735686+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T16:47:40+08:00"
+      },
+      "diagnostics": {
+        "gt_overlap_rows": 705,
+        "gt_arc_length_m": 294.26620411299405,
+        "estimated_arc_length_m": 289.53713362195504,
+        "estimate_to_gt_arc_ratio": 0.9839292775556954,
+        "gap_transition_arc_m": 54.88871368502882,
+        "nongap_arc_m": 234.64841993692622,
+        "gap_transitions": [
+          {
+            "end_s_from_first_matched_pose": 18.9999783039093,
+            "duration_s": 5.206595182418823,
+            "estimate_step_m": 8.175060477832453,
+            "gt_step_m": 8.893099361366573
+          },
+          {
+            "end_s_from_first_matched_pose": 39.09098839759827,
+            "duration_s": 5.10196590423584,
+            "estimate_step_m": 7.668170865363397,
+            "gt_step_m": 8.826521049850722
+          },
+          {
+            "end_s_from_first_matched_pose": 59.091503381729126,
+            "duration_s": 5.197057008743286,
+            "estimate_step_m": 6.98124474231502,
+            "gt_step_m": 9.205427373940001
+          },
+          {
+            "end_s_from_first_matched_pose": 79.092116355896,
+            "duration_s": 5.199793815612793,
+            "estimate_step_m": 9.084450143269208,
+            "gt_step_m": 9.218230873189725
+          },
+          {
+            "end_s_from_first_matched_pose": 99.0911340713501,
+            "duration_s": 5.195026397705078,
+            "estimate_step_m": 4.223025733212655,
+            "gt_step_m": 9.315475275114284
+          },
+          {
+            "end_s_from_first_matched_pose": 119.0970675945282,
+            "duration_s": 5.200582027435303,
+            "estimate_step_m": 3.2913157655704834,
+            "gt_step_m": 9.401939244680607
+          },
+          {
+            "end_s_from_first_matched_pose": 139.09086322784424,
+            "duration_s": 5.193096160888672,
+            "estimate_step_m": 4.724589811296339,
+            "gt_step_m": 9.283478488231669
+          },
+          {
+            "end_s_from_first_matched_pose": 159.08888816833496,
+            "duration_s": 5.199338436126709,
+            "estimate_step_m": 6.976101042114427,
+            "gt_step_m": 8.533127122289317
+          },
+          {
+            "end_s_from_first_matched_pose": 179.08743858337402,
+            "duration_s": 5.190800666809082,
+            "estimate_step_m": 3.7647551040548386,
+            "gt_step_m": 6.317280916239195
+          }
+        ]
+      },
+      "sha1": {
+        "rosbag.log": "06fd00ab794bfa0af1373b86ad7d2a684210e447",
+        "launch.log": "87a2f6b88925ae57c62943bcfc733cbc12468c82",
+        "odometry.csv": "c8319c16ad64f0e7c6d1519abb7ed3e145eb1737",
+        "gravity_direction.csv": "967fefe819b415647ee1eb3f83e5406f59b585cd",
+        "roscore.log": "1a697a15e159fb07acb57fe7f9fd56e053ee42ec",
+        "run_meta.txt": "2dae8b34c0a3e81e5c77d732ae62a8e3de8cf311",
+        "state_log.csv": "4851d761a5f4ab124b9670016a1798c51ddbd9f5",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "metrics": {
+        "frames": 705,
+        "duration_s": 185.688951253891,
+        "gt_arc_length_m": 294.26620411299405,
+        "estimate_to_gt_arc_ratio": 0.9839292775556954,
+        "rmse_z_m": 17.769806729737784,
+        "ate_rmse_m": 24.26715318145266,
+        "rmse_z_mm_per_100m": 6038.6841850566125,
+        "ate_mm_per_100m": 8246.666739934028,
+        "final_position_error_m": 41.512319270226854,
+        "direction_factor": {
+          "factors": 709,
+          "median_pre_residual_deg": 3.67323579942558,
+          "median_post_residual_deg": 3.631491479869121,
+          "p95_post_residual_deg": 10.286627825167924,
+          "max_measurement_age_s": 0.003104686737060547
+        }
+      }
+    },
+    "FG-BA_s5": {
+      "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r1/FG-BA_s5",
+      "status": "admitted_accuracy",
+      "state_rows": 709,
+      "odometry_rows": 710,
+      "sleep": {
+        "checked_at": "2026-08-31T23:55:25.921108+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T23:56:19+08:00"
+      },
+      "diagnostics": {
+        "gt_overlap_rows": 705,
+        "gt_arc_length_m": 294.26620411299405,
+        "estimated_arc_length_m": 314.672411569994,
+        "estimate_to_gt_arc_ratio": 1.0693460790664369,
+        "gap_transition_arc_m": 80.45029676512844,
+        "nongap_arc_m": 234.22211480486556,
+        "gap_transitions": [
+          {
+            "end_s_from_first_matched_pose": 18.9999783039093,
+            "duration_s": 5.206595182418823,
+            "estimate_step_m": 9.19416953287285,
+            "gt_step_m": 8.893099361366573
+          },
+          {
+            "end_s_from_first_matched_pose": 39.09098839759827,
+            "duration_s": 5.10196590423584,
+            "estimate_step_m": 9.181913173789928,
+            "gt_step_m": 8.826521049850722
+          },
+          {
+            "end_s_from_first_matched_pose": 59.091503381729126,
+            "duration_s": 5.197057008743286,
+            "estimate_step_m": 9.55512370813669,
+            "gt_step_m": 9.205427373940001
+          },
+          {
+            "end_s_from_first_matched_pose": 79.092116355896,
+            "duration_s": 5.199793815612793,
+            "estimate_step_m": 8.49891072095546,
+            "gt_step_m": 9.218230873189725
+          },
+          {
+            "end_s_from_first_matched_pose": 99.0911340713501,
+            "duration_s": 5.195026397705078,
+            "estimate_step_m": 8.449339926990612,
+            "gt_step_m": 9.315475275114284
+          },
+          {
+            "end_s_from_first_matched_pose": 119.0970675945282,
+            "duration_s": 5.200582027435303,
+            "estimate_step_m": 7.83069391361644,
+            "gt_step_m": 9.401939244680607
+          },
+          {
+            "end_s_from_first_matched_pose": 139.09086322784424,
+            "duration_s": 5.193096160888672,
+            "estimate_step_m": 11.386297472130133,
+            "gt_step_m": 9.283478488231669
+          },
+          {
+            "end_s_from_first_matched_pose": 159.08888816833496,
+            "duration_s": 5.199338436126709,
+            "estimate_step_m": 8.671453129248837,
+            "gt_step_m": 8.533127122289317
+          },
+          {
+            "end_s_from_first_matched_pose": 179.08743858337402,
+            "duration_s": 5.190800666809082,
+            "estimate_step_m": 7.682395187387491,
+            "gt_step_m": 6.317280916239195
+          }
+        ]
+      },
+      "sha1": {
+        "rosbag.log": "c04e2a93ad4f7c9be7d54bca3aa0adb21aca25d3",
+        "campaign_sleep.json": "4c274c4fa1db4f86869b6dfb92802746fc1f6d22",
+        "launch.log": "182138963efa11d89e1b691a25241116bc2c5f4a",
+        "campaign_completion.json": "963528410d88d58cab9d93c19980a9d7a0dad5fe",
+        "odometry.csv": "67435301a8bfbc0e2a862e9850b8680a21cdf369",
+        "gravity_direction.csv": "e46c15696efdb08f34b6ab4285199c8aae2dbcd6",
+        "roscore.log": "4f6ccacb2cb1ab6ee8ce2c921afc53eeb12f9412",
+        "run_meta.txt": "61065552ef9527602a214c08a99349bd2576a3c6",
+        "state_log.csv": "2eb6699d4bda797ddc70a33a34ac536d40d2fb48",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "metrics": {
+        "frames": 705,
+        "duration_s": 185.688951253891,
+        "gt_arc_length_m": 294.26620411299405,
+        "estimate_to_gt_arc_ratio": 1.069346079066437,
+        "rmse_z_m": 7.871714135653336,
+        "ate_rmse_m": 10.393353903127403,
+        "rmse_z_mm_per_100m": 2675.031663721298,
+        "ate_mm_per_100m": 3531.956357154933,
+        "final_position_error_m": 17.673728041803336,
+        "direction_factor": {
+          "factors": 709,
+          "median_pre_residual_deg": 4.213067539256495,
+          "median_post_residual_deg": 4.190266678036971,
+          "p95_post_residual_deg": 11.472706122986313,
+          "max_measurement_age_s": 0.003104686737060547
+        }
+      }
+    },
+    "GE-BA_off": {
+      "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r1/GE-BA_off",
+      "status": "admitted_accuracy",
+      "state_rows": 709,
+      "odometry_rows": 710,
+      "sleep": {
+        "checked_at": "2026-08-31T16:42:27.223742+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T16:47:40+08:00"
+      },
+      "diagnostics": {
+        "gt_overlap_rows": 705,
+        "gt_arc_length_m": 294.26620411299405,
+        "estimated_arc_length_m": 331.12121020405874,
+        "estimate_to_gt_arc_ratio": 1.1252437608394639,
+        "gap_transition_arc_m": 80.82384285010716,
+        "nongap_arc_m": 250.29736735395159,
+        "gap_transitions": [
+          {
+            "end_s_from_first_matched_pose": 18.9999783039093,
+            "duration_s": 5.206595182418823,
+            "estimate_step_m": 9.918530985290875,
+            "gt_step_m": 8.893099361366573
+          },
+          {
+            "end_s_from_first_matched_pose": 39.09098839759827,
+            "duration_s": 5.10196590423584,
+            "estimate_step_m": 9.279800529562353,
+            "gt_step_m": 8.826521049850722
+          },
+          {
+            "end_s_from_first_matched_pose": 59.091503381729126,
+            "duration_s": 5.197057008743286,
+            "estimate_step_m": 9.38379797204966,
+            "gt_step_m": 9.205427373940001
+          },
+          {
+            "end_s_from_first_matched_pose": 79.092116355896,
+            "duration_s": 5.199793815612793,
+            "estimate_step_m": 8.007551283511804,
+            "gt_step_m": 9.218230873189725
+          },
+          {
+            "end_s_from_first_matched_pose": 99.0911340713501,
+            "duration_s": 5.195026397705078,
+            "estimate_step_m": 10.274431505310162,
+            "gt_step_m": 9.315475275114284
+          },
+          {
+            "end_s_from_first_matched_pose": 119.0970675945282,
+            "duration_s": 5.200582027435303,
+            "estimate_step_m": 10.178360327854902,
+            "gt_step_m": 9.401939244680607
+          },
+          {
+            "end_s_from_first_matched_pose": 139.09086322784424,
+            "duration_s": 5.193096160888672,
+            "estimate_step_m": 10.351963762288115,
+            "gt_step_m": 9.283478488231669
+          },
+          {
+            "end_s_from_first_matched_pose": 159.08888816833496,
+            "duration_s": 5.199338436126709,
+            "estimate_step_m": 7.1587330074201185,
+            "gt_step_m": 8.533127122289317
+          },
+          {
+            "end_s_from_first_matched_pose": 179.08743858337402,
+            "duration_s": 5.190800666809082,
+            "estimate_step_m": 6.270673476819153,
+            "gt_step_m": 6.317280916239195
+          }
+        ]
+      },
+      "sha1": {
+        "rosbag.log": "c07e7fcad50f4f3d0dd80db132352c1005cc639f",
+        "launch.log": "67664e2c110ce722ab8558c189b2474ae5343680",
+        "odometry.csv": "2e2dfc61e6553a0cb333f025ffe8805fe04b28e2",
+        "roscore.log": "b3381d04caad0f160ddcb7443029109991363c11",
+        "run_meta.txt": "2214aae040549bb8a1dcb4bd06351867c8f1ef3c",
+        "state_log.csv": "da4a9b3ff712a19c68827579a3ab9a8bcbaad788",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "metrics": {
+        "frames": 705,
+        "duration_s": 185.688951253891,
+        "gt_arc_length_m": 294.26620411299405,
+        "estimate_to_gt_arc_ratio": 1.1252437608394636,
+        "rmse_z_m": 3.142861536639416,
+        "ate_rmse_m": 11.436829441761528,
+        "rmse_z_mm_per_100m": 1068.0334651792368,
+        "ate_mm_per_100m": 3886.5589326628715,
+        "final_position_error_m": 0.8300757510975004
+      }
+    },
+    "GE-BA_s0p5": {
+      "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r1/GE-BA_s0p5",
+      "status": "admitted_accuracy",
+      "state_rows": 709,
+      "odometry_rows": 710,
+      "sleep": {
+        "checked_at": "2026-08-31T23:55:27.822564+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T23:56:19+08:00"
+      },
+      "diagnostics": {
+        "gt_overlap_rows": 705,
+        "gt_arc_length_m": 294.26620411299405,
+        "estimated_arc_length_m": 423.3949647601287,
+        "estimate_to_gt_arc_ratio": 1.4388161428063653,
+        "gap_transition_arc_m": 115.59171529332417,
+        "nongap_arc_m": 307.8032494668045,
+        "gap_transitions": [
+          {
+            "end_s_from_first_matched_pose": 18.9999783039093,
+            "duration_s": 5.206595182418823,
+            "estimate_step_m": 7.440878181346379,
+            "gt_step_m": 8.893099361366573
+          },
+          {
+            "end_s_from_first_matched_pose": 39.09098839759827,
+            "duration_s": 5.10196590423584,
+            "estimate_step_m": 7.611573409956484,
+            "gt_step_m": 8.826521049850722
+          },
+          {
+            "end_s_from_first_matched_pose": 59.091503381729126,
+            "duration_s": 5.197057008743286,
+            "estimate_step_m": 13.470230862511366,
+            "gt_step_m": 9.205427373940001
+          },
+          {
+            "end_s_from_first_matched_pose": 79.092116355896,
+            "duration_s": 5.199793815612793,
+            "estimate_step_m": 14.834606076312308,
+            "gt_step_m": 9.218230873189725
+          },
+          {
+            "end_s_from_first_matched_pose": 99.0911340713501,
+            "duration_s": 5.195026397705078,
+            "estimate_step_m": 3.4724862617559342,
+            "gt_step_m": 9.315475275114284
+          },
+          {
+            "end_s_from_first_matched_pose": 119.0970675945282,
+            "duration_s": 5.200582027435303,
+            "estimate_step_m": 19.67216973064442,
+            "gt_step_m": 9.401939244680607
+          },
+          {
+            "end_s_from_first_matched_pose": 139.09086322784424,
+            "duration_s": 5.193096160888672,
+            "estimate_step_m": 10.806837221707015,
+            "gt_step_m": 9.283478488231669
+          },
+          {
+            "end_s_from_first_matched_pose": 159.08888816833496,
+            "duration_s": 5.199338436126709,
+            "estimate_step_m": 16.820745058857675,
+            "gt_step_m": 8.533127122289317
+          },
+          {
+            "end_s_from_first_matched_pose": 179.08743858337402,
+            "duration_s": 5.190800666809082,
+            "estimate_step_m": 21.462188490232588,
+            "gt_step_m": 6.317280916239195
+          }
+        ]
+      },
+      "sha1": {
+        "rosbag.log": "599bdedd1a49277e6db512109d3658464f9f809b",
+        "campaign_sleep.json": "b4cda3edd9fb81791bd5c1fb417ef070c5ff4831",
+        "launch.log": "477113832c7563a8e0de04808f0e12e903dae23c",
+        "campaign_completion.json": "1d6012d85920cf44f4bc0b426de3ba8c7fb815d6",
+        "odometry.csv": "7274c7cbebd7c96a97b1d2db50f49a1043f9c8d0",
+        "gravity_direction.csv": "0dac2d7f298a303d85a9a939135851c41cab705b",
+        "roscore.log": "e5133b1c9d6c839a7657f1d84cfbcb77bff1c383",
+        "run_meta.txt": "84df0caa9c382bec04c0d86c4d70b8b916db48b4",
+        "state_log.csv": "997a065bcfba72e44344ccda8ca970f9e8950ea7",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "metrics": {
+        "frames": 705,
+        "duration_s": 185.688951253891,
+        "gt_arc_length_m": 294.26620411299405,
+        "estimate_to_gt_arc_ratio": 1.4388161428063648,
+        "rmse_z_m": 4.8006229997378576,
+        "ate_rmse_m": 37.644739657489346,
+        "rmse_z_mm_per_100m": 1631.3878157392776,
+        "ate_mm_per_100m": 12792.749942509301,
+        "final_position_error_m": 37.072331774489044,
+        "direction_factor": {
+          "factors": 709,
+          "median_pre_residual_deg": 2.305439804289232,
+          "median_post_residual_deg": 1.759138520505097,
+          "p95_post_residual_deg": 5.6651650386174355,
+          "max_measurement_age_s": 0.003104686737060547
+        }
+      }
+    },
+    "GE-BA_s2": {
+      "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r1/GE-BA_s2",
+      "status": "admitted_accuracy",
+      "state_rows": 709,
+      "odometry_rows": 710,
+      "sleep": {
+        "checked_at": "2026-08-31T16:42:28.706034+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T16:47:40+08:00"
+      },
+      "diagnostics": {
+        "gt_overlap_rows": 705,
+        "gt_arc_length_m": 294.26620411299405,
+        "estimated_arc_length_m": 280.37928246434353,
+        "estimate_to_gt_arc_ratio": 0.9528083026370295,
+        "gap_transition_arc_m": 52.05183547180987,
+        "nongap_arc_m": 228.32744699253365,
+        "gap_transitions": [
+          {
+            "end_s_from_first_matched_pose": 18.9999783039093,
+            "duration_s": 5.206595182418823,
+            "estimate_step_m": 8.199352278700612,
+            "gt_step_m": 8.893099361366573
+          },
+          {
+            "end_s_from_first_matched_pose": 39.09098839759827,
+            "duration_s": 5.10196590423584,
+            "estimate_step_m": 8.184371548202254,
+            "gt_step_m": 8.826521049850722
+          },
+          {
+            "end_s_from_first_matched_pose": 59.091503381729126,
+            "duration_s": 5.197057008743286,
+            "estimate_step_m": 6.32750982901602,
+            "gt_step_m": 9.205427373940001
+          },
+          {
+            "end_s_from_first_matched_pose": 79.092116355896,
+            "duration_s": 5.199793815612793,
+            "estimate_step_m": 7.159521878802782,
+            "gt_step_m": 9.218230873189725
+          },
+          {
+            "end_s_from_first_matched_pose": 99.0911340713501,
+            "duration_s": 5.195026397705078,
+            "estimate_step_m": 6.192729449485601,
+            "gt_step_m": 9.315475275114284
+          },
+          {
+            "end_s_from_first_matched_pose": 119.0970675945282,
+            "duration_s": 5.200582027435303,
+            "estimate_step_m": 3.490219917486721,
+            "gt_step_m": 9.401939244680607
+          },
+          {
+            "end_s_from_first_matched_pose": 139.09086322784424,
+            "duration_s": 5.193096160888672,
+            "estimate_step_m": 3.971909877809703,
+            "gt_step_m": 9.283478488231669
+          },
+          {
+            "end_s_from_first_matched_pose": 159.08888816833496,
+            "duration_s": 5.199338436126709,
+            "estimate_step_m": 5.454040186889784,
+            "gt_step_m": 8.533127122289317
+          },
+          {
+            "end_s_from_first_matched_pose": 179.08743858337402,
+            "duration_s": 5.190800666809082,
+            "estimate_step_m": 3.072180505416396,
+            "gt_step_m": 6.317280916239195
+          }
+        ]
+      },
+      "sha1": {
+        "rosbag.log": "3726d934a43032722c507034e1d32fd16762e52f",
+        "launch.log": "2ad98740496bfbc3fa17670da597139557bd8b98",
+        "odometry.csv": "4fbe086e5e47da210e646afab6ee7cc19326ceb5",
+        "gravity_direction.csv": "c41adcca4df1848e358d172ca763d31dd2f0a36f",
+        "roscore.log": "6a4ed30b61fe11081f3fb94fb95170097141f925",
+        "run_meta.txt": "7fc3625c6657094ce6af166cd071bf3ed4b06127",
+        "state_log.csv": "e467966c80d0df637aa7e1ff816960b8b988bce7",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "metrics": {
+        "frames": 705,
+        "duration_s": 185.688951253891,
+        "gt_arc_length_m": 294.26620411299405,
+        "estimate_to_gt_arc_ratio": 0.9528083026370291,
+        "rmse_z_m": 19.998835877772542,
+        "ate_rmse_m": 24.53555004395025,
+        "rmse_z_mm_per_100m": 6796.171493106043,
+        "ate_mm_per_100m": 8337.875604134597,
+        "final_position_error_m": 39.83477365639809,
+        "direction_factor": {
+          "factors": 709,
+          "median_pre_residual_deg": 3.691155286304058,
+          "median_post_residual_deg": 3.6506719791096724,
+          "p95_post_residual_deg": 10.130089921172441,
+          "max_measurement_age_s": 0.003104686737060547
+        }
+      }
+    },
+    "GE-BA_s5": {
+      "path": "results/strengthening_20260831/liosam_weights/tuhh_day04/r1/GE-BA_s5",
+      "status": "admitted_accuracy",
+      "state_rows": 709,
+      "odometry_rows": 710,
+      "sleep": {
+        "checked_at": "2026-08-31T23:55:29.713310+08:00",
+        "events": 0,
+        "history_start": "2026-08-24T23:56:19+08:00"
+      },
+      "diagnostics": {
+        "gt_overlap_rows": 705,
+        "gt_arc_length_m": 294.26620411299405,
+        "estimated_arc_length_m": 319.7030180603231,
+        "estimate_to_gt_arc_ratio": 1.0864415063360848,
+        "gap_transition_arc_m": 80.45153035842797,
+        "nongap_arc_m": 239.2514877018951,
+        "gap_transitions": [
+          {
+            "end_s_from_first_matched_pose": 18.9999783039093,
+            "duration_s": 5.206595182418823,
+            "estimate_step_m": 9.824641967578255,
+            "gt_step_m": 8.893099361366573
+          },
+          {
+            "end_s_from_first_matched_pose": 39.09098839759827,
+            "duration_s": 5.10196590423584,
+            "estimate_step_m": 9.24475826495174,
+            "gt_step_m": 8.826521049850722
+          },
+          {
+            "end_s_from_first_matched_pose": 59.091503381729126,
+            "duration_s": 5.197057008743286,
+            "estimate_step_m": 8.805832117087963,
+            "gt_step_m": 9.205427373940001
+          },
+          {
+            "end_s_from_first_matched_pose": 79.092116355896,
+            "duration_s": 5.199793815612793,
+            "estimate_step_m": 7.652162987455648,
+            "gt_step_m": 9.218230873189725
+          },
+          {
+            "end_s_from_first_matched_pose": 99.0911340713501,
+            "duration_s": 5.195026397705078,
+            "estimate_step_m": 10.205781363972626,
+            "gt_step_m": 9.315475275114284
+          },
+          {
+            "end_s_from_first_matched_pose": 119.0970675945282,
+            "duration_s": 5.200582027435303,
+            "estimate_step_m": 8.46337315781785,
+            "gt_step_m": 9.401939244680607
+          },
+          {
+            "end_s_from_first_matched_pose": 139.09086322784424,
+            "duration_s": 5.193096160888672,
+            "estimate_step_m": 10.314426174411969,
+            "gt_step_m": 9.283478488231669
+          },
+          {
+            "end_s_from_first_matched_pose": 159.08888816833496,
+            "duration_s": 5.199338436126709,
+            "estimate_step_m": 8.6033816109501,
+            "gt_step_m": 8.533127122289317
+          },
+          {
+            "end_s_from_first_matched_pose": 179.08743858337402,
+            "duration_s": 5.190800666809082,
+            "estimate_step_m": 7.337172714201823,
+            "gt_step_m": 6.317280916239195
+          }
+        ]
+      },
+      "sha1": {
+        "rosbag.log": "0394fb626961a207216024dba0401a2063d28ceb",
+        "campaign_sleep.json": "596896ecf36a744c1d0685807ee1355a239b7c6f",
+        "launch.log": "382499d64e91439a3099b96f1af252181127e6cb",
+        "campaign_completion.json": "81779b0f805fdad50614d2abc175951fd578ec3b",
+        "odometry.csv": "856a47e3dbc83e081aca104cf130badc9a549de9",
+        "gravity_direction.csv": "af278836cb0e3af167a3e5e022b077384f67a4eb",
+        "roscore.log": "e5a52c0e80527139090b5692e94fab80ca9082a9",
+        "run_meta.txt": "8a54d90373862e6ef664e70c141991c99cbd994b",
+        "state_log.csv": "c98329067de6815eb198ce7addd12f54ee09ac03",
+        "odometry_stderr.log": "1aef2bf5c359167b67af57acfad0c4c810269aee"
+      },
+      "metrics": {
+        "frames": 705,
+        "duration_s": 185.688951253891,
+        "gt_arc_length_m": 294.26620411299405,
+        "estimate_to_gt_arc_ratio": 1.0864415063360848,
+        "rmse_z_m": 9.173835684640917,
+        "ate_rmse_m": 13.837776019949608,
+        "rmse_z_mm_per_100m": 3117.5294873883286,
+        "ate_mm_per_100m": 4702.468658152839,
+        "final_position_error_m": 25.06187325441052,
+        "direction_factor": {
+          "factors": 709,
+          "median_pre_residual_deg": 4.231497714064268,
+          "median_post_residual_deg": 4.233702700086532,
+          "p95_post_residual_deg": 11.4159886482852,
+          "max_measurement_age_s": 0.003104686737060547
+        }
+      }
+    }
+  },
+  "interpretation": "Excess estimated travel is an observed outcome, not proof of bad GT or factor causality. No accuracy admission or retry for arc failures; low-level IMU receipt timing was not recorded.",
+  "input_sha1": {
+    "data/mcd/degraded/tuhh_day_04_drop5x20.bag": "5d237b0953651414e7ca96d579f2b65b9c7de716",
+    "data/mcd/tuhh_day_04/vn200.bag": "77b79b711a61dab52fe7b88bbaf68ac87aa7dfe6",
+    "data/mcd/tuhh_day_04/gt/pose_inW.csv": "5e217be23bd293ed2172bc17ac5263992b5964e0"
+  },
+  "serial_container_events": [
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "a9ab7494c5934f2a2ab27ee83f1170d102c929d039bd0582a6c4e1ec8a662fa4",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_84801",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788182477,
+      "timeNano": 1788182477428265303
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "a9ab7494c5934f2a2ab27ee83f1170d102c929d039bd0582a6c4e1ec8a662fa4",
+        "Attributes": {
+          "execDuration": "778",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_84801",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788183255,
+      "timeNano": 1788183255954312950
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "70f739527c96dab3d28d30b3ccb6e9fd6374bc89c8e5724c803c7d88b30c3079",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_89536",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788183258,
+      "timeNano": 1788183258859797675
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "70f739527c96dab3d28d30b3ccb6e9fd6374bc89c8e5724c803c7d88b30c3079",
+        "Attributes": {
+          "execDuration": "768",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_89536",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788184027,
+      "timeNano": 1788184027420327126
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "a6c3f9253032105997802584d5022ae0f0f7f8447df19e762675428f61494527",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_94194",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788184030,
+      "timeNano": 1788184030317608920
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "a6c3f9253032105997802584d5022ae0f0f7f8447df19e762675428f61494527",
+        "Attributes": {
+          "execDuration": "770",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_94194",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788184800,
+      "timeNano": 1788184800894014148
+    },
+    {
+      "Type": "container",
+      "Action": "start",
+      "Actor": {
+        "ID": "765371f06d7ce4cae0b2bf7b7671d5e4e9e7af8dbd0a1b95acd27322c48b48c2",
+        "Attributes": {
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_96481",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788184803,
+      "timeNano": 1788184803622128487
+    },
+    {
+      "Type": "container",
+      "Action": "die",
+      "Actor": {
+        "ID": "765371f06d7ce4cae0b2bf7b7671d5e4e9e7af8dbd0a1b95acd27322c48b48c2",
+        "Attributes": {
+          "execDuration": "768",
+          "exitCode": "0",
+          "image": "liosam_exp:noetic",
+          "name": "liosam_mcd_gravity_direction_96481",
+          "org.opencontainers.image.ref.name": "ubuntu",
+          "org.opencontainers.image.version": "20.04"
+        }
+      },
+      "scope": "local",
+      "time": 1788185572,
+      "timeNano": 1788185572142965798
+    }
+  ],
+  "repeat_policy": "Keep all prescribed r2/r3 cells. Only the same FG-BA/0.5deg excessive-arc outcome may be classified after all unchanged structural checks pass; no accuracy admission, no replacement, no threshold change. Any other failure stops."
+}

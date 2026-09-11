@@ -1,0 +1,76 @@
+<launch>
+  <arg name="imu_node" default="lio_sam_imuPreintegration" />
+  <arg name="state_log" default="/tmp/lio_sam_state.csv" />
+  <arg name="gravity_direction_sigma" default="-1.0" />
+  <arg name="gravity_direction_log" default="" />
+  <arg name="setup" default="atv" />
+  <arg name="mapping_process_interval" default="0.15" />
+
+  <rosparam file="$(find lio_sam)/config/params.yaml" command="load" />
+  <param name="lio_sam/mappingProcessInterval"
+         value="$(arg mapping_process_interval)" />
+
+  <!-- MCD publishes Ouster packets and external, orientation-bearing VectorNav
+       IMU data in separate, hardware-synchronised bags.  The transforms below
+       are copied from the dataset's released calibration trees. -->
+  <param name="lio_sam/pointCloudTopic" value="/os_cloud_node/points" />
+  <param name="lio_sam/useImuHeadingInitialization" value="false" />
+  <param name="lio_sam/savePCD" value="false" />
+  <param name="lio_sam/sensor" value="ouster" />
+  <param name="lio_sam/Horizon_SCAN" value="1024" />
+  <param name="lio_sam/downsampleRate" value="1" />
+  <param name="lio_sam/numberOfCores" value="1" />
+  <!-- Prevent map-growth-dependent callback drops during offline playback;
+       the runner waits for this queue to drain before shutdown. -->
+  <param name="lio_sam/mappingInputQueueSize" value="4096" />
+  <param name="lio_sam/lidarMinRange" value="0.5" />
+  <param name="lio_sam/lidarMaxRange" value="150.0" />
+
+  <!-- Values used by the MCD authors' released FAST-LIO configuration.  They
+       are held identical across the four graph structures. -->
+  <param name="lio_sam/imuAccNoise" value="6.0e-2" />
+  <param name="lio_sam/imuGyrNoise" value="5.0e-3" />
+  <param name="lio_sam/imuAccBiasN" value="8.0e-5" />
+  <param name="lio_sam/imuGyrBiasN" value="3.0e-6" />
+  <param name="lio_sam/imuGravity" value="9.805" />
+
+  <group if="$(eval arg('setup') == 'atv')">
+    <param name="lio_sam/imuTopic" value="/vn100/imu" />
+    <param name="lio_sam/N_SCAN" value="128" />
+    <!-- T_os-sensor_vn100; VN100 is the ATV body frame. -->
+    <rosparam param="lio_sam/extrinsicTrans">[-0.060649229060416594, -0.012837544242408117, -0.020492606896077407]</rosparam>
+    <rosparam param="lio_sam/extrinsicRot">[0.9999346552051229, 0.003477624535771754, -0.010889970036688295, 0.003587143302461965, -0.9999430279821171, 0.010053516443599904, -0.010854387257665576, -0.01009192338171122, -0.999890161647627]</rosparam>
+    <!-- The VectorNav ROS quaternion is already reported in an upright world
+         convention, while raw accelerometer/gyro axes follow the calibrated
+         body frame.  LIO-SAM intentionally exposes a separate RPY transform
+         for this case. -->
+    <rosparam param="lio_sam/extrinsicRPY">[1, 0, 0, 0, 1, 0, 0, 0, 1]</rosparam>
+  </group>
+
+  <group if="$(eval arg('setup') == 'handheld')">
+    <param name="lio_sam/imuTopic" value="/vn200/imu" />
+    <param name="lio_sam/N_SCAN" value="64" />
+    <!-- T_os-sensor_vn200; VN200 is the handheld body frame. -->
+    <rosparam param="lio_sam/extrinsicTrans">[-0.04894521120494695, -0.03126929060348084, -0.01755515794222565]</rosparam>
+    <rosparam param="lio_sam/extrinsicRot">[0.9999135040741837, -0.011166365511073898, -0.006949579221822984, -0.011356389542502144, -0.9995453006865824, -0.02793249526856565, -0.006634514801117132, 0.02800900135032654, -0.999585653686922]</rosparam>
+    <rosparam param="lio_sam/extrinsicRPY">[1, 0, 0, 0, 1, 0, 0, 0, 1]</rosparam>
+  </group>
+
+  <param name="lio_sam/loopClosureEnableFlag" value="false" />
+  <param name="lio_sam/useQrFactorization" value="true" />
+  <param name="lio_sam/gravityPriorSigma" value="0.5235987755982988" />
+  <param name="lio_sam/ablationLogPath" value="$(arg state_log)" />
+  <param name="lio_sam/gravityDirectionSigma"
+         value="$(arg gravity_direction_sigma)" />
+  <param name="lio_sam/gravityDirectionLogPath"
+         value="$(arg gravity_direction_log)" />
+
+  <node pkg="lio_sam" type="$(arg imu_node)"
+        name="lio_sam_imuPreintegration" output="screen" required="true" />
+  <node pkg="lio_sam" type="lio_sam_imageProjection"
+        name="lio_sam_imageProjection" output="screen" required="true" />
+  <node pkg="lio_sam" type="lio_sam_featureExtraction"
+        name="lio_sam_featureExtraction" output="screen" required="true" />
+  <node pkg="lio_sam" type="lio_sam_mapOptmization"
+        name="lio_sam_mapOptmization" output="screen" required="true" />
+</launch>

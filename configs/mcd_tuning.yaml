@@ -1,0 +1,5 @@
+# MCD 序列的建图调参(对齐 MCD 作者 FAST_LIO fork 的 run_mcdviral.launch)
+point_filter_num: 1
+max_iteration: 5
+filter_size_surf: 0.2
+filter_size_map: 0.2

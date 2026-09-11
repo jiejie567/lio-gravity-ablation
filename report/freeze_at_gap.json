@@ -1,0 +1,422 @@
+{
+  "schema_version": 1,
+  "design": {
+    "name": "Freeze@Gap matched mechanism proxy",
+    "state_manifold": "FAST-LIO2 23D Online manifold",
+    "intervention": "snapshot gravity after the last completed correction before the trigger, then zero subsequent 2D gravity-mean increments",
+    "causal_control": "same elapsed-time trigger on clean and dropout bags",
+    "scope": "runtime mean-freeze mechanism proxy; covariance remains 23D and the result is not a true 21D FixG ablation",
+    "online_during_gap": "gravity has no process dynamics, so its mean is unchanged during the gap; branch separation can begin only at the return-scan update",
+    "inference": "descriptive matched contrasts on two trajectories; no pooling"
+  },
+  "trajectories": {
+    "vehicle": {
+      "requested_freeze_s": 17.0,
+      "dropout_label": "3 s/20 s",
+      "clean": {
+        "sequence": "ntu_day_10_os1",
+        "frames": 3244,
+        "event": {
+          "requested_elapsed_s": 17.0,
+          "snapshot_elapsed_s": 16.998844624,
+          "activation_elapsed_s": 17.003364086,
+          "correction_gap_s": 0.00451970100402832,
+          "gravity_m_s2": [
+            -0.074396017,
+            -0.024746234,
+            -9.808686653
+          ],
+          "accelerometer_bias_m_s2": [
+            0.320897392,
+            -0.185636187,
+            -0.02658363
+          ]
+        },
+        "structure": {
+          "matched_frames": true,
+          "matched_correction_timestamps": true,
+          "bit_identical_pre_trigger_prefix": true,
+          "snapshot_is_preceding_correction": true,
+          "frozen_gravity_max_abs_deviation": 0.0,
+          "binary_sha1": "2ad395afea75"
+        },
+        "metrics": {
+          "online": {
+            "rmse_z_m": 2.518207167892123,
+            "ate_rmse_m": 6.621250388556442,
+            "rmse_roll_deg": 2.3061390914586655,
+            "rmse_pitch_deg": 1.2978857819620484
+          },
+          "freeze_at_gap": {
+            "rmse_z_m": 2.4738982356250796,
+            "ate_rmse_m": 6.606760140574762,
+            "rmse_roll_deg": 2.309108683761921,
+            "rmse_pitch_deg": 1.2985194843599124
+          },
+          "fixg_from_initialization": {
+            "rmse_z_m": 2.325500236850994,
+            "ate_rmse_m": 6.550122565800919,
+            "rmse_roll_deg": 2.3171454183210733,
+            "rmse_pitch_deg": 1.3265990467323439
+          },
+          "freeze_effect_vs_online": {
+            "rmse_z_m": {
+              "absolute": -0.04430893226704358,
+              "percent": -1.7595427743990033
+            },
+            "ate_rmse_m": {
+              "absolute": -0.014490247981679971,
+              "percent": -0.2188445857103316
+            },
+            "rmse_roll_deg": {
+              "absolute": 0.0029695923032555527,
+              "percent": 0.12876900245324396
+            },
+            "rmse_pitch_deg": {
+              "absolute": 0.0006337023978639778,
+              "percent": 0.04882574465883138
+            }
+          },
+          "freeze_effect_vs_fixg": {
+            "rmse_z_m": {
+              "absolute": 0.14839799877408577,
+              "percent": 6.381336644155078
+            },
+            "ate_rmse_m": {
+              "absolute": 0.056637574773843014,
+              "percent": 0.8646796178983784
+            },
+            "rmse_roll_deg": {
+              "absolute": -0.008036734559152325,
+              "percent": -0.34683772954463565
+            },
+            "rmse_pitch_deg": {
+              "absolute": -0.028079562372431477,
+              "percent": -2.1166578131950664
+            }
+          }
+        },
+        "diagnostics": {
+          "online_gravity_motion_after_snapshot_final_deg": 1.4298613831674898,
+          "online_gravity_motion_after_snapshot_max_deg": 1.7431219109831917,
+          "raw_position_separation_first_return_m": 0.0,
+          "raw_position_separation_final_m": 0.323467614588335,
+          "raw_position_separation_max_m": 0.3257023130350425
+        }
+      },
+      "dropout": {
+        "sequence": "ntu_day_10_drop3x20",
+        "frames": 2763,
+        "event": {
+          "requested_elapsed_s": 17.0,
+          "snapshot_elapsed_s": 16.998844624,
+          "activation_elapsed_s": 20.098079681,
+          "correction_gap_s": 3.0992352962493896,
+          "gravity_m_s2": [
+            -0.074396017,
+            -0.024746234,
+            -9.808686653
+          ],
+          "accelerometer_bias_m_s2": [
+            0.320897392,
+            -0.185636187,
+            -0.02658363
+          ]
+        },
+        "structure": {
+          "matched_frames": true,
+          "matched_correction_timestamps": true,
+          "bit_identical_pre_trigger_prefix": true,
+          "snapshot_is_preceding_correction": true,
+          "frozen_gravity_max_abs_deviation": 0.0,
+          "binary_sha1": "2ad395afea75"
+        },
+        "metrics": {
+          "online": {
+            "rmse_z_m": 3.093166372762335,
+            "ate_rmse_m": 8.421632925725785,
+            "rmse_roll_deg": 2.7798514689045692,
+            "rmse_pitch_deg": 1.5746095982976918
+          },
+          "freeze_at_gap": {
+            "rmse_z_m": 3.1092701654794737,
+            "ate_rmse_m": 12.422441692034457,
+            "rmse_roll_deg": 2.8313979518598487,
+            "rmse_pitch_deg": 1.6161860114083513
+          },
+          "fixg_from_initialization": {
+            "rmse_z_m": 5.971429374492883,
+            "ate_rmse_m": 18.521974706992346,
+            "rmse_roll_deg": 3.0801142886880943,
+            "rmse_pitch_deg": 1.9990608439990627
+          },
+          "freeze_effect_vs_online": {
+            "rmse_z_m": {
+              "absolute": 0.0161037927171388,
+              "percent": 0.5206248476947284
+            },
+            "ate_rmse_m": {
+              "absolute": 4.000808766308673,
+              "percent": 47.50633044201318
+            },
+            "rmse_roll_deg": {
+              "absolute": 0.051546482955279416,
+              "percent": 1.8542891061583244
+            },
+            "rmse_pitch_deg": {
+              "absolute": 0.041576413110659516,
+              "percent": 2.640426754390912
+            }
+          },
+          "freeze_effect_vs_fixg": {
+            "rmse_z_m": {
+              "absolute": -2.862159209013409,
+              "percent": -47.930889398762666
+            },
+            "ate_rmse_m": {
+              "absolute": -6.099533014957888,
+              "percent": -32.93133216867646
+            },
+            "rmse_roll_deg": {
+              "absolute": -0.24871633682824568,
+              "percent": -8.074906107921754
+            },
+            "rmse_pitch_deg": {
+              "absolute": -0.3828748325907114,
+              "percent": -19.1527353326966
+            }
+          }
+        },
+        "diagnostics": {
+          "online_gravity_motion_after_snapshot_final_deg": 2.430011972883067,
+          "online_gravity_motion_after_snapshot_max_deg": 2.496015755320982,
+          "raw_position_separation_first_return_m": 0.0,
+          "raw_position_separation_final_m": 7.381309402771321,
+          "raw_position_separation_max_m": 9.186129363197225
+        }
+      },
+      "freeze_by_dropout_interaction": {
+        "rmse_z_m": {
+          "absolute_difference_in_differences": 0.060412724984182375,
+          "effect_difference_percentage_points": 2.2801676220937317
+        },
+        "ate_rmse_m": {
+          "absolute_difference_in_differences": 4.015299014290353,
+          "effect_difference_percentage_points": 47.72517502772351
+        },
+        "rmse_roll_deg": {
+          "absolute_difference_in_differences": 0.04857689065202386,
+          "effect_difference_percentage_points": 1.7255201037050805
+        },
+        "rmse_pitch_deg": {
+          "absolute_difference_in_differences": 0.04094271071279554,
+          "effect_difference_percentage_points": 2.5916010097320807
+        }
+      }
+    },
+    "handheld": {
+      "requested_freeze_s": 15.0,
+      "dropout_label": "5 s/20 s",
+      "clean": {
+        "sequence": "tuhh_day_04_os1",
+        "frames": 1875,
+        "event": {
+          "requested_elapsed_s": 15.0,
+          "snapshot_elapsed_s": 14.997518301,
+          "activation_elapsed_s": 15.007957935,
+          "correction_gap_s": 0.010439634323120117,
+          "gravity_m_s2": [
+            0.205027592,
+            -0.058474129,
+            -9.806682694
+          ],
+          "accelerometer_bias_m_s2": [
+            0.061356352,
+            -0.037768693,
+            -0.02701151
+          ]
+        },
+        "structure": {
+          "matched_frames": true,
+          "matched_correction_timestamps": true,
+          "bit_identical_pre_trigger_prefix": true,
+          "snapshot_is_preceding_correction": true,
+          "frozen_gravity_max_abs_deviation": 0.0,
+          "binary_sha1": "2ad395afea75"
+        },
+        "metrics": {
+          "online": {
+            "rmse_z_m": 0.45383328808803275,
+            "ate_rmse_m": 0.5452502952700321,
+            "rmse_roll_deg": 0.8619438611583895,
+            "rmse_pitch_deg": 1.0327829669126842
+          },
+          "freeze_at_gap": {
+            "rmse_z_m": 0.4526492485665777,
+            "ate_rmse_m": 0.544151537945827,
+            "rmse_roll_deg": 0.8622738901307051,
+            "rmse_pitch_deg": 1.032763560695899
+          },
+          "fixg_from_initialization": {
+            "rmse_z_m": 0.456905485844208,
+            "ate_rmse_m": 0.5458301128275327,
+            "rmse_roll_deg": 0.8703490274875076,
+            "rmse_pitch_deg": 1.0354709464174963
+          },
+          "freeze_effect_vs_online": {
+            "rmse_z_m": {
+              "absolute": -0.0011840395214550714,
+              "percent": -0.26089746004382963
+            },
+            "ate_rmse_m": {
+              "absolute": -0.0010987573242050575,
+              "percent": -0.20151430154859984
+            },
+            "rmse_roll_deg": {
+              "absolute": 0.00033002897231559913,
+              "percent": 0.03828891731674222
+            },
+            "rmse_pitch_deg": {
+              "absolute": -1.9406216785311514e-05,
+              "percent": -0.0018790217700126455
+            }
+          },
+          "freeze_effect_vs_fixg": {
+            "rmse_z_m": {
+              "absolute": -0.004256237277630304,
+              "percent": -0.9315356040793032
+            },
+            "ate_rmse_m": {
+              "absolute": -0.0016785748817056412,
+              "percent": -0.30752698362687125
+            },
+            "rmse_roll_deg": {
+              "absolute": -0.008075137356802542,
+              "percent": -0.9278044901266269
+            },
+            "rmse_pitch_deg": {
+              "absolute": -0.002707385721597344,
+              "percent": -0.26146418989004827
+            }
+          }
+        },
+        "diagnostics": {
+          "online_gravity_motion_after_snapshot_final_deg": 0.46547140582735363,
+          "online_gravity_motion_after_snapshot_max_deg": 0.6124867832818781,
+          "raw_position_separation_first_return_m": 0.0,
+          "raw_position_separation_final_m": 0.0035530109099353555,
+          "raw_position_separation_max_m": 0.012922257027639704
+        }
+      },
+      "dropout": {
+        "sequence": "tuhh_day_04_drop5x20",
+        "frames": 1423,
+        "event": {
+          "requested_elapsed_s": 15.0,
+          "snapshot_elapsed_s": 14.997518301,
+          "activation_elapsed_s": 20.004555941,
+          "correction_gap_s": 5.00703763961792,
+          "gravity_m_s2": [
+            0.205027592,
+            -0.058474129,
+            -9.806682694
+          ],
+          "accelerometer_bias_m_s2": [
+            0.061356352,
+            -0.037768693,
+            -0.02701151
+          ]
+        },
+        "structure": {
+          "matched_frames": true,
+          "matched_correction_timestamps": true,
+          "bit_identical_pre_trigger_prefix": true,
+          "snapshot_is_preceding_correction": true,
+          "frozen_gravity_max_abs_deviation": 0.0,
+          "binary_sha1": "2ad395afea75"
+        },
+        "metrics": {
+          "online": {
+            "rmse_z_m": 3.2304664886989514,
+            "ate_rmse_m": 3.984548550523172,
+            "rmse_roll_deg": 6.9562581921865965,
+            "rmse_pitch_deg": 4.347838782704327
+          },
+          "freeze_at_gap": {
+            "rmse_z_m": 3.4367279927302326,
+            "ate_rmse_m": 5.003905171735633,
+            "rmse_roll_deg": 6.9845098250200595,
+            "rmse_pitch_deg": 4.429740161014792
+          },
+          "fixg_from_initialization": {
+            "rmse_z_m": 4.200244822432377,
+            "ate_rmse_m": 5.4779633942662445,
+            "rmse_roll_deg": 8.94970934662676,
+            "rmse_pitch_deg": 5.5608919546598585
+          },
+          "freeze_effect_vs_online": {
+            "rmse_z_m": {
+              "absolute": 0.20626150403128118,
+              "percent": 6.3848829496557125
+            },
+            "ate_rmse_m": {
+              "absolute": 1.0193566212124612,
+              "percent": 25.582738126722514
+            },
+            "rmse_roll_deg": {
+              "absolute": 0.028251632833462992,
+              "percent": 0.4061326082633876
+            },
+            "rmse_pitch_deg": {
+              "absolute": 0.08190137831046496,
+              "percent": 1.8837262006187627
+            }
+          },
+          "freeze_effect_vs_fixg": {
+            "rmse_z_m": {
+              "absolute": -0.7635168297021444,
+              "percent": -18.177912526060545
+            },
+            "ate_rmse_m": {
+              "absolute": -0.47405822253061114,
+              "percent": -8.653913661175705
+            },
+            "rmse_roll_deg": {
+              "absolute": -1.9651995216067002,
+              "percent": -21.958249653631544
+            },
+            "rmse_pitch_deg": {
+              "absolute": -1.1311517936450661,
+              "percent": -20.3411935147777
+            }
+          }
+        },
+        "diagnostics": {
+          "online_gravity_motion_after_snapshot_final_deg": 0.43361813121220594,
+          "online_gravity_motion_after_snapshot_max_deg": 1.6213361238203141,
+          "raw_position_separation_first_return_m": 0.0,
+          "raw_position_separation_final_m": 4.116160364901796,
+          "raw_position_separation_max_m": 4.117463368438207
+        }
+      },
+      "freeze_by_dropout_interaction": {
+        "rmse_z_m": {
+          "absolute_difference_in_differences": 0.20744554355273626,
+          "effect_difference_percentage_points": 6.645780409699542
+        },
+        "ate_rmse_m": {
+          "absolute_difference_in_differences": 1.0204553785366661,
+          "effect_difference_percentage_points": 25.784252428271113
+        },
+        "rmse_roll_deg": {
+          "absolute_difference_in_differences": 0.027921603861147393,
+          "effect_difference_percentage_points": 0.3678436909466454
+        },
+        "rmse_pitch_deg": {
+          "absolute_difference_in_differences": 0.08192078452725027,
+          "effect_difference_percentage_points": 1.8856052223887754
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+results/
+quarantine/
+data/
+verification.json
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.blg

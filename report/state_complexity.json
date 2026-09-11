@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "role": "source-derived state-only arithmetic scaling estimate",
+  "end_to_end_profiled": false,
+  "sources": {
+    "Online": {
+      "path": "catkin_ws/src/FAST_LIO/include/use-ikfom.hpp",
+      "sha256": "1ee2c078ee757ff2dffedf48da764daec152baa79876a70785d010cc2e6165ab"
+    },
+    "FixG": {
+      "path": "catkin_ws/src/FAST_LIO/include/use-ikfom-redg.hpp",
+      "sha256": "cdf7151712cd1a8115bf509134476deb845eff161661922c3f2cae2c583c6771"
+    },
+    "FixBa": {
+      "path": "catkin_ws/src/FAST_LIO/include/use-ikfom-redb.hpp",
+      "sha256": "c464c3efa971735c3434b192ef80cd640d68b0936acc6e4c603d44551c3a7b13"
+    },
+    "FixG+Ba": {
+      "path": "catkin_ws/src/FAST_LIO/include/use-ikfom-red.hpp",
+      "sha256": "efb5f39944e16567bc0eda74a3b59d77c340592ebd36a1d138cd9f1674e8ded8"
+    }
+  },
+  "baseline": "Online",
+  "estimates": {
+    "Online": {
+      "dimension": 23,
+      "quadratic_reduction_pct_vs_online": 0.0,
+      "cubic_reduction_pct_vs_online": 0.0
+    },
+    "FixG": {
+      "dimension": 21,
+      "quadratic_reduction_pct_vs_online": 16.635160680529314,
+      "cubic_reduction_pct_vs_online": 23.884277143091982
+    },
+    "FixBa": {
+      "dimension": 20,
+      "quadratic_reduction_pct_vs_online": 24.38563327032136,
+      "cubic_reduction_pct_vs_online": 34.24837675680119
+    },
+    "FixG+Ba": {
+      "dimension": 18,
+      "quadratic_reduction_pct_vs_online": 38.7523629489603,
+      "cubic_reduction_pct_vs_online": 52.06706665570806
+    }
+  },
+  "assumptions": [
+    "quadratic and cubic dense algebra scale as d^2 and d^3",
+    "only the state-side component is represented"
+  ],
+  "excluded_from_estimate": [
+    "point-cloud preprocessing",
+    "nearest-neighbor search",
+    "residual construction",
+    "map maintenance",
+    "system and middleware overhead"
+  ]
+}

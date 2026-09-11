@@ -1,0 +1,124 @@
+\section{Discussion}
+\label{sec:analysis}
+
+\subsection{Why Scan Recovery Changes the Comparison}
+Accepted LiDAR scans repeatedly constrain pose, so gravity-state drift need
+not produce a worse trajectory. During an outage, errors accumulate until
+registration resumes from the propagated state.
+
+For a small gravity-direction discrepancy $\varepsilon$ propagated without an
+external update for time $T$, the leading position contribution is
+\begin{equation}
+ \|\delta\mathbf p_g\|\approx\tfrac12g\sin(\varepsilon)T^2 .
+ \label{eq:timescale}
+\end{equation}
+This describes displacement before recovery, not final trajectory error.
+Registration may correct a large error but leave a smaller one partly
+uncorrected, depending on the scene and returning pose. This is consistent
+with the non-monotonic 3-s and 5-s results, although we do not directly measure
+the registration convergence basin.
+
+In the matched switch, both runs start from the same state and map, but fixing
+gravity conditions the covariance. Gravity has no process dynamics, so the
+nominal means remain equal during the first gap; Eq.~\ref{eq:timescale} cannot
+explain separation before scan return. Differences arise during correction,
+through the changed covariance and continued Online gravity updates. The APE
+traces show accumulation over successive recovery corrections. ATE
+interactions stay positive across tested starts, while RMSE$_z$ interactions
+change sign. The repeated advantage concerns 3D recovery, not direct height
+information.
+
+The relevant interval $T_k=t_k-t_{k-1}$ is between \emph{accepted pose
+corrections}, not arriving LiDAR packets. A rejected scan cannot interrupt
+inertial error accumulation. Message removal controls these intervals, whereas
+natural rejection may depend on geometry and the estimated pose. Biased but
+accepted registrations instead introduce erroneous corrections, a different
+failure mode not tested here. Scan rate alone is therefore insufficient to
+transfer the observed thresholds.
+
+\subsection{Interpreting the Direction-Factor Response}
+The factor uses AHRS directions derived from the IMU measurements also used
+for preintegration. It observes neither height nor vertical velocity, so its
+vertical-error effects are mediated by attitude, bias, propagation, and
+registration.
+
+At fixed gravity magnitude, a direction error $\varepsilon$ gives
+\begin{equation}
+ \begin{aligned}
+  \|\mathbf e_g^\top\delta\mathbf g\|
+    &=g(1-\cos\varepsilon)=\mathcal O(\varepsilon^2),\\
+  \|\mathbf P_{\perp}\delta\mathbf g\|
+    &=g\sin\varepsilon=\mathcal O(\varepsilon).
+ \end{aligned}
+\label{eq:gravity_components}
+\end{equation}
+where $\mathbf e_g$ is unit true down and
+$\mathbf P_\perp=\mathbf I-\mathbf e_g\mathbf e_g^\top$.
+Small direction errors therefore act to first order transversely, but only to
+second order along true down. A direction factor can still change RMSE$_z$ by
+rotating measured specific force or changing scan-matching initialization.
+Neither route measures height, and Eq.~\ref{eq:gravity_components} alone does
+not determine the final error change.
+
+Hall05's improvements and TUHH's mixed or adverse responses reject an
+unconditional benefit from stronger direction consistency. They do not
+invalidate independent gravity, velocity, contact, radar, or registration
+information
+\cite{kubelka2022gravity,noh2025garlio,noh2025garlileo}, nor do they test a
+downstream global pose-graph prior. Factor covariance must be validated with
+the state structure, correction regime, and both trajectory metrics.
+
+Unmodeled same-IMU correlation could contribute to the adverse response, but
+we do not isolate it from weighting and online-gravity interactions.
+A smaller residual establishes agreement with AHRS, not an independent
+reference (Fig.~\ref{fig:direction}). Table~\ref{tab:direction} also retains
+resets and arc warnings; reporting only successful accuracy comparisons would
+overstate reliability.
+
+\begin{table}[t]
+\caption{Direction-factor effects relative to factor-off.}
+\label{tab:direction}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.0pt}
+\input{tables/t5_direction}
+\vspace{1pt}
+{\scriptsize\raggedright Outcome entries report accuracy runs/planned runs;
+R denotes a graph reset and A a retained arc warning.\par}
+\end{table}
+
+\subsection{Choosing a Default Configuration}
+Keeping $\mathbf g$ and $\mathbf b_a$ online allows adjustment but does not
+guarantee physical accuracy. The handheld runs retain different gravity and
+bias estimates despite similar effective accelerations and poses. Vehicle
+excitation largely removes those differences. As Eq.~\ref{eq:coupling}
+suggests, accurate pose does not establish that gravity and bias have each
+been identified.
+
+With reliable initialization and continuous correction, FAST-LIO2 FixG is
+equivalent on average but saves negligible compute. Keeping both states online
+allows adaptation when motion contaminates startup or corrections disappear.
+Fixed-bias variants are phase-sensitive, and one FixG start incurs large ATE
+harm. We therefore recommend keeping both states online by default. FixG is an
+option for a validated steady-state setting, not a generally better estimator.
+A separate direction factor needs its own paired RMSE$_z$ and ATE validation
+under the intended operating conditions.
+
+Across \NumRuntimePairs{} serial pairs, FixG reduced filter algebra by
+\RuntimeAlgebraReduction{}, but it occupied only \RuntimeAlgebraCoreShare{} of
+core time versus \RuntimeMatchingCoreShare{} for scan matching. Its attributable
+saving was \RuntimeAttributableCoreSaving{}, and whole-core change
+(\RuntimeCoreMedianChangeRange{}) crossed zero. Dimension reduction is not a
+runtime strategy.
+
+Two dropout and two initialization trajectories cannot establish universal
+thresholds. The factor study retains \NumHallDirResetOutcomes{} reset and
+\NumTuhhDirArcWarnings{} arc warnings. Larger initialization errors,
+calibration faults, and motion-aware initialization also remain untested.
+TOST concerns pose error, not covariance
+consistency; dropout results are not pooled across trajectories.
+
+% balance.sty and ieeeconf can differ by a few points in the final output box;
+% this tolerance suppresses that rounding-only diagnostic without changing layout.
+\vfuzz=3pt
+\balance
