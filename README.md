@@ -4,37 +4,55 @@
 
 Jie Xu · Ziyi Jin · Kangjin Yu · Can Jiang · Hongjun Huang · Tongxing Jin · Hongkun Luo · Zhongpu Xia
 
-Anyverse Dynamics
+Anyverse Dynamics | 无界动力
 
 [Paper (preprint PDF)](paper/preprint.pdf) · [Video](#video) · [Reproduction archive](https://github.com/jiejie567/rethink-lio-gravity/releases/tag/v1.0.0)
 
 Corresponding author: Zhongpu Xia. Contact: Jie Xu
 ([jeff_xu_0503@foxmail.com](mailto:jeff_xu_0503@foxmail.com)).
 
-Should an LIO system keep estimating gravity after initialization? We compare
-online and fixed gravity and accelerometer bias within FAST-LIO2 and LIO-SAM.
-We also test an added gravity-direction factor using the same IMU as preintegration.
+An LIO system can change its estimate of “down” while barely changing its
+trajectory. Is online gravity doing useful work, or just adding a state?
+We test this inside FAST-LIO2 and LIO-SAM by changing whether gravity and
+accelerometer bias remain online.
 
 **Keep both gravity and accelerometer bias online by default. The tested
 same-IMU direction factor is not a generic z-drift remedy.**
-
-With continuous LiDAR updates, fixing gravity makes little difference to pose
-accuracy. Keeping gravity and bias online matters more during multi-second
-LiDAR outages and motion at startup. The added direction factor helps on Hall05
-but hurts on TUHH with online gravity: a smaller direction residual does not
-necessarily mean a smaller height error. These results do not cover independent
-gravity sensors or global pose-graph priors.
 
 ## Video
 
 https://github.com/user-attachments/assets/c3f4aaa6-e61e-4339-bcfb-015d5a785b81
 
-Real RViz recordings with results from the experiments reported in the paper.
+Watch the point clouds, the missing scans, and the recovery that follows.
+The footage is real RViz output; the plots show the paper's audited experiment results.
 
-## Reproduce the reported results
+## What we found
 
-Code and result summaries are in this repository. Trajectories, state logs,
-ground truth, failure records and checksums are in
+- **With regular scans, fixing gravity changes little.** Across the FAST-LIO2
+  sequences, average vertical and 3D position errors remain close to the online
+  baseline. LIO-SAM likewise shows no consistent accuracy gain from online gravity.
+- **A few seconds without scans changes the picture.** Runs with identical
+  histories before an outage separate during recovery. Starting in motion also
+  exposes failures in fixed-bias configurations, which helps explain why we
+  still recommend keeping both states online.
+- **A direction factor is not a height sensor.** Under repeated LiDAR outages,
+  the tested factor improves both errors on Hall05 but worsens both on TUHH with
+  online gravity. Better direction agreement alone is not enough to justify it.
+
+These are controlled changes within each estimator, not a FAST-LIO2 versus
+LIO-SAM leaderboard. We remove states from the estimator and test the added
+direction factor separately. That factor reuses the IMU already used for
+preintegration; independent gravity sensors and global pose-graph priors are
+outside this study.
+
+The practical reason to keep gravity and bias online is room to recover, not
+a promise that either estimate is physically exact.
+
+## Check the results yourself
+
+You can check the paper's results without replaying a single bag. The code and
+result summaries are here; trajectories, state logs, ground truth, failure
+records and checksums are in
 [`lio-gravity-evidence.zip`](https://github.com/jiejie567/rethink-lio-gravity/releases/tag/v1.0.0).
 
 Download and extract that archive, then run from its root:
@@ -46,14 +64,16 @@ python3 -m venv .venv
 .venv/bin/python verify_review.py --recompute --figures
 ```
 
-The scripts check file integrity, recompute trajectory metrics, and regenerate
-tables and figures. No ROS, Docker, GPU or raw bags are needed for these checks.
+This checks file integrity, recomputes trajectory errors, and rebuilds the
+tables and figures. You do not need ROS, Docker, a GPU or the original bags.
 
-See [PROTOCOL.md](PROTOCOL.md) for evaluation and sample selection,
-[EVIDENCE_MAP.md](EVIDENCE_MAP.md) for the supporting runs, and
-[RUNNING.md](RUNNING.md) to rerun the estimators. Run experiments serially with
-the provided run lock. The archive includes excluded runs and binary fingerprints;
-use the report-defined comparisons rather than pooling all runs.
+To follow a finding back to its runs, start with [EVIDENCE_MAP.md](EVIDENCE_MAP.md).
+[PROTOCOL.md](PROTOCOL.md) explains alignment and which comparisons belong together;
+[RUNNING.md](RUNNING.md) covers rerunning the estimators on the original bags.
+
+The archive also retains failures, excluded runs and binary fingerprints. Use
+the comparisons defined in the reports, and run new experiments serially with
+the provided run lock.
 
 ## Contents
 
