@@ -11,34 +11,31 @@ Anyverse Dynamics
 Corresponding author: Zhongpu Xia. Contact: Jie Xu
 ([jeff_xu_0503@foxmail.com](mailto:jeff_xu_0503@foxmail.com)).
 
-We test gravity and accelerometer-bias state choices within FAST-LIO2 and
-LIO-SAM, keeping the rest of each estimator fixed. We separately test a
-gravity-direction factor derived from the same IMU used for preintegration.
+Should an LIO system keep estimating gravity after initialization? We compare
+online and fixed gravity and accelerometer bias within FAST-LIO2 and LIO-SAM.
+We also test an added gravity-direction factor using the same IMU as preintegration.
 
 **Keep both gravity and accelerometer bias online by default. The tested
 same-IMU direction factor is not a generic z-drift remedy.**
 
-Continuous LiDAR correction largely masks the value of online gravity.
-Multi-second correction gaps and motion during startup expose costs of removing
-state freedom. A direction factor can help on one trajectory and hurt on another;
-direction agreement alone is not evidence of better height estimation.
+With continuous LiDAR updates, fixing gravity makes little difference to pose
+accuracy. Keeping gravity and bias online matters more during multi-second
+LiDAR outages and motion at startup. The added direction factor helps on Hall05
+but hurts on TUHH with online gravity: a smaller direction residual does not
+necessarily mean a smaller height error. These results do not cover independent
+gravity sensors or global pose-graph priors.
 
 ## Video
 
 https://github.com/user-attachments/assets/c3f4aaa6-e61e-4339-bcfb-015d5a785b81
 
-Watch the two-minute research demonstration above.
-The video uses real RViz recordings;
-quantitative overlays come from audited experiments. Dataset attribution and
-reuse conditions are in [DATA_SOURCES.md](DATA_SOURCES.md).
+Real RViz recordings with results from the experiments reported in the paper.
 
 ## Reproduce the reported results
 
-The Git repository keeps the code, configurations, machine-readable reports,
-and manuscript assets small enough to browse. Recorded trajectories, state
-logs, ground truth, retained failures, and excluded-run records are distributed
-in the versioned [Release](https://github.com/jiejie567/rethink-lio-gravity/releases/tag/v1.0.0)
-as `lio-gravity-evidence.zip`, with SHA-256 checksums.
+Code and result summaries are in this repository. Trajectories, state logs,
+ground truth, failure records and checksums are in
+[`lio-gravity-evidence.zip`](https://github.com/jiejie567/rethink-lio-gravity/releases/tag/v1.0.0).
 
 Download and extract that archive, then run from its root:
 
@@ -49,17 +46,14 @@ python3 -m venv .venv
 .venv/bin/python verify_review.py --recompute --figures
 ```
 
-These checks do not require ROS, Docker, a GPU, or raw bags. They verify the
-manifest, recompute supported trajectory metrics, and regenerate tables and
-figures. See [PROTOCOL.md](PROTOCOL.md) for alignment and inference units,
-[EVIDENCE_MAP.md](EVIDENCE_MAP.md) for claim-to-file mappings, and
-[RUNNING.md](RUNNING.md) for estimator reruns. Run estimator experiments serially;
-do not bypass the run lock.
+The scripts check file integrity, recompute trajectory metrics, and regenerate
+tables and figures. No ROS, Docker, GPU or raw bags are needed for these checks.
 
-The current source is inspectable but does not prove the provenance of every
-historical executable. Original binary fingerprints and failure outcomes are
-retained in the evidence archive. Do not pool every historical run as an
-independent sample; the report files define the admitted comparisons.
+See [PROTOCOL.md](PROTOCOL.md) for evaluation and sample selection,
+[EVIDENCE_MAP.md](EVIDENCE_MAP.md) for the supporting runs, and
+[RUNNING.md](RUNNING.md) to rerun the estimators. Run experiments serially with
+the provided run lock. The archive includes excluded runs and binary fingerprints;
+use the report-defined comparisons rather than pooling all runs.
 
 ## Contents
 
@@ -69,18 +63,16 @@ independent sample; the report files define the admitted comparisons.
 | `catkin_ws/src/FAST_LIO/` | FAST-LIO2 state-removal variants |
 | `liosam_ws/src/LIO-SAM/` | LIO-SAM state and direction-factor ablations |
 | `report/` | Source reports and figure data |
-| `paper/` | Named preprint, TeX sources and vector figures |
+| `paper/` | Paper, TeX sources and figures |
 | `media/` | Video and preview |
 
-Raw LiDAR/IMU bags and historical binaries are not redistributed. Obtain the
-datasets from their original providers. Independent gravity sensors and
-downstream global loop-closure PGO priors were not tested.
+Raw bags and historical binaries are not included. Dataset links and usage
+terms are listed in [DATA_SOURCES.md](DATA_SOURCES.md).
 
 ## Citation and licence
 
-Use [CITATION.cff](CITATION.cff). This is a preprint release, not an acceptance
-announcement. No arXiv identifier has been assigned by this release workflow.
+Citation details are in [CITATION.cff](CITATION.cff).
 
-Original experiment/analysis scripts are MIT licensed. Third-party software,
-data, manuscript, and video are **not** covered by that blanket grant; see
+Our experiment and analysis scripts use the MIT license. Third-party software,
+datasets, the paper and video have separate terms; see
 [LICENSE_SCOPE.md](LICENSE_SCOPE.md) and the in-tree notices.
