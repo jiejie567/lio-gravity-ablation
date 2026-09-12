@@ -31,9 +31,7 @@ direction agreement alone is not evidence of better height estimation.
 
 https://github.com/user-attachments/assets/8ea7ec5d-82f2-4cc8-bb14-24ee3c0eb5b1
 
-[Download the full-resolution MP4](https://github.com/jiejie567/rethink-lio-gravity/raw/refs/heads/main/media/demo.mp4).
-The inline version is a smaller 720p copy; the download is 1080p. Both are
-two-minute research demonstrations without conference or submission labels.
+Watch the two-minute research demonstration above.
 The video uses real RViz recordings;
 quantitative overlays come from audited experiments. Dataset attribution and
 reuse conditions are in [DATA_SOURCES.md](DATA_SOURCES.md).
