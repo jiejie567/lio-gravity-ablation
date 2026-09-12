@@ -21,5 +21,5 @@ FAST-LIO, LIO-SAM and Livox driver source retain their in-tree licences. Modifie
 files are supplied as an experimental snapshot; upstream names do not imply
 upstream endorsement. Original experiment/analysis code is covered by the root MIT licence; see LICENSE_SCOPE.md for exclusions.
 
-Public repository: https://github.com/jiejie567/lio-gravity-ablation
+Public repository: https://github.com/jiejie567/rethink-lio-gravity
 Versioned evidence is distributed through its Releases. No DOI is asserted.

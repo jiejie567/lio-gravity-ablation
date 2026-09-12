@@ -6,10 +6,10 @@ Jie Xu · Ziyi Jin · Kangjin Yu · Hongjun Huang · Tongxing Jin · Hongkun Luo
 
 Anyverse Dynamics
 
-[Paper (preprint PDF)](paper/preprint.pdf) · [Video](media/demo.mp4) · [Reproduction archive](https://github.com/jiejie567/lio-gravity-ablation/releases/tag/v1.0.0)
+[Paper (preprint PDF)](paper/preprint.pdf) · [Video](media/demo.mp4) · [Reproduction archive](https://github.com/jiejie567/rethink-lio-gravity/releases/tag/v1.0.0)
 
 The updated seven-author preprint and its source are in
-[v1.0.3](https://github.com/jiejie567/lio-gravity-ablation/releases/tag/v1.0.3),
+[v1.0.3](https://github.com/jiejie567/rethink-lio-gravity/releases/tag/v1.0.3),
 using given-name-first author display.
 
 Corresponding author: Zhongpu Xia. Contact: Jie Xu
@@ -29,7 +29,7 @@ direction agreement alone is not evidence of better height estimation.
 
 ## Video
 
-[![Watch the experiment video](media/poster.png)](https://github.com/jiejie567/lio-gravity-ablation/raw/refs/heads/main/media/demo.mp4)
+[![Watch the experiment video](media/poster.png)](https://github.com/jiejie567/rethink-lio-gravity/raw/refs/heads/main/media/demo.mp4)
 
 [Open or download the MP4](media/demo.mp4). The video uses real RViz recordings;
 quantitative overlays come from audited experiments. Dataset attribution and
@@ -40,7 +40,7 @@ reuse conditions are in [DATA_SOURCES.md](DATA_SOURCES.md).
 The Git repository keeps the code, configurations, machine-readable reports,
 and manuscript assets small enough to browse. Recorded trajectories, state
 logs, ground truth, retained failures, and excluded-run records are distributed
-in the versioned [Release](https://github.com/jiejie567/lio-gravity-ablation/releases/tag/v1.0.0)
+in the versioned [Release](https://github.com/jiejie567/rethink-lio-gravity/releases/tag/v1.0.0)
 as `lio-gravity-evidence.zip`, with SHA-256 checksums.
 
 Download and extract that archive, then run from its root:
