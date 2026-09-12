@@ -29,7 +29,7 @@ direction agreement alone is not evidence of better height estimation.
 
 ## Video
 
-https://github.com/user-attachments/assets/8ea7ec5d-82f2-4cc8-bb14-24ee3c0eb5b1
+https://github.com/user-attachments/assets/c3a804e0-74b5-4405-a516-c194d8e55aaf
 
 Watch the two-minute research demonstration above.
 The video uses real RViz recordings;

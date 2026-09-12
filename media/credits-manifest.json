@@ -1,0 +1,17 @@
+{
+  "anonymous_master_sha256": "eaa7f704a52052d93665c26954e2c6a40e7b281692e39999f6d56132f59b14f6",
+  "public_sha256": "b7969c26942bdb617bc3740c9c0d2edeef43961e8a1cb0877eb6f57983dc2297",
+  "web_sha256": "79c4e818d50446f709529ccb4871f573f1e606b86a05385487ad27cade4f4fe4",
+  "credit_windows_seconds": [
+    [
+      0,
+      8
+    ],
+    [
+      110,
+      120
+    ]
+  ],
+  "corresponding_author": "Zhongpu Xia",
+  "contact": "Jie Xu \u2014 jeff_xu_0503@foxmail.com"
+}
