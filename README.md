@@ -6,7 +6,7 @@ Jie Xu · Ziyi Jin · Kangjin Yu · Hongjun Huang · Tongxing Jin · Hongkun Luo
 
 Anyverse Dynamics
 
-[Paper (preprint PDF)](paper/preprint.pdf) · [Video](media/demo.mp4) · [Reproduction archive](https://github.com/jiejie567/rethink-lio-gravity/releases/tag/v1.0.0)
+[Paper (preprint PDF)](paper/preprint.pdf) · [Video](#video) · [Reproduction archive](https://github.com/jiejie567/rethink-lio-gravity/releases/tag/v1.0.0)
 
 The updated seven-author preprint and its source are in
 [v1.0.3](https://github.com/jiejie567/rethink-lio-gravity/releases/tag/v1.0.3),
@@ -29,9 +29,12 @@ direction agreement alone is not evidence of better height estimation.
 
 ## Video
 
-[![Watch the experiment video](media/poster.png)](https://github.com/jiejie567/rethink-lio-gravity/raw/refs/heads/main/media/demo.mp4)
+https://github.com/user-attachments/assets/8ea7ec5d-82f2-4cc8-bb14-24ee3c0eb5b1
 
-[Open or download the MP4](media/demo.mp4). The video uses real RViz recordings;
+[Download the full-resolution MP4](https://github.com/jiejie567/rethink-lio-gravity/raw/refs/heads/main/media/demo.mp4).
+The inline version is a smaller 720p copy; the download is 1080p. Both are
+two-minute research demonstrations without conference or submission labels.
+The video uses real RViz recordings;
 quantitative overlays come from audited experiments. Dataset attribution and
 reuse conditions are in [DATA_SOURCES.md](DATA_SOURCES.md).
 
