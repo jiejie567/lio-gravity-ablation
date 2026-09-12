@@ -8,9 +8,6 @@ Anyverse Dynamics
 
 [Paper (preprint PDF)](paper/preprint.pdf) · [Video](#video) · [Reproduction archive](https://github.com/jiejie567/rethink-lio-gravity/releases/tag/v1.0.0)
 
-The current eight-author preprint and its source are in [paper/](paper/),
-using given-name-first author display. Earlier releases retain their original snapshots.
-
 Corresponding author: Zhongpu Xia. Contact: Jie Xu
 ([jeff_xu_0503@foxmail.com](mailto:jeff_xu_0503@foxmail.com)).
 
