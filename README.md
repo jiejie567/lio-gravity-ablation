@@ -2,15 +2,14 @@
 
 **Revisiting a Silent Design Split in LiDAR-Inertial Odometry**
 
-Jie Xu · Ziyi Jin · Kangjin Yu · Hongjun Huang · Tongxing Jin · Hongkun Luo · Zhongpu Xia
+Jie Xu · Ziyi Jin · Kangjin Yu · Can Jiang · Hongjun Huang · Tongxing Jin · Hongkun Luo · Zhongpu Xia
 
 Anyverse Dynamics
 
 [Paper (preprint PDF)](paper/preprint.pdf) · [Video](#video) · [Reproduction archive](https://github.com/jiejie567/rethink-lio-gravity/releases/tag/v1.0.0)
 
-The updated seven-author preprint and its source are in
-[v1.0.3](https://github.com/jiejie567/rethink-lio-gravity/releases/tag/v1.0.3),
-using given-name-first author display.
+The current eight-author preprint and its source are in [paper/](paper/),
+using given-name-first author display. Earlier releases retain their original snapshots.
 
 Corresponding author: Zhongpu Xia. Contact: Jie Xu
 ([jeff_xu_0503@foxmail.com](mailto:jeff_xu_0503@foxmail.com)).
@@ -29,7 +28,7 @@ direction agreement alone is not evidence of better height estimation.
 
 ## Video
 
-https://github.com/user-attachments/assets/c3a804e0-74b5-4405-a516-c194d8e55aaf
+https://github.com/user-attachments/assets/c3f4aaa6-e61e-4339-bcfb-015d5a785b81
 
 Watch the two-minute research demonstration above.
 The video uses real RViz recordings;
