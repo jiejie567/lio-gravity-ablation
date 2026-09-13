@@ -4,6 +4,10 @@ The root MIT licence covers original experiment, validation, analysis and
 reproduction code authored for this study, including original code under
 `scripts/` and `verify_review.py`. It does not override any existing file notice.
 
+The Anyverse Dynamics name and logo are not covered by the MIT licence.
+Their inclusion identifies the authors' affiliation and does not grant
+permission to reuse the company's branding.
+
 Bundled FAST-LIO2, LIO-SAM, Livox driver, and their dependencies retain their
 own in-tree licences, copyright notices, and applicable obligations. Changes
 inside those upstream-derived trees remain subject to their governing terms;

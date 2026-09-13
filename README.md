@@ -1,3 +1,7 @@
+<p align="left">
+  <img src="media/anyverse-dynamics-logo.png" alt="Anyverse Dynamics · 无界动力" width="300">
+</p>
+
 # Does Online Gravity Estimation Matter?
 
 **Revisiting a Silent Design Split in LiDAR-Inertial Odometry**
