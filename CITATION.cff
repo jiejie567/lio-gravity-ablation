@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the accompanying preprint when using this research software."
+message: "Please cite the paper at arXiv:2609.13675 when using this research software."
 type: software
 title: "Does Online Gravity Estimation Matter? Revisiting a Silent Design Split in LiDAR-Inertial Odometry"
 authors:
@@ -31,3 +31,29 @@ repository-code: "https://github.com/jiejie567/rethink-lio-gravity"
 url: "https://github.com/jiejie567/rethink-lio-gravity"
 version: 1.0.3
 date-released: 2026-09-11
+preferred-citation:
+  type: article
+  title: "Does Online Gravity Estimation Matter? Revisiting a Silent Design Split in LiDAR-Inertial Odometry"
+  authors:
+    - family-names: Xu
+      given-names: Jie
+    - family-names: Jin
+      given-names: Ziyi
+    - family-names: Yu
+      given-names: Kangjin
+    - family-names: Jiang
+      given-names: Can
+    - family-names: Huang
+      given-names: Hongjun
+    - family-names: Jin
+      given-names: Tongxing
+    - family-names: Luo
+      given-names: Hongkun
+    - family-names: Xia
+      given-names: Zhongpu
+  journal: arXiv
+  year: 2026
+  url: "https://arxiv.org/abs/2609.13675"
+  identifiers:
+    - type: other
+      value: "arXiv:2609.13675"
